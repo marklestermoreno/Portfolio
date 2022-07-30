@@ -1,26 +1,58 @@
 import React, { useState } from 'react'
+import ImageGallery from 'react-image-gallery';
 import Profile from '../../assets/profile.png'
+import { AiFillCloseCircle } from 'react-icons/ai'
 import Typewriter from 'typewriter-effect';
 
-import { Modal } from 'antd';
+import profile1 from '../../assets/personal/01.jpg'
+import profile2 from '../../assets/personal/02.jpg'
+import profile3 from '../../assets/personal/03.png'
+import profile4 from '../../assets/personal/04.png'
+import profile5 from '../../assets/personal/05.jpg'
+
+
+import './modal.css'
 
 import file from '../../assets/marklestermoreno.pdf'
 
 const Home = () => {
 
-    const [isModalVisible, setIsModalVisible] = useState(false);
+    const [modal, setModal] = useState(false)
 
-    const showModal = () => {
-        setIsModalVisible(true);
-    };
+    const toggleModal = () => {
+        setModal(!modal)
+    }
 
-    const handleOk = () => {
-        setIsModalVisible(false);
-    };
+    if (modal) {
+        document.body.classList.add("active-modal")
+    } else {
+        document.body.classList.remove("active-modal")
+    }
 
-    const handleCancel = () => {
-        setIsModalVisible(false);
-    };
+    const images = [
+        {
+            original: profile1,
+            thumbnail: profile1,
+        },
+        {
+            original: profile2,
+            thumbnail: profile2,
+        },
+        {
+            original: profile3,
+            thumbnail: profile3,
+        },
+        {
+            original: profile4,
+            thumbnail: profile4,
+        },
+        {
+            original: profile5,
+            thumbnail: profile5,
+        },
+
+    ];
+
 
 
     return (
@@ -46,7 +78,7 @@ const Home = () => {
                                     xsm:text-[10px]
                                     xxsm:text-[8px]    
                     '>
-                        Hi, <span className='text-[#fe4066]'>I'm Mark Lester Moreno </span>
+                        Hi, <span className='text-[#fe4066] hover:cursor-pointer' onClick={toggleModal}>I'm Mark Lester Moreno </span>
                     </span>
                     <p className='flex text-[#fe4066] text-[50px] font-semibold 
                                     2xl:text-[50px]
@@ -91,15 +123,84 @@ const Home = () => {
                     </a>
                 </div>
                 <div className='flex justify-center text-start items-start w-1/2 xs:pl-10 xsm:pl-6 pt-4 pb-10'>
-                    <img src={Profile} alt='profile' onClick={showModal}
-                        className='2xl:w-[450px] lg:w-96 md:w-72 sm:w-60 xs:w-44 xsm:w-32 xxsm:w-24 rounded-lg shadow-md hover:brightness-110 hover:cursor-cell' />
+                    <img src={Profile} alt='profile' onClick={toggleModal}
+                        className='2xl:w-[450px] lg:w-96 md:w-72 sm:w-60 xs:w-44 xsm:w-32 xxsm:w-24 rounded-lg shadow-md hover:brightness-110 hover:cursor-pointer' />
                 </div>
             </div>
 
-            <Modal title={false} footer={false} visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
-                <img src={Profile} alt='profile' onClick={showModal}
-                    className='w-[550px] rounded-lg shadow-md hover:brightness-110' />
-            </Modal>
+            {/* Popup box */}
+            {modal && (
+                <div className='modal'>
+                    <div onClick={toggleModal} className='overlay' ></div>
+                    <div className=' modal-content 
+                    flex flex-col items-center duration-200 hide-scrollbar overflow-y-auto scrollbar-hide '>
+
+                        <div className='mx-10 xs:ml-10 xsm:ml-6 xxsm:ml-4'>
+                            <h1>
+                                <a href={file} download="Mark Lester Moreno Curiculum Vitae"
+                                    className='text-[#fe4066] 
+                                    lg:text-[35px]
+                                    2xl:text-[45px]
+                                    md:text-[30px]
+                                    sm:text-[20px]
+                                    xsm:text-[12px]
+                                    xxsm:text-[7px] xxsm:-mt-10
+                                    font-semibold hover:text-[#fe4066]'>
+                                    Mark Lester Moreno
+                                </a>
+                            </h1>
+                            <p className='lg:text-lg
+                                         md:text-[15px]
+                                         2xl:text-[20px]
+                                         sm:text-[13px]
+                                         xs:text-[9px] xs:-mt-0
+                                         xsm:text-[7px] xsm:-mt-2
+                                         xxsm:text-[5px] xxsm:-mt-2
+                            '> "The Hardest Choices Require The Strongest Wills" - Thanos</p>
+                            <p className='lg:text-[15px] 
+                                         md:text-[13px]
+                                         2xl:text-[20px]
+                                         sm:text-[11px]
+                                         xs:text-[9px]
+                                         xsm:text-[7px] 
+                                         xxsm:text-[5px]
+                            font-thin'> Hi! My name is Mark Lester Moreno an <b> incoming 4th year PUP student </b> who seek a position as an IT Professional to develop my skills and experience further while helping the company in creating the best web app and maintaining
+                                their computer system </p>
+                            <div className='grid overflow-hidden grid-cols-3 grid-rows-2 pt-2 pb-4'>
+                                <p className='box row-start-1 row-end-1 col-start-1 col-end-1 text-[#fe4066] 2xl:text-[20px] xxsm:text-[5px] xsm:text-[7px] xs:text-[9px] lg:text-[15px] md:text-[13px] sm:text-[11px] font-semibold'> Birthdate</p>
+                                <p className='box row-start-1 row-end-1 col-start-2 col-end-4 text-[#111213] 2xl:text-[20px] xxsm:text-[5px] xsm:text-[7px] xs:text-[9px] lg:text-[15px] md:text-[13px] sm:text-[11px] font-thin capitalize'> January 9, 2001 (21 Years Old) </p>
+                                <p className='box row-start-2 row-end-2 col-start-1 col-end-1 text-[#fe4066] 2xl:text-[20px] xxsm:text-[5px] xsm:text-[7px] xs:text-[9px] lg:text-[15px] md:text-[13px] sm:text-[11px] sm:-mt-2 xxsm:-mt-0 font-semibold'> Birthplace </p>
+                                <p className='box row-start-2 row-end-2 col-start-2 col-end-4 text-[#111213] 2xl:text-[20px] xxsm:text-[5px] xsm:text-[7px] xs:text-[9px] lg:text-[15px] md:text-[13px] sm:text-[11px] sm:-mt-2 xxsm:-mt-0 font-thin capitalize'> Malanday, Marikina City </p>
+                                <p className='box row-start-3 row-end-3 col-start-1 col-end-1 text-[#fe4066] 2xl:text-[20px] xxsm:text-[5px] xsm:text-[7px] xs:text-[9px] lg:text-[15px] md:text-[13px] sm:text-[11px] sm:-mt-3 xxsm:-mt-0 font-semibold'> Blood Type </p>
+                                <p className='box row-start-3 row-end-3 col-start-2 col-end-4 text-[#111213] 2xl:text-[20px] xxsm:text-[5px] xsm:text-[7px] xs:text-[9px] lg:text-[15px] md:text-[13px] sm:text-[11px] sm:-mt-3 xxsm:-mt-0 font-thin capitalize'> 0 </p>
+                                <p className='box row-start-4 row-end-4 col-start-1 col-end-1 text-[#fe4066] 2xl:text-[20px] xxsm:text-[5px] xsm:text-[7px] xs:text-[9px] lg:text-[15px] md:text-[13px] sm:text-[11px] sm:-mt-2 xxsm:-mt-0 font-semibold'> Height and Weight </p>
+                                <p className='box row-start-4 row-end-4 col-start-2 col-end-4 text-[#111213] 2xl:text-[20px] xxsm:text-[5px] xsm:text-[7px] xs:text-[9px] lg:text-[15px] md:text-[13px] sm:text-[11px] sm:-mt-2 xxsm:-mt-0 font-thin capitalize'> 170cm - 65kg </p>
+                                <p className='box row-start-5 row-end-5 col-start-1 col-end-1 text-[#fe4066] 2xl:text-[20px] xxsm:text-[5px] xsm:text-[7px] xs:text-[9px] lg:text-[15px] md:text-[13px] sm:text-[11px] sm:-mt-2 xxsm:-mt-0 font-semibold'> Nationality </p>
+                                <p className='box row-start-5 row-end-5 col-start-2 col-end-4 text-[#111213] 2xl:text-[20px] xxsm:text-[5px] xsm:text-[7px] xs:text-[9px] lg:text-[15px] md:text-[13px] sm:text-[11px] sm:-mt-2 xxsm:-mt-0 font-thin capitalize'> Filipino </p>
+                                <p className='box row-start-6 row-end-6 col-start-1 col-end-1 text-[#fe4066] 2xl:text-[20px] xxsm:text-[5px] xsm:text-[7px] xs:text-[9px] lg:text-[15px] md:text-[13px] sm:text-[11px] sm:-mt-2 xxsm:-mt-0 font-semibold'> Hobbies </p>
+                                <p className='box row-start-6 row-end-6 col-start-2 col-end-4 text-[#111213] 2xl:text-[20px] xxsm:text-[5px] xsm:text-[7px] xs:text-[9px] lg:text-[15px] md:text-[13px] sm:text-[11px] sm:-mt-2 xxsm:-mt-0 font-thin capitalize'> Creating Music, Dancing, Playing NBA2k  </p>
+                                <p className='box row-start-7 row-end-7 col-start-1 col-end-1 text-[#fe4066] 2xl:text-[20px] xxsm:text-[5px] xsm:text-[7px] xs:text-[9px] lg:text-[15px] md:text-[13px] sm:text-[11px] sm:-mt-2 xxsm:-mt-0 font-semibold'> Weaknesses </p>
+                                <p className='box row-start-7 row-end-7 col-start-2 col-end-4 text-[#111213] 2xl:text-[20px] xxsm:text-[5px] xsm:text-[7px] xs:text-[9px] lg:text-[15px] md:text-[13px] sm:text-[11px] sm:-mt-2 xxsm:-mt-0 font-thin capitalize'> Jack of all trades, Pessimistic  </p>
+                                <p className='box row-start-8 row-end-8 col-start-1 col-end-1 text-[#fe4066] 2xl:text-[20px] xxsm:text-[5px] xsm:text-[7px] xs:text-[9px] lg:text-[15px] md:text-[13px] sm:text-[11px] sm:-mt-2 xxsm:-mt-0 font-semibold'> Strength </p>
+                                <p className='box row-start-8 row-end-8 col-start-2 col-end-4 text-[#111213] 2xl:text-[20px] xxsm:text-[5px] xsm:text-[7px] xs:text-[9px] lg:text-[15px] md:text-[13px] sm:text-[11px] sm:-mt-2 xxsm:-mt-0 font-thin capitalize'> Tenacious, Competitive </p>
+                            </div>
+                            <div className='modal-text right'>
+                                <button className='close-modal btn_shadow xxsm:hidden xs:flex' onClick={toggleModal}>
+                                    <AiFillCloseCircle size={30} />
+                                </button>
+                            </div>
+                        </div>
+                        <div className='sm:py-5 xxsm:py-2'>
+                            <ImageGallery
+                                className='rounded-lg'
+                                items={images}
+                                showFullscreenButton={true}
+                                autoPlay showPlayButton={false}
+                                showNav={false} />
+                        </div>
+                    </div>
+                </div>
+            )}
         </>
     )
 }

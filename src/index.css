@@ -22,12 +22,12 @@ code {
   font-size: 40px !important;
 }
 
-.slick-prev:before{
+.slick-prev:before {
   margin-left: -20px !important;
 }
 
 .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
-  color: #fe4066 !important; 
+  color: #fe4066 !important;
 }
 
 .ant-tabs-ink-bar {
@@ -36,7 +36,7 @@ code {
 
 .ant-tabs-ink-bar {
   position: absolute;
-  background: #fe4066 !important; 
+  background: #fe4066 !important;
 }
 
 
@@ -49,9 +49,11 @@ code {
 
 
 .ant-tabs-content-holder {
-  padding: 15px  !important;
-  border-left: 1px solid #4e4e4e !important; /* Border for the content part */
-  border-top: transparent !important; /* Remove the top border so that there is no overlap*/
+  padding: 15px !important;
+  border-left: 1px solid #4e4e4e !important;
+  /* Border for the content part */
+  border-top: transparent !important;
+  /* Remove the top border so that there is no overlap*/
 }
 
 input::-webkit-outer-spin-button,
@@ -59,3 +61,60 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
+
+.image-gallery {
+  width: 100%;
+  height: auto;
+}
+
+.image-gallery-slide img {
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  object-fit: cover;
+  overflow: hidden;
+  object-position: center center;
+}
+
+.fullscreen .image-gallery-slide img {
+  max-height: 100vh;
+}
+
+@media (max-width: 1024px) {
+
+  .image-gallery {
+    width: 80% !important;
+    padding: auto;
+    margin: auto;
+    height: auto;
+  }
+}
+
+@media (max-width: 724px) {
+
+  .image-gallery {
+    width: 60% !important;
+    padding: auto;
+    margin: auto;
+    height: auto;
+  }
+  
+
+}
+
+
+@media (max-width: 360px) {
+
+  .image-gallery {
+    display: none;
+    width: 0% !important;
+    padding: auto;
+    margin: auto;
+    height: auto;
+  }
+
+}
+
+
+

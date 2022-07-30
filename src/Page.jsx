@@ -4,6 +4,7 @@ import Header from './Component/Header/Header'
 import Home from './Component/Home/Home'
 import Info from './Component/Info/Info'
 import Experience from './Component/Experience/Experience'
+import Portfolio from './Component/Portfolio/Portfolio'
 
 const Page = () => {
     return (
@@ -19,6 +20,9 @@ const Page = () => {
             </div>
             <div>
                 <Experience />
+            </div>
+            <div>
+                <Portfolio />
             </div>
         </>
     )

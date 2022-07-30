@@ -29,6 +29,7 @@ const Experience = () => {
                                             xsm:-ml-10 xsm:-mr-10  xsm:text-[8px] 
                                             font-semibold'> Diploma in Information Communication and Technology </h1>
                                 <p className='lg:text-sm 
+                                            2xl:text-base
                                             md:text-[12px] 
                                             sm:text-[10px] 
                                             xs:-ml-0 
@@ -39,6 +40,7 @@ const Experience = () => {
                                 <p className='lg:text-base 
                                             md:text-[12px] 
                                             sm:text-[10px]
+                                            2xl:text-[20px]
                                             xs:-ml-0 xs:-mr-0 xs:text-[8px]
                                             xxsm:text-[5px] xxsm:-ml-10 xxsm:-mr-5
                                             flex'>
@@ -53,6 +55,7 @@ const Experience = () => {
                                 </p>
                                 <p className='lg:text-base 
                                             md:text-[12px] 
+                                            2xl:text-[20px]
                                             sm:text-[10px]
                                             xs:-ml-0 xs:-mr-0 xs:text-[8px]
                                             xxsm:text-[5px] xxsm:-ml-10 xxsm:-mr-5
@@ -88,6 +91,7 @@ const Experience = () => {
                                             md:text-[12px] 
                                             sm:text-[10px] 
                                             xs:-ml-0 
+                                            2xl:text-base
                                             xsm:text-[6px]
                                             xxsm:-ml-10 xxsm:text-[4px]
                                             pb-5
@@ -95,6 +99,7 @@ const Experience = () => {
                                 <p className='lg:text-base 
                                             md:text-[12px] 
                                             sm:text-[10px]
+                                            2xl:text-[20px]
                                             xs:-ml-0 xs:-mr-0 xs:text-[8px]
                                             xxsm:text-[5px] xxsm:-ml-10 xxsm:-mr-5
                                             flex'>
@@ -110,6 +115,7 @@ const Experience = () => {
                                 <p className='lg:text-base 
                                             md:text-[12px] 
                                             sm:text-[10px]
+                                            2xl:text-[20px]
                                             xs:-ml-0 xs:-mr-0 xs:text-[8px]
                                             xxsm:text-[5px] xxsm:-ml-10 xxsm:-mr-5
                                             flex'>
@@ -145,12 +151,14 @@ const Experience = () => {
                                             sm:text-[10px] 
                                             xs:-ml-0 
                                             xsm:text-[6px]
+                                            2xl:text-base
                                             xxsm:-ml-10 xxsm:text-[4px]
                                             pb-5
                                             '> June 2017 - March 2019 </p>
                                 <p className='lg:text-base 
                                             md:text-[12px] 
                                             sm:text-[10px]
+                                            2xl:text-[20px]
                                             xs:-ml-0 xs:-mr-0 xs:text-[8px]
                                             xxsm:text-[5px] xxsm:-ml-10 xxsm:-mr-5
                                             flex'>
@@ -166,6 +174,7 @@ const Experience = () => {
                                 <p className='lg:text-base 
                                             md:text-[12px] 
                                             sm:text-[10px]
+                                            2xl:text-[20px]
                                             xs:-ml-0 xs:-mr-0 xs:text-[8px]
                                             xxsm:text-[5px] xxsm:-ml-10 xxsm:-mr-5
                                             flex'>
@@ -207,10 +216,13 @@ const Experience = () => {
                                             sm:text-[10px] 
                                             xs:-ml-0 
                                             xsm:text-[6px]
+                                            2xl:text-base
                                             xxsm:-ml-10 xxsm:text-[4px]
                                             pb-5
                                             '> January 2019 - Present </p>
-                                <p className='lg:text-base 
+                                <p className='
+                                            2xl:text-[20px]
+                                            lg:text-base 
                                             md:text-[12px] 
                                             sm:text-[10px]
                                             xs:-ml-0 xs:-mr-0 xs:text-[8px]
@@ -226,6 +238,7 @@ const Experience = () => {
                                     </span>
                                 </p>
                                 <p className='lg:text-base 
+                                            2xl:text-[20px]
                                             md:text-[12px] 
                                             sm:text-[10px]
                                             xs:-ml-0 xs:-mr-0 xs:text-[8px]
@@ -249,7 +262,7 @@ const Experience = () => {
                                             xs:text-[8px] 
                                             xsm:text-[6px]
                                             xxsm:text-[4px]'> Polytechnic University of <br /> the Philippines - 2nd Internship
-                                            </span>} key='2' className='text-white'>
+                        </span>} key='2' className='text-white'>
                             <div className='px-5' style={{ marginTop: '-20px' }}>
                                 <h1 className='text-white 
                                             lg:text-[21px] 
@@ -259,11 +272,12 @@ const Experience = () => {
                                             xxsm:text-[5px] xxsm:-ml-10 xxsm:mt-4 
                                             xsm:-ml-10 xsm:-mr-10  xsm:text-[8px] 
                                             font-semibold'> Internship (Computer  Programming Specialist)
-                                            </h1>
+                                </h1>
                                 <p className='lg:text-sm 
                                             md:text-[12px] 
                                             sm:text-[10px] 
                                             xs:-ml-0 
+                                            2xl:text-base
                                             xsm:text-[6px]
                                             xxsm:-ml-10 xxsm:text-[4px]
                                             pb-5
@@ -271,6 +285,7 @@ const Experience = () => {
                                 <p className='lg:text-base 
                                             md:text-[12px] 
                                             sm:text-[10px]
+                                            2xl:text-[20px]
                                             xs:-ml-0 xs:-mr-0 xs:text-[8px]
                                             xxsm:text-[5px] xxsm:-ml-10 xxsm:-mr-5
                                             flex'>
@@ -286,6 +301,7 @@ const Experience = () => {
                                 <p className='lg:text-base 
                                             md:text-[12px] 
                                             sm:text-[10px]
+                                            2xl:text-[20px]
                                             xs:-ml-0 xs:-mr-0 xs:text-[8px]
                                             xxsm:text-[5px] xxsm:-ml-10 xxsm:-mr-5
                                             flex'>
@@ -319,15 +335,17 @@ const Experience = () => {
                                 <p className='lg:text-sm 
                                             md:text-[12px] 
                                             sm:text-[10px] 
+                                            2xl:text-base
                                             xs:-ml-0 
                                             xsm:text-[6px]
                                             xxsm:-ml-10 xxsm:text-[4px]
                                             pb-5
                                             '> August 2021 – September 2021
-                                            </p>
+                                </p>
                                 <p className='lg:text-base 
                                             md:text-[12px] 
                                             sm:text-[10px]
+                                            2xl:text-[20px]
                                             xs:-ml-0 xs:-mr-0 xs:text-[8px]
                                             xxsm:text-[5px] xxsm:-ml-10 xxsm:-mr-5
                                             flex'>
@@ -342,6 +360,7 @@ const Experience = () => {
                                 </p>
                                 <p className='lg:text-base 
                                             md:text-[12px] 
+                                            2xl:text-[20px]
                                             sm:text-[10px]
                                             xs:-ml-0 xs:-mr-0 xs:text-[8px]
                                             xxsm:text-[5px] xxsm:-ml-10 xxsm:-mr-5

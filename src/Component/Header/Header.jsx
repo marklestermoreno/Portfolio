@@ -19,11 +19,11 @@ const Header = () => {
                     bg-[#212224] text-white'>
                 <div className='flex justify-center items-center text-center'>
                     <img src={Profile} alt="profile-header" className='w-14 h-12 hover:brightness-110' />
-                    <a href='https://www.facebook.com/MLMoreno09'
+                    <NavLink to='/'
                         className='px-3 hover:cursor-pointer text-white hover:text-white
                          sm:text-[13px] xsm:text-[10px] md:text-[15px] lg:text-base xxsm:text-[8px]
                          '> MARK LESTER MORENO
-                    </a>
+                    </NavLink>
                 </div>
                 <Link to='home' 
                 activeClass={activeStyle}
@@ -39,10 +39,10 @@ const Header = () => {
                 <Link to='experience' spy={true} smooth={true} offset={0} duration={500}  activeClass={activeStyle} className={notActive}>
                     Experience
                 </Link>
-                <Link to='portfolios' activeClass={activeStyle} className={notActive}>
+                <Link to='portfolios'   spy={true} smooth={true} offset={0} duration={500}  activeClass={activeStyle} className={notActive}>
                     Portfolios
                 </Link>
-                <Link to='achivements' activeClass={activeStyle} className={notActive}>
+                <Link to='achivements'   spy={true} smooth={true} offset={0} duration={500}  activeClass={activeStyle} className={notActive}>
                     Achievements
                 </Link>
                 <div className='flex justify-center items-center text-center px-3'>

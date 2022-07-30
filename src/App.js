@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
 
 import Contacts from './Component/Contacts/Contacts'
+import Loading from './Loading'
 
 // Components
 
@@ -21,8 +22,7 @@ const App = () => {
         <div className='font-main'>
           <div className='min-h-screen bg-[#111213]'>
             {loading ?
-              // <Loading /> 
-              'Hello World'
+              <Loading /> 
               :
               <>
                 <Routes>
