@@ -103,7 +103,6 @@ input::-webkit-inner-spin-button {
 
 }
 
-
 @media (max-width: 360px) {
 
   .image-gallery {
@@ -117,4 +116,15 @@ input::-webkit-inner-spin-button {
 }
 
 
+.react-tabs__tab--selected {
+  background: #fe4066 !important; 
+  color: white !important;
+  border-radius: 0px 0px !important;
+  border-style: 6px solid white !important;
+}
+
+
+.react-tabs__tab--selected:focus {
+  border-style: none !important;
+}
 
