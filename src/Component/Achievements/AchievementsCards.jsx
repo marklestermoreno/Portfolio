@@ -17,7 +17,7 @@ const AchievementsCards = ({ user }) => {
         document.body.classList.remove("active-modal")
     }
 
-    
+
     const images = [
         {
             original: user.image[0],
@@ -35,7 +35,7 @@ const AchievementsCards = ({ user }) => {
             original: user.image[3],
             thumbnail: user.image[3],
         },
-    
+
     ];
 
     return (
@@ -67,26 +67,37 @@ const AchievementsCards = ({ user }) => {
             </div>
             {/* Popup box */}
             {modal && (
-                <div className='modal'>
+                <div className='modal  xs:flex xxsm:hidden'>
                     <div onClick={toggleModal} className='overlay' ></div>
-                    <div className='modal-content 
-                        flex flex-col items-center duration-200 hide-scrollbar overflow-y-auto scrollbar-hide '>
+                    <div className=' modal-content flex flex-col items-center duration-200 hide-scrollbar overflow-y-auto scrollbar-hide '>
+                        <div className='sm:py-5 xxsm:py-2'>
+                            <h1 className='text-[#fe4066] 
+                                            lg:text-[35px]
+                                            2xl:text-[45px]
+                                            md:text-[30px]
+                                            sm:text-[20px]
+                                            xsm:text-[12px] 
+                                            xxsm:text-[7px] xxsm:-mt-3
+                                            xs:flex xsm:hidden
+                                            font-semibold hover:text-[#fe4066]'>
+                                {user.name}
+                            </h1>
+                        </div>
+
                         {
                             user.image.length === 1 ?
                                 <img src={user.image} alt='certificate' />
                                 :
-                                <div className='sm:py-5 xxsm:py-2'>
+                                <div className='mx-10 sm:ml-10 xs:ml-7 xsm:ml-6 xxsm:ml-4'>
                                     <ImageGallery
-                                        className='rounded-lg'
+                                        className='rounded-lg '
                                         items={images}
                                         showFullscreenButton={true}
-                                        autoPlay showPlayButton={false}
+                                        showPlayButton={false}
                                         showNav={false} />
                                 </div>
                         }
-                        <p className='font-thin'>
-                            {user.name}
-                        </p>
+
                     </div>
                 </div>
             )}

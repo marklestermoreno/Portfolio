@@ -25,7 +25,7 @@ const Header = () => {
                     <img src={Profile} alt="profile-header" className='w-14 h-12 hover:brightness-110' />
                     <NavLink to='/'
                         className='px-3 hover:cursor-pointer text-white hover:text-white
-                         sm:text-[13px] xsm:text-[10px] md:text-[15px] lg:text-base xxsm:text-[8px]
+                         sm:text-[13px] xsm:text-[12px] md:text-[15px] lg:text-base xxsm:text-[8px]
                          '> MARK LESTER MORENO
                     </NavLink>
                 </div>
@@ -52,8 +52,9 @@ const Header = () => {
                 <div className='flex justify-center items-center text-center px-3'>
                     <NavLink to='/contacts' className='bg-[#fe4066] text-white px-3 py-1 rounded-md 
                                         hover:bg-white hover:text-[#fe4066] hover:transition-color duration-300
-                                        lg:text-lg text-[12px] 
-                                        sm:text-[12px]
+                                        lg:text-lg text-[15px] 
+                                        sm:text-[14px]
+                                        xsm:text-[12px]
                                         xxsm:text-[8px]
                                         '>
                         Let's Connect

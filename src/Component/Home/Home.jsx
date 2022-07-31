@@ -67,7 +67,7 @@ const Home = () => {
                                     md:text-[17px] md:pl-7 md:pt-16
                                     sm:pl-8 sm:pt-16 
                                     xs:pl-5 xs:pt-14 xs:text-[12px]
-                                    xsm:pl-4 xsm:pt-8 xsm:text-[8px] 
+                                    xsm:pl-4 xsm:pt-8 xsm:text-[10px] 
                                     xxsm:pl-2 xxsm:pt-6 xxsm:text-[6px] 
                 '>
                     WELCOME TO MY WORLD
@@ -78,7 +78,7 @@ const Home = () => {
                                     md:text-[30px] md:pt-3
                                     sm:text-[20px]
                                     xs:text-[15px]
-                                    xsm:text-[10px]
+                                    xsm:text-[12px]
                                     xxsm:text-[8px]    
                     '>
                         Hi, <span className='text-[#fe4066] hover:cursor-pointer' onClick={toggleModal}>I'm Mark Lester Moreno </span>
@@ -89,7 +89,7 @@ const Home = () => {
                                     md:text-[30px] 
                                     sm:text-[20px]
                                     xs:text-[15px]
-                                    xsm:text-[10px]
+                                    xsm:text-[12px]
                                     xxsm:text-[8px]
                                                                         '
                     >
@@ -106,7 +106,7 @@ const Home = () => {
                             />
                         </span>
                     </p>
-                    <p className='2xl:text-[20px] lg:text-[18px] md:text-[13px] sm:text-[10px] xs:text-[9px] xsm:text-[6px] xxsm:text-[5px]'>
+                    <p className='2xl:text-[20px] lg:text-[18px] md:text-[13px] sm:text-[10px] xs:text-[9px] xsm:text-[8px] xxsm:text-[5px]'>
 
                         
 

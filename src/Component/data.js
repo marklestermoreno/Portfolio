@@ -445,7 +445,7 @@ export const achievements = [
         title: 'National Certificate',
         name: 'National Certificate II - Computer System Servicing (Currently Ongoing)',
         subname: 'IETI College of Science and Technology, Marikina, Inc',
-        image: [],
+        image: '',
     },
     {
         id: 2,
@@ -461,7 +461,7 @@ export const achievements = [
         icon: <BsLaptop className='hover:cursor-pointer' />,
         date: 'AUGUST 2021',
         title: 'Online Certificate',
-        name: 'Responsive Web Design - 300 Hours',
+        name: 'Responsive Web Design',
         subname: 'Certificate of Completion - FreeCodeCamp',
         image: [online04]
     },
@@ -470,7 +470,7 @@ export const achievements = [
         icon: <BsLaptop className='hover:cursor-pointer' />,
         date: 'AUGUST 2021',
         title: 'Online Certificate',
-        name: 'Javascript Algorithms and Data Structure - 300 Hours',
+        name: 'Javascript Algorithms and Data Structures',
         subname: 'Certificate of Completion - FreeCodeCamp',
         image: [online05]
     },
