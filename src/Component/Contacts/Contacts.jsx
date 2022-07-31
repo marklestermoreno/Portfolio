@@ -11,6 +11,8 @@ import { notification } from 'antd';
 
 import { NavLink, Link } from 'react-router-dom'
 
+import { motion } from 'framer-motion'
+
 const Contacts = () => {
 
     const activeStyle = '2xl:text-xl lg:text-base md:flex md:text-[12px] hidden px-3 font-medium text-[#a1a1a1] hover:text-[#fe4066] hover:transition-colors duration-200'
@@ -69,7 +71,7 @@ const Contacts = () => {
         <>
             {/*  Header */}
             <div>
-                <div className='flex justify-between items-center text-center py-3 
+                <motion.div animate={{ y: 0 }} initial={{ y: -200 }} transition={{ duration: 0.10 }} className='flex justify-between items-center text-center py-3 
                     sm:px-5 px-2 
                     bg-[#212224] text-white'>
                     <div className='flex justify-center items-center text-center'>
@@ -110,7 +112,7 @@ const Contacts = () => {
                             Let's Connect
                         </NavLink>
                     </div>
-                </div>
+                </motion.div>
             </div>
 
             {/*  Header */}
@@ -118,7 +120,8 @@ const Contacts = () => {
             <div className='py-10 flex flex-col justify-center text-center items-center'>
                 <h1 className=' text-white text-4xl font-semibold'>Let's Connect</h1>
                 <div className='flex lg:justify-center w-full md:px-16 xxsm:px-1 py-8'>
-                    <div className='xxsm:hidden lg:flex h-[640px] 2xl:w-[650px] w-[500px] shadow-sm shadow-white bg-[#212224] mx-auto'>
+                    <motion.div animate={{ x: 0 }} initial={{ x: -1000 }} transition={{ duration: 0.5 }}
+                        className='xxsm:hidden lg:flex h-[640px] 2xl:w-[650px] w-[500px] shadow-sm shadow-white bg-[#212224] mx-auto'>
                         <div className='flex flex-col m-auto p-auto'>
                             <div className='flex justify-center text-start items-start'>
                                 <img src={Contact} alt='contact-profile'
@@ -127,8 +130,8 @@ const Contacts = () => {
                             <h1 className='text-white text-[25px] tracking-wider'> Mark Lester P. Moreno </h1>
                             <h1 className='text-[#fe4066] text-[15px] -mt-4 mb-10'> Web Developer/UI Designer</h1>
                         </div>
-                    </div>
-                    <div className='md:h-[640px] xxsm:h-[700px] 2xl:w-[1000px] w-[850px] rounded-lg shadow-sm shadow-white bg-[#212224] mx-5
+                    </motion.div >
+                    <motion.div animate={{ x: 0 }} initial={{ x: 1000 }} transition={{ duration: 0.5 }} className='md:h-[640px] xxsm:h-[700px] 2xl:w-[1000px] w-[850px] rounded-lg shadow-sm shadow-white bg-[#212224] mx-5
                             
                             p-10'>
                         <form onSubmit={handleSubmit} ref={form1}
@@ -176,7 +179,7 @@ const Contacts = () => {
                             <div className='flex sm:flex-row xxsm:flex-col justify-around w-full py-10 '>
                                 <button type='reset' disabled={loading}
                                     className='border border-[#fe40066] text-lg text-white font-medium px-4 py-2 rounded-lg hover:scale-110 duration-150'>
-                                    Reset 
+                                    Reset
                                 </button>
                                 <br />
                                 <button type='submit' disabled={loading}
@@ -194,7 +197,7 @@ const Contacts = () => {
                                 </button>
                             </div>
                         </form>
-                    </div>
+                    </motion.div >
                 </div>
             </div>
         </>

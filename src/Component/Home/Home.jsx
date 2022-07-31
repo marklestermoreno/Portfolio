@@ -10,6 +10,7 @@ import profile3 from '../../assets/personal/03.png'
 import profile4 from '../../assets/personal/04.png'
 import profile5 from '../../assets/personal/05.jpg'
 
+import { motion } from 'framer-motion'
 
 import './modal.css'
 
@@ -58,7 +59,9 @@ const Home = () => {
     return (
         <>
             <div className='flex justify-center pt-10' id='home'>
-                <div className='text-white lg:text-[25px] flex-col pl-16 justify-start text-start items-start w-1/2 
+                <motion.div animate={{ x: 0 }} initial={{ x: -1000 }} transition={{ duration: 0.5 }}
+
+                    className='text-white lg:text-[25px] flex-col pl-16 justify-start text-start items-start w-1/2 
                                     lg:pt-20 lg:pl-14 
                                     3xl:pl-20
                                     md:text-[17px] md:pl-7 md:pt-16
@@ -104,11 +107,12 @@ const Home = () => {
                         </span>
                     </p>
                     <p className='2xl:text-[20px] lg:text-[18px] md:text-[13px] sm:text-[10px] xs:text-[9px] xsm:text-[6px] xxsm:text-[5px]'>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed lorem vitae nunc tincidunt
-                        venenatis et non arcu. Ut sagittis ante in risus eleifend lobortis. Ut eros elit, bibendum et
-                        metus ut, tincidunt lacinia urna. Etiam auctor aliquam magna, ac porttitor ipsum lobortis in.
-                        Duis arcu velit, scelerisque sed massa vitae, lobortis euismod lorem. Aliquam nibh nisl, gravida
-                        et metus et, sagittis ultrices sapien.
+
+                        
+
+                    An incoming 4th year PUP student who seek a position as an IT Professional to develop my skills and experience 
+                    further while helping the company in creating the best web app and maintaining their computer system
+
                     </p>
                     <a href={file} download="Mark Lester Moreno Curiculum Vitae"
                         className='bg-[#fe4066] flex justify-center text-white px-3 py-1  rounded-md 
@@ -121,11 +125,12 @@ const Home = () => {
                                         '>
                         Download CV
                     </a>
-                </div>
-                <div className='flex justify-center text-start items-start w-1/2 xs:pl-10 xsm:pl-6 pt-4 pb-10'>
+                </motion.div>
+                <motion.div animate={{ x: 0 }} initial={{ x: 1000 }} transition={{ duration: 0.5 }}
+                    className='flex justify-center text-start items-start w-1/2 xs:pl-10 xsm:pl-6 pt-4 pb-10'>
                     <img src={Profile} alt='profile' onClick={toggleModal}
                         className='2xl:w-[450px] lg:w-96 md:w-72 sm:w-60 xs:w-44 xsm:w-32 xxsm:w-24 rounded-lg shadow-md hover:brightness-110 hover:cursor-pointer' />
-                </div>
+                </motion.div >
             </div>
 
             {/* Popup box */}
@@ -166,7 +171,19 @@ const Home = () => {
                                          xxsm:text-[5px]
                             font-thin'> Hi! My name is Mark Lester Moreno an <b> incoming 4th year PUP student </b> who seek a position as an IT Professional to develop my skills and experience further while helping the company in creating the best web app and maintaining
                                 their computer system </p>
-                            <div className='grid overflow-hidden grid-cols-3 grid-rows-2 pt-2 pb-4'>
+                            <div className='grid overflow-hidden grid-cols-3 grid-rows-2 pt-2'>
+                                <p className='box row-start-1 row-end-1 col-start-1 col-end-1 text-[#fe4066] 2xl:text-[20px] xxsm:text-[5px] xsm:text-[7px] xs:text-[9px] lg:text-[15px] md:text-[13px] sm:text-[11px] font-semibold'> Email </p>
+                                <p className='box row-start-1 row-end-1 col-start-2 col-end-4 text-[#111213] 2xl:text-[20px] xxsm:text-[5px] xsm:text-[7px] xs:text-[9px] lg:text-[15px] md:text-[13px] sm:text-[11px] font-thin'> marklestermoreno09@gmail.com </p>
+                                <p className='box row-start-2 row-end-2 col-start-1 col-end-1 text-[#fe4066] 2xl:text-[20px] xxsm:text-[5px] xsm:text-[7px] xs:text-[9px] lg:text-[15px] md:text-[13px] sm:text-[11px] font-semibold'> Facebook </p>
+                                <p className='box row-start-2 row-end-2 col-start-2 col-end-4 text-[#111213] 2xl:text-[20px] xxsm:text-[5px] xsm:text-[7px] xs:text-[9px] lg:text-[15px] md:text-[13px] sm:text-[11px] font-thin'> https://www.facebook.com/MLMoreno09 </p>
+                                <p className='box row-start-3 row-end-3 col-start-1 col-end-1 text-[#fe4066] 2xl:text-[20px] xxsm:text-[5px] xsm:text-[7px] xs:text-[9px] lg:text-[15px] md:text-[13px] sm:text-[11px] font-semibold'> Github </p>
+                                <p className='box row-start-3 row-end-3 col-start-2 col-end-4 text-[#111213] 2xl:text-[20px] xxsm:text-[5px] xsm:text-[7px] xs:text-[9px] lg:text-[15px] md:text-[13px] sm:text-[11px] font-thin'> https://github.com/marklestermoreno </p>
+                                <p className='box row-start-4 row-end-4 col-start-1 col-end-1 text-[#fe4066] 2xl:text-[20px] xxsm:text-[5px] xsm:text-[7px] xs:text-[9px] lg:text-[15px] md:text-[13px] sm:text-[11px] font-semibold'> Linkedin </p>
+                                <p className='box row-start-4 row-end-4 col-start-2 col-end-4 text-[#111213] 2xl:text-[20px] xxsm:text-[5px] xsm:text-[7px] xs:text-[9px] lg:text-[15px] md:text-[13px] sm:text-[11px] font-thin'> https://www.linkedin.com/in/mark-lester-moreno-6a06a6219/ </p>
+                                <p className='box row-start-5 row-end-6 col-start-1 col-end-1 text-[#fe4066] 2xl:text-[20px] xxsm:text-[5px] xsm:text-[7px] xs:text-[9px] lg:text-[15px] md:text-[13px] sm:text-[11px] font-semibold'> Contact No: </p>
+                                <p className='box row-start-5 row-end-6 col-start-2 col-end-4 text-[#111213] 2xl:text-[20px] xxsm:text-[5px] xsm:text-[7px] xs:text-[9px] lg:text-[15px] md:text-[13px] sm:text-[11px] font-thin'> 09089260456 or 847-837-41 </p>
+                            </div>
+                            <div className='grid overflow-hidden grid-cols-3 grid-rows-2 pt-4 pb-4'>
                                 <p className='box row-start-1 row-end-1 col-start-1 col-end-1 text-[#fe4066] 2xl:text-[20px] xxsm:text-[5px] xsm:text-[7px] xs:text-[9px] lg:text-[15px] md:text-[13px] sm:text-[11px] font-semibold'> Birthdate</p>
                                 <p className='box row-start-1 row-end-1 col-start-2 col-end-4 text-[#111213] 2xl:text-[20px] xxsm:text-[5px] xsm:text-[7px] xs:text-[9px] lg:text-[15px] md:text-[13px] sm:text-[11px] font-thin capitalize'> January 9, 2001 (21 Years Old) </p>
                                 <p className='box row-start-2 row-end-2 col-start-1 col-end-1 text-[#fe4066] 2xl:text-[20px] xxsm:text-[5px] xsm:text-[7px] xs:text-[9px] lg:text-[15px] md:text-[13px] sm:text-[11px] sm:-mt-2 xxsm:-mt-0 font-semibold'> Birthplace </p>

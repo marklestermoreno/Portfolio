@@ -75,37 +75,38 @@ const Info = () => {
         id: 1,
         icon: SystemDesign ,
         title: 'System Design',
-        details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae condimentum lectus. Etiam nisi neque, ultricies eu tristique maximus, ultrices non eratLorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae condimentum lectus. Etiam nisi neque, ultricies eu tristique maximus, ultrices non er'
+        details: "Designed a number of systems, including the user interface for TRACKIT - Barangay Informatics and the Animal Welfare System (Furbae). Knowledgeable in editing and designing system designs using Figma, Adobe Photoshop, and Adobe XD. Proficient in selecting the most appropriate color schemes for a system design. ",
       },
       {
         id: 2,
         icon: WebDev ,
         title: 'Web Development',
-        details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae condimentum lectus. Etiam nisi neque, ultricies eu tristique maximus, ultrices non eratLorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae condimentum lectus. Etiam nisi neque, ultricies eu tristique maximus, ultrices non erat'
+        details: 'Proficient in developing modern Web Application using Modern Stack technologies such as React, Tailwind, Ant Design, MongoDB, Sanity Studio, Firebase and many more. Possess extensive knowledge in using HTML5, CSS and SCSS, Javascript to create a stunning and responsive modern web application'
       },
       {
         id: 3,
         icon: PhotoEditing ,
         title: 'Media Editing',
-        details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae condimentum lectus. Etiam nisi neque, ultricies eu tristique maximus, ultrices non eratLorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae condimentum lectus. Etiam nisi neque, ultricies eu tristique maximus, ultrices non erat'
+        details: 'Expertise in editing and manipulating images using Adobe Photoshop. Posses in-depth knowledge in editing and enhancing video using Adobe After Effects for Clip Effects, Wondershare Fimora for Text and Subtitle, Premiere Pro for compiling clips and videos and Adobe Media Encoder for smooth rendering of video'
       },
       {
         id: 4,
         icon: Music ,
         title: 'Music Editing',
-        details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae condimentum lectus. Etiam nisi neque, ultricies eu tristique maximus, ultrices non eratLorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae condimentum lectus. Etiam nisi neque, ultricies eu tristique maximus, ultrices non erat'
+        details: 'Experience in recording and composing music with FL Studio, Mix craft Pro, and Audacity. Employ editing, mixing and composition skills to create popular remixes. Have a comprehensive understanding of music melody creation utilizing guitar and keyboard piano midi. In addition, I edit voice over in presentations.',
       },
       {
         id: 5,
         icon: Comain ,
         title: 'Computer Maintenance',
-        details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae condimentum lectus. Etiam nisi neque, ultricies eu tristique maximus, ultrices non eratLorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae condimentum lectus. Etiam nisi neque, ultricies eu tristique maximus, ultrices non erat'
+        details: 'Posses in-depth knowledge in configuring Computer System, Computer Network and Computer Hardware. I have been installing computer system since 2018, from configuring BIOS setup to installating operating system, configuring permission and restrictions of different user in a single computer workplace',
+       
       },
       {
         id: 6,
         icon: Program ,
         title: 'Computer Program',
-        details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae condimentum lectus. Etiam nisi neque, ultricies eu tristique maximus, ultrices non eratLorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae condimentum lectus. Etiam nisi neque, ultricies eu tristique maximus, ultrices non erat'
+        details: 'Knowledgeable in Java and Python programming. Using Java Eclipse IDE, I have written programs in both CLI (Command Line Interface) and GUI (Graphics User Interface). Having a thorough understanding of Object Oriented Programming concepts such as Encapsulation, Polymorphism, Inheritance, and Abstraction.',
       }
     ]
 

@@ -5,10 +5,14 @@ import Home from './Component/Home/Home'
 import Info from './Component/Info/Info'
 import Experience from './Component/Experience/Experience'
 import Portfolio from './Component/Portfolio/Portfolio'
+import Achievements from './Component/Achievements/Achievements'
 
 const Page = () => {
+
+
     return (
         <>
+
             <div className='sticky top-0 left-0 right-0 z-40'>
                 <Header />
             </div>
@@ -23,6 +27,9 @@ const Page = () => {
             </div>
             <div>
                 <Portfolio />
+            </div>
+            <div>
+                <Achievements />
             </div>
         </>
     )

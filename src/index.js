@@ -6,6 +6,7 @@ import App from './App';
 import 'antd/dist/antd.min.css';
 import "react-image-gallery/styles/css/image-gallery.css";
 import 'react-tabs/style/react-tabs.css';
+import 'react-vertical-timeline-component/style.min.css';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

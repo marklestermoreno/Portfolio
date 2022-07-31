@@ -323,7 +323,7 @@ const Portfolio = () => {
                         xs:py-4 xs:px-6 xs:text-base
                         xsm:py-3 xsm:px-5 xsm:text-[10px]
                         xxsm:py-2 xxsm:px-4 xxsm:text-[8px]
-                        '>Photoshop </Tab>
+                        '> React App </Tab>
                         <Tab className='selected:bg-[#fe4066] hover:bg-[#fe4066] bg-[#212224] border border-white cursor-pointer text-white focus:border-none 
                         lg:py-4 lg:px-16 lg:text-2xl
                         md:py-4 md:px-12 md:text-xl 
@@ -331,7 +331,7 @@ const Portfolio = () => {
                         xs:py-4 xs:px-6 xs:text-base
                         xsm:py-3 xsm:px-5 xsm:text-[10px]
                         xxsm:py-2 xxsm:px-4 xxsm:text-[8px]
-                        '>React App</Tab>
+                        '> Photoshop </Tab>
                         <Tab className='selected:bg-[#fe4066] hover:bg-[#fe4066] bg-[#212224] border border-white cursor-pointer text-white focus:border-none 
                         lg:py-4 lg:px-16 lg:text-2xl
                         md:py-4 md:px-12 md:text-xl 
@@ -350,48 +350,6 @@ const Portfolio = () => {
                         '>Codepen</Tab>
                     </TabList>
 
-                    <TabPanel>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-3 gap-10 w-full mx-auto pt-10 px-10">
-                            {
-                                currentItems.map((item, id) => {
-                                    return <PhotoshopCards key={id} item={item} />
-                                })
-
-                            }
-                        </div>
-                        <div className='flex items-center text-center justify-center ml-3 py-10'>
-                            <div className=''>
-                                <button
-                                    className={!disabledPrev ?
-                                        'bg-[#212224] text-white sm:text-base xs:text-[10px] xxsm:text-[7px] sm:rounded-lg xxsm:rounded-sm sm:px-6 sm:py-3 xxsm:px-2 xxsm:py-1 hover:bg-[#fe4066] duration-150 cursor-pointer'
-                                        :
-                                        'bg-gray-400 text-white sm:text-base xs:text-[10px] xxsm:text-[7px] sm:rounded-lg xxsm:rounded-sm sm:px-6 sm:py-3 xxsm:px-2 xxsm:py-1 cursor-not-allowed'
-                                    }
-                                    onClick={handlePrevbtn}
-                                    disabled={disabledPrev}
-                                >
-                                    Prev
-                                </button>
-                            </div>
-                            <div className='px-3 py-3'>  {pageDecrementBtn} </div>
-                            <div className='px-3 py-3'>  {renderPageNumbers} </div>
-                            <div className='px-3 py-3'>  {pageIncrementBtn} </div>
-                            <div>
-                                <button
-                                    className={
-                                        !disabledNext ?
-                                            'bg-[#212224] text-white sm:text-base xs:text-[10px] xxsm:text-[7px] sm:rounded-lg xxsm:rounded-sm sm:px-6 sm:py-3 xxsm:px-2 xxsm:py-1 hover:bg-[#fe4066] duration-150 cursor-pointer'
-                                            :
-                                            'bg-gray-400 text-white sm:text-base xs:text-[10px] xxsm:text-[7px] sm:rounded-lg xxsm:rounded-sm sm:px-6 sm:py-3 xxsm:px-2 xxsm:py-1 cursor-not-allowed'
-                                    }
-                                    onClick={handleNextbtn}
-                                    disabled={disabledNext}
-                                >
-                                    Next
-                                </button>
-                            </div>
-                        </div>
-                    </TabPanel>
 
                     <TabPanel>
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-3 gap-10 w-full mx-auto pt-10 px-10">
@@ -437,6 +395,50 @@ const Portfolio = () => {
                         </div>
 
                     </TabPanel>
+
+                    <TabPanel>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-3 gap-10 w-full mx-auto pt-10 px-10">
+                            {
+                                currentItems.map((item, id) => {
+                                    return <PhotoshopCards key={id} item={item} />
+                                })
+
+                            }
+                        </div>
+                        <div className='flex items-center text-center justify-center ml-3 py-10'>
+                            <div className=''>
+                                <button
+                                    className={!disabledPrev ?
+                                        'bg-[#212224] text-white sm:text-base xs:text-[10px] xxsm:text-[7px] sm:rounded-lg xxsm:rounded-sm sm:px-6 sm:py-3 xxsm:px-2 xxsm:py-1 hover:bg-[#fe4066] duration-150 cursor-pointer'
+                                        :
+                                        'bg-gray-400 text-white sm:text-base xs:text-[10px] xxsm:text-[7px] sm:rounded-lg xxsm:rounded-sm sm:px-6 sm:py-3 xxsm:px-2 xxsm:py-1 cursor-not-allowed'
+                                    }
+                                    onClick={handlePrevbtn}
+                                    disabled={disabledPrev}
+                                >
+                                    Prev
+                                </button>
+                            </div>
+                            <div className='px-3 py-3'>  {pageDecrementBtn} </div>
+                            <div className='px-3 py-3'>  {renderPageNumbers} </div>
+                            <div className='px-3 py-3'>  {pageIncrementBtn} </div>
+                            <div>
+                                <button
+                                    className={
+                                        !disabledNext ?
+                                            'bg-[#212224] text-white sm:text-base xs:text-[10px] xxsm:text-[7px] sm:rounded-lg xxsm:rounded-sm sm:px-6 sm:py-3 xxsm:px-2 xxsm:py-1 hover:bg-[#fe4066] duration-150 cursor-pointer'
+                                            :
+                                            'bg-gray-400 text-white sm:text-base xs:text-[10px] xxsm:text-[7px] sm:rounded-lg xxsm:rounded-sm sm:px-6 sm:py-3 xxsm:px-2 xxsm:py-1 cursor-not-allowed'
+                                    }
+                                    onClick={handleNextbtn}
+                                    disabled={disabledNext}
+                                >
+                                    Next
+                                </button>
+                            </div>
+                        </div>
+                    </TabPanel>
+
                     <TabPanel>
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-3 gap-10 w-full mx-auto pt-10 px-10">
                             {

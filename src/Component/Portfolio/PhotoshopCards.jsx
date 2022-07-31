@@ -29,6 +29,14 @@ const PhotoshopCards = ({ item }) => {
         {
             original: item.image[2],
             thumbnail: item.image[2],
+        },
+        {
+            original: item.image[3],
+            thumbnail: item.image[3],
+        },
+        {
+            original: item.image[4],
+            thumbnail: item.image[4],
         }
     ];
 
@@ -58,26 +66,26 @@ const PhotoshopCards = ({ item }) => {
                     <div onClick={toggleModal} className='overlay' ></div>
                     <div className=' modal-content flex flex-col items-center duration-200 hide-scrollbar overflow-y-auto scrollbar-hide '>
 
-                        <div className='sm:py-5 xxsm:py-2'>
+                    <div className='sm:py-5 xxsm:py-2'>
+                            <h1 className='text-[#fe4066] 
+                                            lg:text-[35px]
+                                            2xl:text-[45px]
+                                            md:text-[30px]
+                                            sm:text-[20px]
+                                            xsm:text-[12px] sm:mt-0
+                                            xxsm:text-[7px] xxsm:-mt-10
+                                            font-semibold hover:text-[#fe4066]'>
+                                {item.name}
+                            </h1>
+                        </div>
+                        <div className='mx-10 sm:ml-10 xs:ml-7 xsm:ml-6 xxsm:ml-4'>
                             <ImageGallery
                                 className='rounded-lg'
                                 items={images}
                                 showFullscreenButton={true}
                                 showPlayButton={false}
                                 showNav={false} />
-                        </div>
-                        <div className='mt-10 mx-10 sm:ml-10 xs:ml-7 xsm:ml-6 xxsm:ml-4'>
-                            <h1 className='text-[#fe4066] 
-                                            lg:text-[35px]
-                                            2xl:text-[45px]
-                                            md:text-[30px]
-                                            sm:text-[20px]
-                                            xsm:text-[12px]
-                                            xxsm:text-[7px] xxsm:-mt-10
-                                            font-semibold hover:text-[#fe4066]'>
-                                {item.name}
-                            </h1>
-                            <p className='lg:text-lg
+                            {/* <p className='lg:text-lg
                                             md:text-[15px]
                                         2xl:text-[20px]
                                         sm:text-[13px]
@@ -92,7 +100,7 @@ const PhotoshopCards = ({ item }) => {
                                          xs:text-[9px]
                                          xsm:text-[7px] 
                                          xxsm:text-[5px]
-                            font-thin'> {item.description} </p>
+                            font-thin'> {item.description} </p> */}
 
                             <div className='modal-text right'>
                                 <button className='close-modal btn_shadow xxsm:hidden xs:flex' onClick={toggleModal}>

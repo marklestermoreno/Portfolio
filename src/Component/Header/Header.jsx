@@ -7,6 +7,9 @@ import Profile from '../../assets/header-profile.png'
 import { Link } from 'react-scroll'
 import { NavLink } from 'react-router-dom'
 
+import { motion } from 'framer-motion'
+
+
 const Header = () => {
 
     const activeStyle = '2xl:text-xl lg:text-base md:flex md:text-[12px] hidden px-3 font-medium text-[#a1a1a1] hover:text-[#fe4066] hover:transition-colors duration-200'
@@ -14,7 +17,8 @@ const Header = () => {
 
     return (
         <>
-            <div className='flex justify-between items-center text-center py-3 
+            <motion.div animate={{ y: 0 }} initial={{ y: -200 }} transition={{ duration: 0.10}}
+            className='flex justify-between items-center text-center py-3 
                     sm:px-5 px-2 
                     bg-[#212224] text-white'>
                 <div className='flex justify-center items-center text-center'>
@@ -42,7 +46,7 @@ const Header = () => {
                 <Link to='portfolios'   spy={true} smooth={true} offset={0} duration={500}  activeClass={activeStyle} className={notActive}>
                     Portfolios
                 </Link>
-                <Link to='achivements'   spy={true} smooth={true} offset={0} duration={500}  activeClass={activeStyle} className={notActive}>
+                <Link to='achievements'   spy={true} smooth={true} offset={0} duration={500}  activeClass={activeStyle} className={notActive}>
                     Achievements
                 </Link>
                 <div className='flex justify-center items-center text-center px-3'>
@@ -55,7 +59,7 @@ const Header = () => {
                         Let's Connect
                     </NavLink>
                 </div>
-            </div>
+            </motion.div>
             
         </>
     )
