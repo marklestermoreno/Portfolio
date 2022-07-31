@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { AiFillCloseCircle } from 'react-icons/ai'
 import ImageGallery from 'react-image-gallery';
 
-const PhotoshopCards = ({ item }) => {
+const CodepenCards = ({ item }) => {
 
     const [modal, setModal] = useState(false)
 
@@ -88,11 +88,20 @@ const PhotoshopCards = ({ item }) => {
                             <p className='lg:text-[15px] 
                                          md:text-[13px]
                                          2xl:text-[20px]
+                                         sm:text-[11px] 
+                                         xs:text-[9px]
+                                         xsm:text-[6px] 
+                                         xxsm:text-[4px]
+                            font-semibold'> Codepen Link:
+                                <a href={item.link} className='text-[#fe4066] font-thin'> {item.link}  </a> </p>
+                            <p className='lg:text-[15px] 
+                                         md:text-[13px]
+                                         2xl:text-[20px]
                                          sm:text-[11px]
                                          xs:text-[9px]
                                          xsm:text-[7px] 
                                          xxsm:text-[5px]
-                            font-thin'> {item.description} </p>
+                            font-thin'> {item.details} </p>
 
                             <div className='modal-text right'>
                                 <button className='close-modal btn_shadow xxsm:hidden xs:flex' onClick={toggleModal}>
@@ -108,4 +117,4 @@ const PhotoshopCards = ({ item }) => {
     )
 }
 
-export default PhotoshopCards
+export default CodepenCards

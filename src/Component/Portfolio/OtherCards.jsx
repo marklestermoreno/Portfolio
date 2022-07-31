@@ -1,9 +1,9 @@
 
 import React, { useState } from 'react'
 import { AiFillCloseCircle } from 'react-icons/ai'
-import ImageGallery from 'react-image-gallery';
+import YouTube from 'react-youtube';
 
-const PhotoshopCards = ({ item }) => {
+const OtherCards = ({ item }) => {
 
     const [modal, setModal] = useState(false)
 
@@ -17,22 +17,6 @@ const PhotoshopCards = ({ item }) => {
         document.body.classList.remove("active-modal")
     }
 
-    const images = [
-        {
-            original: item.image[0],
-            thumbnail: item.image[0],
-        },
-        {
-            original: item.image[1],
-            thumbnail: item.image[1],
-        },
-        {
-            original: item.image[2],
-            thumbnail: item.image[2],
-        }
-    ];
-
-
     return (
         <>
 
@@ -40,7 +24,7 @@ const PhotoshopCards = ({ item }) => {
             <div className='flex justify-center items-center text-center' key={item.id} onClick={toggleModal}>
                 <div className='bg-[#212224] rounded-xl basic-1/3 shadow-lg shadow-slate-50 text-white 
                                         hover:-translate-y-3 hover:cursor-pointer duration-150'>
-                    <img src={item.image[0]} alt='photoshop' className='rounded-lg p-5' />
+                    <img src={item.image} alt='other' className='rounded-lg p-5' />
                     <div className='flex flex-col'>
                         <div className='flex justify-center items-start px-7 pb-5'>
                             <h1 className='capitalize text-xl font-medium text-white tracking-wide'> {item.name} </h1>
@@ -59,12 +43,19 @@ const PhotoshopCards = ({ item }) => {
                     <div className=' modal-content flex flex-col items-center duration-200 hide-scrollbar overflow-y-auto scrollbar-hide '>
 
                         <div className='sm:py-5 xxsm:py-2'>
-                            <ImageGallery
-                                className='rounded-lg'
-                                items={images}
-                                showFullscreenButton={true}
-                                showPlayButton={false}
-                                showNav={false} />
+                            <YouTube videoId={item.link}   iframeClassName='
+                            2xl:w-[800px] 2xl:h-[500px]
+                            lg:w-[600px] lg:h-[400px] 
+                            md:w-[420px] md:h-[300px] 
+                            sm:w-[350px] sm:h-[200px] 
+                            xs:w-[300px] xs:h-[175px]
+                            xsm:w-[180px] xsm:h-[150px] xsm:flex
+                            xxsm:hidden
+                            rounded-lg
+                            shadow-md shadow-black
+                            '  
+                            
+                            />
                         </div>
                         <div className='mt-10 mx-10 sm:ml-10 xs:ml-7 xsm:ml-6 xxsm:ml-4'>
                             <h1 className='text-[#fe4066] 
@@ -108,4 +99,4 @@ const PhotoshopCards = ({ item }) => {
     )
 }
 
-export default PhotoshopCards
+export default OtherCards

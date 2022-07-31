@@ -392,7 +392,7 @@ const Info = () => {
           </div>
         </div>
         <h1 className=' text-white lg:text-[30px] md:text-[25px] sm:text-[20px]'> What I Do </h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-6 mx-auto items-center text-center w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-3 mx-auto items-center text-center w-full">
             {
             data.map((item, i) =>(
               <>
