@@ -1,8 +1,5 @@
 import React from 'react'
 
-// Images and Icons
-import Profile from '../../assets/header-profile.png'
-
 // Misc
 import { Link } from 'react-scroll'
 import { NavLink } from 'react-router-dom'
@@ -22,7 +19,7 @@ const Header = () => {
                     sm:px-5 px-2 
                     bg-[#212224] text-white'>
                 <div className='flex justify-center items-center text-center'>
-                    <img src={Profile} alt="profile-header" className='w-14 h-12 hover:brightness-110' />
+                    <img src='https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/header-profile.png?alt=media&token=c8763ec5-7534-478b-9787-2711bc50ea7a' alt="profile-header" className='w-14 h-12 hover:brightness-110' />
                     <NavLink to='/'
                         className='px-3 hover:cursor-pointer text-white hover:text-white
                          sm:text-[13px] xsm:text-[12px] md:text-[15px] lg:text-base xxsm:text-[8px]

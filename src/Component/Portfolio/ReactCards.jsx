@@ -47,6 +47,7 @@ const ReactCards = ({ item }) => {
       <div className='flex justify-center items-center text-center' key={item.id} onClick={toggleModal}>
         <div className='bg-[#212224] rounded-xl basic-1/3 shadow-lg shadow-slate-50 text-white 
                                         hover:-translate-y-3 hover:cursor-pointer duration-150'>
+
           <img src={item.image[0]} alt='photoshop' className='rounded-lg p-5' />
           <div className='flex flex-col'>
             <div className='flex justify-center items-start px-7 pb-5'>
@@ -54,7 +55,7 @@ const ReactCards = ({ item }) => {
             </div>
             <div className='flex flex-col justify-between items-start text-start px-7 pb-5'>
               <h1 className='text-[#fe4066] capitalize text-[17px]'> {item.type} </h1>
-              <h1 className='text-white capitalize -mt-2'> {item.dateCreated} </h1>
+              <h1 className='text-white capitalize -mt-2'> {item.dateCreated.toDate().toDateString()} </h1>
             </div>
           </div>
         </div>

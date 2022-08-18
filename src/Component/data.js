@@ -85,6 +85,69 @@ import achivements01 from '../assets/achievements/achievements01.jpg'
 import achivements02 from '../assets/achievements/achievements02.jpg'
 
 
+export const projectsCodepen = [
+    {
+        id: 1,
+        name: 'Personal Portfolio',
+        tags: 'FreeCodeCamp',
+        dateCreated: 'August 15, 2021',
+        type: 'Codepen',
+        link: 'https://codepen.io/mlmorenogorospe09/pen/GRmLxwQ',
+        details: 'This is a FreeCodeCamp challenge that you must complete in order to receive your "Responsive Web Design" Certificate online.',
+        image: [codepen01, codepen0101]
+    },
+    {
+        id: 2,
+        name: 'PHP Technical Documentation',
+        tags: 'FreeCodeCamp',
+        dateCreated: 'August 13, 2021',
+        type: 'Codepen',
+        link: 'https://codepen.io/mlmorenogorospe09/pen/rNmRQqx',
+        details: 'This is a FreeCodeCamp challenge that you must complete in order to receive your "Responsive Web Design" Certificate online.',
+        image: [codepen02, codepen0201]
+    },
+    {
+        id: 3,
+        name: 'MLM Beats',
+        tags: 'FreeCodeCamp',
+        type: 'Codepen',
+        dateCreated: 'August 12, 2021',
+        link: 'https://codepen.io/mlmorenogorospe09/pen/abWMdpE?editors=1100',
+        details: 'This is a FreeCodeCamp challenge that you must complete in order to receive your "Responsive Web Design" Certificate online.',
+        image: [codepen03, codepen0301]
+    },
+    {
+        id: 4,
+        name: 'My Biography',
+        tags: 'FreeCodeCamp',
+        type: 'Codepen',
+        dateCreated: 'August 12, 2021',
+        link: 'https://codepen.io/mlmorenogorospe09/pen/rNmRNYx',
+        details: 'This is a FreeCodeCamp challenge that you must complete in order to receive your "Responsive Web Design" Certificate online.',
+        image: [codepen04]
+    },
+    {
+        id: 5,
+        name: 'MLM Survey Form',
+        tags: 'FreeCodeCamp',
+        type: 'Codepen',
+        dateCreated: 'August 12, 2021',
+        link: 'https://codepen.io/mlmorenogorospe09/pen/xxdBxLR',
+        details: 'This is a FreeCodeCamp challenge that you must complete in order to receive your "Responsive Web Design" Certificate online.',
+        image: [codepen05, codepen0501]
+    },
+    {
+        id: 6,
+        name: 'Employee Finder',
+        tags: 'Google Scripts w/ Spreadsheet',
+        type: 'Codepen',
+        dateCreated: 'June 27, 2021',
+        link: 'https://codepen.io/mlmorenogorospe09/full/RwVbMaj',
+        details: "Freelance work - Employee Finder is a static website that allows employees to search their monthly contributions and HR employees to avoid informing employees about their contributions.",
+        image: [codepen06]
+    }
+]
+
 export const projectsLogo = [
 
     {
@@ -273,6 +336,36 @@ export const projectsLogo = [
 
 ]
 
+export const projectsOther = [
+
+    {
+        id: 1,
+        name: 'Sample Beats',
+        type: 'Music',
+        description: 'FL Studio was used to create this beat. Aside from programming and designing, one of my passions and pleasures is creating music and beats. However, due to lack of musical instruments, I am currently creating my beats manually in FL Studio and Mixcraft. Hoping one day, I can build my own studio room and create more advance music.',
+        dateCreated: 'August 11, 2021',
+        link: '0RTwe1LvP9w',
+        image: other01
+    },
+    {
+        id: 2,
+        name: 'Vending Machine',
+        type: 'Java Programming',
+        description: "Eclipse Java was used to create the Soda Vending Machine. It is a vending machine's software version, it  receives coins via buttons, and validates when the user purchases with insufficient funds and when the user wants to refund money. In addition, money changes are separated from the penny, nickel, dime, and quarter that is displayed on the receipt",
+        dateCreated: 'July 14, 2021',
+        link: 'wydjuEzRFl0',
+        image: other02
+    },
+    {
+        id: 3,
+        name: 'Nutritional Value Calculator',
+        type: 'Java Programming',
+        description: 'Eclipse Java was used to develop the Nutritional Value Calculator. It computes the food you consume and displays the equivalent quantity of Calories, Protein, Fats, Vitamins, and Calcium.',
+        dateCreated: 'June 22, 2021',
+        link: 'U7R40V9PoDs',
+        image: other03
+    }
+]
 
 export const projectsReact = [
 
@@ -342,100 +435,6 @@ export const projectsReact = [
     },
 ]
 
-export const projectsOther = [
-
-    {
-        id: 1,
-        name: 'Sample Beats',
-        type: 'Music',
-        description: 'FL Studio was used to create this beat. Aside from programming and designing, one of my passions and pleasures is creating music and beats. However, due to lack of musical instruments, I am currently creating my beats manually in FL Studio and Mixcraft. Hoping one day, I can build my own studio room and create more advance music.',
-        dateCreated: 'August 11, 2021',
-        link: '0RTwe1LvP9w',
-        image: other01
-    },
-    {
-        id: 2,
-        name: 'Vending Machine',
-        type: 'Java Programming',
-        description: "Eclipse Java was used to create the Soda Vending Machine. It is a vending machine's software version, it  receives coins via buttons, and validates when the user purchases with insufficient funds and when the user wants to refund money. In addition, money changes are separated from the penny, nickel, dime, and quarter that is displayed on the receipt",
-        dateCreated: 'July 14, 2021',
-        link: 'wydjuEzRFl0',
-        image: other02
-    },
-    {
-        id: 3,
-        name: 'Nutritional Value Calculator',
-        type: 'Java Programming',
-        description: 'Eclipse Java was used to develop the Nutritional Value Calculator. It computes the food you consume and displays the equivalent quantity of Calories, Protein, Fats, Vitamins, and Calcium.',
-        dateCreated: 'June 22, 2021',
-        link: 'U7R40V9PoDs',
-        image: other03
-    }
-]
-
-export const projectsCodepen = [
-    {
-        id: 1,
-        name: 'Personal Portfolio',
-        tags: 'FreeCodeCamp',
-        dateCreated: 'August 15, 2021',
-        type: 'Codepen',
-        link: 'https://codepen.io/mlmorenogorospe09/pen/GRmLxwQ',
-        details: 'This is a FreeCodeCamp challenge that you must complete in order to receive your "Responsive Web Design" Certificate online.',
-        image: [codepen01, codepen0101]
-    },
-    {
-        id: 2,
-        name: 'PHP Technical Documentation',
-        tags: 'FreeCodeCamp',
-        dateCreated: 'August 13, 2021',
-        type: 'Codepen',
-        link: 'https://codepen.io/mlmorenogorospe09/pen/rNmRQqx',
-        details: 'This is a FreeCodeCamp challenge that you must complete in order to receive your "Responsive Web Design" Certificate online.',
-        image: [codepen02, codepen0201]
-    },
-    {
-        id: 3,
-        name: 'MLM Beats',
-        tags: 'FreeCodeCamp',
-        type: 'Codepen',
-        dateCreated: 'August 12, 2021',
-        link: 'https://codepen.io/mlmorenogorospe09/pen/abWMdpE?editors=1100',
-        details: 'This is a FreeCodeCamp challenge that you must complete in order to receive your "Responsive Web Design" Certificate online.',
-        image: [codepen03, codepen0301]
-    },
-    {
-        id: 4,
-        name: 'My Biography',
-        tags: 'FreeCodeCamp',
-        type: 'Codepen',
-        dateCreated: 'August 12, 2021',
-        link: 'https://codepen.io/mlmorenogorospe09/pen/rNmRNYx',
-        details: 'This is a FreeCodeCamp challenge that you must complete in order to receive your "Responsive Web Design" Certificate online.',
-        image: [codepen04]
-    },
-    {
-        id: 5,
-        name: 'MLM Survey Form',
-        tags: 'FreeCodeCamp',
-        type: 'Codepen',
-        dateCreated: 'August 12, 2021',
-        link: 'https://codepen.io/mlmorenogorospe09/pen/xxdBxLR',
-        details: 'This is a FreeCodeCamp challenge that you must complete in order to receive your "Responsive Web Design" Certificate online.',
-        image: [codepen05, codepen0501]
-    },
-    {
-        id: 6,
-        name: 'Employee Finder',
-        tags: 'Google Scripts w/ Spreadsheet',
-        type: 'Codepen',
-        dateCreated: 'June 27, 2021',
-        link: 'https://codepen.io/mlmorenogorospe09/full/RwVbMaj',
-        details: "Freelance work - Employee Finder is a static website that allows employees to search their monthly contributions and HR employees to avoid informing employees about their contributions.",
-        image: [codepen06]
-    }
-]
-
 
 export const achievements = [
     {
@@ -443,7 +442,7 @@ export const achievements = [
         icon: <BsAward className='hover:cursor-pointer' />,
         date: 'AUGUST 2022',
         title: 'National Certificate',
-        name: 'National Certificate II - Computer System Servicing (Currently Ongoing)',
+        name: 'National Certificate II Computer System Servicing - Credential ID of 22131202002465',
         subname: 'IETI College of Science and Technology, Marikina, Inc',
         image: '',
     },

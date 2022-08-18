@@ -1,20 +1,11 @@
 import React, { useState } from 'react'
 import ImageGallery from 'react-image-gallery';
-import Profile from '../../assets/profile.png'
 import { AiFillCloseCircle } from 'react-icons/ai'
 import Typewriter from 'typewriter-effect';
 
-import profile1 from '../../assets/personal/01.jpg'
-import profile2 from '../../assets/personal/02.jpg'
-import profile3 from '../../assets/personal/03.png'
-import profile4 from '../../assets/personal/04.png'
-import profile5 from '../../assets/personal/05.jpg'
-
 import { motion } from 'framer-motion'
-
 import './modal.css'
 
-import file from '../../assets/marklestermoreno.pdf'
 
 const Home = () => {
 
@@ -32,24 +23,24 @@ const Home = () => {
 
     const images = [
         {
-            original: profile1,
-            thumbnail: profile1,
+            original: 'https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/profile%2F01.jpg?alt=media&token=2b307540-cc96-43a6-b8e4-88d68af4a2b7',
+            thumbnail: 'https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/profile%2F01.jpg?alt=media&token=2b307540-cc96-43a6-b8e4-88d68af4a2b7',
         },
         {
-            original: profile2,
-            thumbnail: profile2,
+            original: 'https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/profile%2F02.jpg?alt=media&token=ad11619f-bb95-4a17-9194-f6c0001b666a',
+            thumbnail: 'https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/profile%2F02.jpg?alt=media&token=ad11619f-bb95-4a17-9194-f6c0001b666a',
         },
         {
-            original: profile3,
-            thumbnail: profile3,
+            original: 'https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/profile%2F03.png?alt=media&token=7f516a98-baf0-47fa-9578-a091ea28254d',
+            thumbnail: 'https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/profile%2F03.png?alt=media&token=7f516a98-baf0-47fa-9578-a091ea28254d',
         },
         {
-            original: profile4,
-            thumbnail: profile4,
+            original: 'https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/profile%2F04.png?alt=media&token=a4b0e98b-4f97-4a62-a98a-8e86de601f8b',
+            thumbnail: 'https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/profile%2F04.png?alt=media&token=a4b0e98b-4f97-4a62-a98a-8e86de601f8b',
         },
         {
-            original: profile5,
-            thumbnail: profile5,
+            original: 'https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/profile%2F05.jpg?alt=media&token=555bf4a1-5374-411e-8713-d43334da1eef',
+            thumbnail: 'https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/profile%2F05.jpg?alt=media&token=555bf4a1-5374-411e-8713-d43334da1eef',
         },
 
     ];
@@ -114,7 +105,7 @@ const Home = () => {
                     further while helping the company in creating the best web app and maintaining their computer system
 
                     </p>
-                    <a href={file} download="Mark Lester Moreno Curiculum Vitae"
+                    <a href='https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/marklestermoreno.pdf?alt=media&token=5e794807-c88a-4de4-870c-0b0bef9744bb' download="Mark Lester Moreno Curiculum Vitae"
                         className='bg-[#fe4066] flex justify-center text-white px-3 py-1  rounded-md 
                                         hover:bg-white hover:text-[#fe4066] hover:transition-color duration-300
                                         lg:text-lg lg:w-32 lg:mt-10
@@ -128,7 +119,7 @@ const Home = () => {
                 </motion.div>
                 <motion.div animate={{ x: 0 }} initial={{ x: 1000 }} transition={{ duration: 0.5 }}
                     className='flex justify-center text-start items-start w-1/2 xs:pl-10 xsm:pl-6 pt-4 pb-10'>
-                    <img src={Profile} alt='profile' onClick={toggleModal}
+                    <img src='https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/profile-02.png?alt=media&token=855c4773-19b7-4d59-8daf-876e827e7c86' alt='profile' onClick={toggleModal}
                         className='2xl:w-[450px] lg:w-96 md:w-72 sm:w-60 xs:w-44 xsm:w-32 xxsm:w-24 rounded-lg shadow-md hover:brightness-110 hover:cursor-pointer' />
                 </motion.div >
             </div>
@@ -142,7 +133,7 @@ const Home = () => {
 
                         <div className='mx-10 xs:ml-10 xsm:ml-6 xxsm:ml-4'>
                             <h1>
-                                <a href={file} download="Mark Lester Moreno Curiculum Vitae"
+                                <a href='https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/marklestermoreno.pdf?alt=media&token=5e794807-c88a-4de4-870c-0b0bef9744bb' download="Mark Lester Moreno Curiculum Vitae"
                                     className='text-[#fe4066] 
                                     lg:text-[35px]
                                     2xl:text-[45px]

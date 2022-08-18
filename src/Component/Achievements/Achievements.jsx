@@ -1,10 +1,32 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 
-import { achievements } from '../data';
+// import { achievements } from '../data';
 import AchievementsCards from './AchievementsCards';
 import { VerticalTimeline } from 'react-vertical-timeline-component';
 
+// Database
+import { db } from '../../firebase-config'
+import { collection, onSnapshot, orderBy, query } from 'firebase/firestore'
+
 const Achievements = () => {
+
+    const [achievements, setAchievements] = useState([])
+
+    const achievementsCollectionRef = collection(db, "achievements");
+
+    useEffect(() => {
+
+        const q = query(achievementsCollectionRef, orderBy("date", "desc"));
+        onSnapshot(q, achievementsCollectionRef, snapshot => {
+            setAchievements(snapshot.docs.map(doc => {
+            return {
+              id: doc.id,
+              ...doc.data()
+            }})
+          )
+        })
+    
+      }, [achievementsCollectionRef])
 
 
     return (

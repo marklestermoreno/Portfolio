@@ -1,34 +1,11 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-// Images
-import ReactLogo from '../../assets/react.png'
-import Tailwind from '../../assets/tailwind.png'
-import Antd from '../../assets/antd.svg'
-import Firebase from '../../assets/firebase.png'
-import MongoDB from '../../assets/mongodb.svg'
-import Sanity from '../../assets/sanity.png'
-import Photoshop from '../../assets/photoshop.png'
-import AE from '../../assets/ae.png'
-import BT from '../../assets/bootstrap.png'
-import SCSS from '../../assets/css.png'
-import HTML from '../../assets/html.png'
-import MySQL from '../../assets/mysql.png'
-import Filmora from '../../assets/filmora.png'
-import Mixcraft from '../../assets/mixcraft.png'
-import Audacity from '../../assets/audacity.png'
-import FLStudio from '../../assets/flstudio.png'
-import ID from '../../assets/id.png'
-import IC from '../../assets/ic.png'
-
-import SystemDesign from '../../assets/system-design.png'
-import PhotoEditing from '../../assets/photo-editing.png'
-import WebDev from '../../assets/webdev.png'
-import Music from '../../assets/music.png'
-import Comain from '../../assets/maintenance.png'
-import Program from '../../assets/program.png'
+// Database
+import { db } from '../../firebase-config'
+import { collection, onSnapshot, orderBy, query } from 'firebase/firestore'
 
 const Info = () => {
 
@@ -69,46 +46,24 @@ const Info = () => {
     ]
   };
 
-  const data =
-    [
-      {
-        id: 1,
-        icon: SystemDesign ,
-        title: 'System Design',
-        details: "Designed a number of systems, including the user interface for TRACKIT - Barangay Informatics and the Animal Welfare System (Furbae). Knowledgeable in editing and designing system designs using Figma, Adobe Photoshop, and Adobe XD. Proficient in selecting the most appropriate color schemes for a system design. ",
-      },
-      {
-        id: 2,
-        icon: WebDev ,
-        title: 'Web Development',
-        details: 'Proficient in developing modern Web Application using Modern Stack technologies such as React, Tailwind, Ant Design, MongoDB, Sanity Studio, Firebase and many more. Possess extensive knowledge in using HTML5, CSS and SCSS, Javascript to create a stunning and responsive modern web application'
-      },
-      {
-        id: 3,
-        icon: PhotoEditing ,
-        title: 'Media Editing',
-        details: 'Expertise in editing and manipulating images using Adobe Photoshop. Posses in-depth knowledge in editing and enhancing video using Adobe After Effects for Clip Effects, Wondershare Fimora for Text and Subtitle, Premiere Pro for compiling clips and videos and Adobe Media Encoder for smooth rendering of video'
-      },
-      {
-        id: 4,
-        icon: Music ,
-        title: 'Music Editing',
-        details: 'Experience in recording and composing music with FL Studio, Mix craft Pro, and Audacity. Employ editing, mixing and composition skills to create popular remixes. Have a comprehensive understanding of music melody creation utilizing guitar and keyboard piano midi. In addition, I edit voice over in presentations.',
-      },
-      {
-        id: 5,
-        icon: Comain ,
-        title: 'Computer Maintenance',
-        details: 'Posses in-depth knowledge in configuring Computer System, Computer Network and Computer Hardware. I have been installing computer system since 2018, from configuring BIOS setup to installating operating system, configuring permission and restrictions of different user in a single computer workplace',
-       
-      },
-      {
-        id: 6,
-        icon: Program ,
-        title: 'Computer Program',
-        details: 'Knowledgeable in Java and Python programming. Using Java Eclipse IDE, I have written programs in both CLI (Command Line Interface) and GUI (Graphics User Interface). Having a thorough understanding of Object Oriented Programming concepts such as Encapsulation, Polymorphism, Inheritance, and Abstraction.',
-      }
-    ]
+  const [data, setData] = useState([])
+
+  const dataCollectionRef = collection(db, "skills02");
+
+  useEffect(() => {
+
+    const q = query(dataCollectionRef, orderBy("id", "asc"));
+    onSnapshot(q, dataCollectionRef, snapshot => {
+      setData(snapshot.docs.map(doc => {
+        return {
+          id: doc.id,
+          ...doc.data()
+        }
+      }))
+    })
+
+  }, [dataCollectionRef])
+
 
   return (
     <>
@@ -119,7 +74,7 @@ const Info = () => {
             <Slider {...settings}>
               <div>
                 <h3 className='flex flex-col justify-center items-center text-center text-white'>
-                  <img src={ReactLogo} alt='react-icons' className='lg:w-20 md:w-16 sm:w-12 xxsm:w-10' />
+                  <img src='https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/skills%2Freact.png?alt=media&token=a8a60c98-64c8-4202-9ca8-700addc3e09a' alt='react-icons' className='lg:w-20 md:w-16 sm:w-12 xxsm:w-10' />
                   <h1 className='text-white pt-5 2xl:text-[30px] lg:text-[25px] md:text-[20px] xxsm:text-[15px] font-medium'> React JS</h1>
                   <h1 className='text-white items-center text-center pb-5 
                                 lg:text-[15px] lg:px-18
@@ -133,7 +88,7 @@ const Info = () => {
               </div>
               <div>
                 <h3 className='flex flex-col justify-center items-center text-center text-white'>
-                  <img src={Tailwind} alt='tailwind-icons' className='md:w-[70px] sm:w-14 xxsm:w-10' />
+                  <img src='https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/skills%2Ftailwind.png?alt=media&token=0f96f6f9-1e26-479b-8ebd-e0ead8685fc7' alt='tailwind-icons' className='md:w-[70px] sm:w-14 xxsm:w-10' />
                   <h1 className='text-white pt-3 2xl:text-[30px] lg:text-[25px] md:text-[20px] xxsm:text-[15px] font-medium'> Tailwind CSS</h1>
                   <h1 className='text-white items-center text-center pb-5 
                                   lg:text-[15px] lg:px-18
@@ -147,7 +102,7 @@ const Info = () => {
               </div>
               <div>
                 <h3 className='flex flex-col justify-center items-center text-center text-white'>
-                  <img src={Antd} alt='ant-icons' className='md:w-20 sm:w-14 xxsm:w-10' />
+                  <img src='https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/skills%2Fantd.svg?alt=media&token=8c8d65cd-78a4-4af0-9e9b-1bdae5e5b4ed' alt='ant-icons' className='md:w-20 sm:w-14 xxsm:w-10' />
                   <h1 className='text-white pt-3 2xl:text-[30px] lg:text-[25px] md:text-[20px] xxsm:text-[15px] font-medium'> Ant Design </h1>
                   <h1 className='text-white items-center text-center pb-5 
                                   lg:text-[15px] lg:px-18 
@@ -162,7 +117,7 @@ const Info = () => {
               </div>
               <div>
                 <h3 className='flex flex-col justify-center items-center text-center pt-2 text-white'>
-                  <img src={BT} alt='bootstrap-icons' className='lg:w-[100px] md:w-[70px] sm:w-[55px] xxsm:w-[40px]' />
+                  <img src='https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/skills%2Fbootstrap.png?alt=media&token=2a6e18bd-3264-4b89-844c-eb3491fb980b' alt='bootstrap-icons' className='lg:w-[100px] md:w-[70px] sm:w-[55px] xxsm:w-[40px]' />
                   <h1 className='text-white pt-3 2xl:text-[30px] lg:text-[25px] md:text-[20px] xxsm:text-[15px]  font-medium'> Bootstrap </h1>
                   <h1 className='text-white items-center text-center pb-5 
                                   lg:text-[15px] lg:px-18
@@ -178,7 +133,7 @@ const Info = () => {
               </div>
               <div>
                 <h3 className='flex flex-col justify-center items-center text-center text-white pt-1'>
-                  <img src={SCSS} alt='scss-icons' className='lg:w-[85px] md:w-[65px] sm:w-[55px]  xxsm:w-[40px]' />
+                  <img src='https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/skills%2Fcss.png?alt=media&token=6d2c2fef-eeae-4bc4-9379-5a62335e6ee0' alt='scss-icons' className='lg:w-[85px] md:w-[65px] sm:w-[55px]  xxsm:w-[40px]' />
                   <h1 className='text-white pt-3 2xl:text-[30px] lg:text-[25px] md:text-[20px] xxsm:text-[15px] font-medium'> SCSS </h1>
                   <h1 className='text-white items-center text-center pb-5 
                                   lg:text-[15px] lg:px-18
@@ -194,7 +149,7 @@ const Info = () => {
               </div>
               <div>
                 <h3 className='flex flex-col justify-center items-center text-center text-white'>
-                  <img src={HTML} alt='html-icons' className='lg:w-[85px] md:w-[65px] sm:w-[55px]  xxsm:w-[40px]' />
+                  <img src='https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/skills%2Fhtml.png?alt=media&token=0f58ad93-bd38-4dd7-83fb-c97bb33d3a6c' alt='html-icons' className='lg:w-[85px] md:w-[65px] sm:w-[55px]  xxsm:w-[40px]' />
                   <h1 className='text-white pt-3 2xl:text-[30px] lg:text-[25px] md:text-[20px] font-medium'> HTML 5 </h1>
                   <h1 className='text-white items-center text-center pb-5 
                           lg:text-[15px] lg:px-18
@@ -203,14 +158,14 @@ const Info = () => {
                           xxsm:text-[10px] xxsm:px-5
                           2xl:px-32 2xl:text-[20px]
                           sm:text-[10px] sm:px-5'
-                    >
+                  >
                     Uses HTML 5 to an advanced web app which has newer functionalities and supports all major browsers
                   </h1>
                 </h3>
               </div>
               <div>
                 <h3 className='flex flex-col justify-center items-center text-center text-white'>
-                  <img src={MySQL} alt='mysql-icons' className='lg:w-[85px] md:w-[65px] sm:w-[55px]  xxsm:w-[40px]' />
+                  <img src='https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/skills%2Fmysql.png?alt=media&token=6e1aa056-79d0-48f0-a2c5-a5181fe9c359' alt='mysql-icons' className='lg:w-[85px] md:w-[65px] sm:w-[55px]  xxsm:w-[40px]' />
                   <h1 className='text-white pt-3 2xl:text-[30px] lg:text-[25px] md:text-[20px] font-medium'> My SQL</h1>
                   <h1 className='text-white items-center text-center pb-5 
                                   lg:text-[15px] lg:px-18
@@ -226,7 +181,7 @@ const Info = () => {
               </div>
               <div>
                 <h3 className='flex flex-col justify-center items-center text-center text-white'>
-                  <img src={Firebase} alt='firebase-icons' className='lg:w-16 md:w-12 sm:w-10 xxsm:w-8' />
+                  <img src='https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/skills%2Ffirebase.png?alt=media&token=c5c0eae3-f8b7-4042-8a8a-68239e9e7849' alt='firebase-icons' className='lg:w-16 md:w-12 sm:w-10 xxsm:w-8' />
                   <h1 className='text-white pt-3 2xl:text-[30px] lg:text-[25px] md:text-[20px] font-medium'> Firebase  </h1>
                   <h1 className='text-white items-center text-center pb-5 
                                     lg:text-[15px] lg:px-18
@@ -241,7 +196,7 @@ const Info = () => {
               </div>
               <div>
                 <h3 className='flex flex-col justify-center items-center text-center text-white'>
-                  <img src={MongoDB} alt='mongodb-icons' className='lg:w-[85px] md:w-[65px] sm:w-[55px]  xxsm:w-[40px]' />
+                  <img src='https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/skills%2Fmongodb.svg?alt=media&token=ab61ca7d-6836-4297-a8ef-1354354cc9c7' alt='mongodb-icons' className='lg:w-[85px] md:w-[65px] sm:w-[55px]  xxsm:w-[40px]' />
                   <h1 className='text-white pt-3 2xl:text-[30px] lg:text-[25px] md:text-[20px] font-medium'> MongoDB  </h1>
                   <h1 className='text-white items-center text-center pb-5 
                                 lg:text-[15px] lg:px-18
@@ -256,7 +211,7 @@ const Info = () => {
               </div>
               <div>
                 <h3 className='flex flex-col justify-center items-center text-center text-white'>
-                  <img src={Sanity} alt='sanity-icons' className='lg:w-[85px] md:w-[65px] sm:w-[55px]  xxsm:w-[40px]' />
+                  <img src='https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/skills%2Fsanity.png?alt=media&token=67c7eadf-2460-4ea0-bdc9-66b2fb4e5463' alt='sanity-icons' className='lg:w-[85px] md:w-[65px] sm:w-[55px]  xxsm:w-[40px]' />
                   <h1 className='text-white pt-3 2xl:text-[30px] lg:text-[25px] md:text-[20px] font-medium'> Sanity Studio   </h1>
                   <h1 className='text-white items-center text-center pb-5 
                         lg:text-[15px] lg:px-18
@@ -271,7 +226,7 @@ const Info = () => {
               </div>
               <div>
                 <h3 className='flex flex-col justify-center items-center text-center text-white'>
-                  <img src={Photoshop} alt='ps-icons' className='lg:w-[85px] md:w-[65px] sm:w-[55px]  xxsm:w-[40px]' />
+                  <img src='https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/skills%2Fphotoshop.png?alt=media&token=15a411d2-a97a-4cd0-8b4c-7a5a7708a5a8' alt='ps-icons' className='lg:w-[85px] md:w-[65px] sm:w-[55px]  xxsm:w-[40px]' />
                   <h1 className='text-white pt-3 2xl:text-[30px] lg:text-[25px] md:text-[20px] font-medium'> Adobe Photoshop </h1>
                   <h1 className='text-white items-center text-center pb-5 
                      lg:text-[15px] lg:px-18
@@ -286,7 +241,7 @@ const Info = () => {
               </div>
               <div>
                 <h3 className='flex flex-col justify-center items-center text-center text-white'>
-                  <img src={AE} alt='ae-icons' className='lg:w-[85px] md:w-[65px] sm:w-[55px]  xxsm:w-[40px]' />
+                  <img src='https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/skills%2Fae.png?alt=media&token=b0bd32b4-b3c8-4f99-82ec-50888dff3cf0' alt='ae-icons' className='lg:w-[85px] md:w-[65px] sm:w-[55px]  xxsm:w-[40px]' />
                   <h1 className='text-white pt-3 2xl:text-[30px] lg:text-[25px] md:text-[20px] font-medium'> Adobe After Effects </h1>
                   <h1 className='text-white items-center text-center pb-5 
                     lg:text-[15px] lg:px-18
@@ -301,7 +256,7 @@ const Info = () => {
               </div>
               <div>
                 <h3 className='flex flex-col justify-center items-center text-center text-white'>
-                  <img src={ID} alt='id-icons' className='lg:w-[85px] md:w-[65px] sm:w-[55px]  xxsm:w-[40px]' />
+                  <img src='https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/skills%2Fid.png?alt=media&token=667b6790-1d03-4d0b-915a-7c7a613ccbfd' alt='id-icons' className='lg:w-[85px] md:w-[65px] sm:w-[55px]  xxsm:w-[40px]' />
                   <h1 className='text-white pt-3 2xl:text-[30px] lg:text-[25px] md:text-[20px] font-medium'> Adobe InDesign </h1>
                   <h1 className='text-white items-center text-center pb-5 
                           lg:text-[15px] lg:px-18
@@ -316,7 +271,7 @@ const Info = () => {
               </div>
               <div>
                 <h3 className='flex flex-col justify-center items-center text-center text-white'>
-                  <img src={IC} alt='ic-icons' className='lg:w-[85px] md:w-[65px] sm:w-[55px]  xxsm:w-[40px]' />
+                  <img src='https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/skills%2Fic.png?alt=media&token=6e1b7d98-7f9b-436f-8599-17d9497c28f5' alt='ic-icons' className='lg:w-[85px] md:w-[65px] sm:w-[55px]  xxsm:w-[40px]' />
                   <h1 className='text-white pt-3 2xl:text-[30px] lg:text-[25px] md:text-[20px] font-medium'> Adobe InCopy </h1>
                   <h1 className='text-white items-center text-center pb-5 
                         lg:text-[15px] lg:px-18
@@ -331,7 +286,7 @@ const Info = () => {
               </div>
               <div>
                 <h3 className='flex flex-col justify-center items-center text-center text-white'>
-                  <img src={Filmora} alt='filmora-icons' className='lg:w-[85px] md:w-[65px] sm:w-[55px]  xxsm:w-[40px]' />
+                  <img src='https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/skills%2Ffilmora.png?alt=media&token=88de8a58-029b-40b7-a263-9197943b00f0' alt='filmora-icons' className='lg:w-[85px] md:w-[65px] sm:w-[55px]  xxsm:w-[40px]' />
                   <h1 className='text-white pt-3 2xl:text-[30px] lg:text-[25px] md:text-[20px] font-medium'> Wondershare Filmora X</h1>
                   <h1 className='text-white items-center text-center pb-5 
                         lg:text-[15px] lg:px-18
@@ -346,7 +301,7 @@ const Info = () => {
               </div>
               <div>
                 <h3 className='flex flex-col justify-center items-center text-center text-white'>
-                  <img src={Mixcraft} alt='mixcraft-icons' className='lg:w-[85px] md:w-[65px] sm:w-[55px]  xxsm:w-[40px]' />
+                  <img src='https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/skills%2Fmixcraft.png?alt=media&token=486c96ad-04d0-4324-b2a5-8dfee1948fb6' alt='mixcraft-icons' className='lg:w-[85px] md:w-[65px] sm:w-[55px]  xxsm:w-[40px]' />
                   <h1 className='text-white pt-3 2xl:text-[30px] lg:text-[25px] md:text-[20px] font-medium'> Mixcraft Pro 10 </h1>
                   <h1 className='text-white items-center text-center pb-5 
                             lg:text-[15px] lg:px-20
@@ -361,7 +316,7 @@ const Info = () => {
               </div>
               <div>
                 <h3 className='flex flex-col justify-center items-center text-center text-white'>
-                  <img src={Audacity} alt='audacity-icons' className='lg:w-[85px] md:w-[65px] sm:w-[55px]  xxsm:w-[40px]' />
+                  <img src='https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/skills%2Faudacity.png?alt=media&token=97532b63-d940-47b8-9f3d-059e7e13ec11' alt='audacity-icons' className='lg:w-[85px] md:w-[65px] sm:w-[55px]  xxsm:w-[40px]' />
                   <h1 className='text-white pt-3 2xl:text-[30px] lg:text-[25px] md:text-[20px] font-medium'> Audacity </h1>
                   <h1 className='text-white items-center text-center pb-5 
                           lg:text-[15px] lg:px-20
@@ -376,7 +331,7 @@ const Info = () => {
               </div>
               <div>
                 <h3 className='flex flex-col justify-center items-center text-center text-white'>
-                  <img src={FLStudio} alt='flstudio-icons' className='lg:w-[85px] md:w-[65px] sm:w-[55px]  xxsm:w-[40px]' />
+                  <img src='https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/skills%2Fflstudio.png?alt=media&token=48ebf889-db00-40e2-a61c-f4a219297d5e' alt='flstudio-icons' className='lg:w-[85px] md:w-[65px] sm:w-[55px]  xxsm:w-[40px]' />
                   <h1 className='text-white pt-3 2xl:text-[30px] lg:text-[25px] md:text-[20px] font-medium'> FL Studio </h1>
                   <h1 className='text-white items-center text-center pb-5 
                           lg:text-[15px] lg:px-20
@@ -394,24 +349,24 @@ const Info = () => {
         </div>
         <h1 className=' text-white lg:text-[30px] md:text-[25px] sm:text-[20px]'> What I Do </h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-3 mx-auto items-center text-center w-full">
-            {
-            data.map((item, i) =>(
+          {
+            data.map((item, i) => (
               <>
                 <div className='bg-[#212224] flex flex-col justify-center items-center text-center p-3 mx-3 my-7 xxsm:p-1 
-                            rounded-lg shadow-white shadow-md hover:cursor-pointer duration-200 hover:bg-[#fe4066] hover:-translate-y-6' 
-                key={i}>
-                  <img src={item.icon} alt='icon' className='pt-5 w-16'/>
+                            rounded-lg shadow-white shadow-md hover:cursor-pointer duration-200 hover:bg-[#fe4066] hover:-translate-y-6'
+                  key={i}>
+                  <img src={item.icon} alt='icon' className='pt-5 w-16' />
                   <h1 className='text-white 2xl:text-[15px] lg:text-[20px] xxsm:text-[15px] font-semibold px-10 pt-5'> {item.title} </h1>
                   <h1 className='text-white 
                                   xxsm:px-10 2xl:px-5 lg:text-[15px] md:text-[12px] xxsm:text-[8px] pb-5
-                                  '> 
-                              {item.details}
-                          </h1>
+                                  '>
+                    {item.details}
+                  </h1>
                 </div>
               </>
             ))
-            
-            }
+
+          }
         </div>
       </div>
     </>

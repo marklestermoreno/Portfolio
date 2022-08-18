@@ -47,7 +47,7 @@ const CodepenCards = ({ item }) => {
                         </div>
                         <div className='flex flex-col justify-between items-start text-start px-7 pb-5'>
                             <h1 className='text-[#fe4066] capitalize text-[17px]'> {item.type} </h1>
-                            <h1 className='text-white capitalize -mt-2'> {item.dateCreated} </h1>
+                            <h1 className='text-white capitalize -mt-2'> {item.dateCreated.toDate().toDateString()}  </h1>
                         </div>
                     </div>
                 </div>

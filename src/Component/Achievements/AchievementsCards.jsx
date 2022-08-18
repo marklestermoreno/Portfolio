@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import ImageGallery from 'react-image-gallery';
+import { BsAward, BsLaptop } from 'react-icons/bs';
+import { FaCertificate } from 'react-icons/fa'
 import { Tooltip } from 'antd';
 import { VerticalTimelineElement } from 'react-vertical-timeline-component';
 
@@ -44,9 +46,22 @@ const AchievementsCards = ({ user }) => {
             className="vertical-timeline-element--work py-10"
             contentStyle={{ background: '#212224', color: 'white' }}
             contentArrowStyle={{ borderRight: '7px solid  white' }}
-            date={<p className='text-white'> {user.date}  </p>}
+            date={<p className='text-white'> {user.date.toDate().toDateString()}  </p>}
             iconStyle={{ background: '#fe4066', color: 'white' }}
-            icon={<Tooltip placement="topLeft" title={user.title} color='#fe4066' mouseEnterDelay={-0.5} mouseLeaveDelay={-0.5}> {user.icon}   </Tooltip>}
+            icon={<Tooltip placement="topLeft" title={user.title} color='#fe4066' mouseEnterDelay={-0.5} mouseLeaveDelay={-0.5}>
+                {
+                    user.icon === 'award' ?
+                        <BsAward className='hover:cursor-pointer' />
+                        :
+                        user.icon === 'laptop' ?
+                            <BsLaptop className='hover:cursor-pointer' />
+                            :
+                            user.icon === 'certificate' ?
+                            <FaCertificate className='hover:cursor-pointer' />
+                            :
+                            ""
+                }
+            </Tooltip>}
         >
 
             <div onClick={user.image === '' ? '' : toggleModal} key={user.id}>

@@ -1,13 +1,97 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
-import { projectsLogo, projectsReact, projectsOther, projectsCodepen } from '../data'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import PhotoshopCards from './PhotoshopCards';
 import ReactCards from './ReactCards';
 import OtherCards from './OtherCards';
 import CodepenCards from './CodepenCards';
 
+// Database
+import { db } from '../../firebase-config'
+import { collection, onSnapshot, orderBy, query } from 'firebase/firestore'
+
 const Portfolio = () => {
+
+    // Project React
+
+
+    const [projectsReact, setProjectReact] = useState([])
+    const projectReactCollectionRef = collection(db, "projectReact");
+
+    useEffect(() => {
+
+        const q = query(projectReactCollectionRef, orderBy("dateCreated", "desc"));
+        onSnapshot(q, projectReactCollectionRef, snapshot => {
+            setProjectReact(snapshot.docs.map(doc => {
+                return {
+                    id: doc.id,
+                    ...doc.data()
+                }
+            }))
+        })
+
+    }, [projectReactCollectionRef])
+
+    // Project Other
+
+    const [projectsOther, setProjectOther] = useState([])
+    const projectOtherCollectionRef = collection(db, "projectOther");
+
+    useEffect(() => {
+
+        const q = query(projectOtherCollectionRef, orderBy("dateCreated", "desc"));
+        onSnapshot(q, projectOtherCollectionRef, snapshot => {
+            setProjectOther(snapshot.docs.map(doc => {
+                return {
+                    id: doc.id,
+                    ...doc.data()
+                }
+            })
+            )
+        })
+
+    }, [projectOtherCollectionRef])
+
+    // Project Logo
+
+    const [projectsLogo, setProjectsLogo] = useState([])
+    const projectsLogoCollectionRef = collection(db, "projectLogo");
+
+    useEffect(() => {
+
+        const q = query(projectsLogoCollectionRef, orderBy("dateCreated", "desc"));
+        onSnapshot(q, projectsLogoCollectionRef, snapshot => {
+            setProjectsLogo(snapshot.docs.map(doc => {
+                return {
+                    id: doc.id,
+                    ...doc.data()
+                }
+            })
+            )
+        })
+
+    }, [projectsLogoCollectionRef])
+
+    // Project Codepen
+
+    const [projectsCodepen, setProjectsCodepen] = useState([])
+    const projectCodepenCollectionRef = collection(db, "projectCodepen");
+
+    useEffect(() => {
+
+        const q = query(projectCodepenCollectionRef, orderBy("dateCreated", "desc"));
+        onSnapshot(q, projectCodepenCollectionRef, snapshot => {
+            setProjectsCodepen(snapshot.docs.map(doc => {
+                return {
+                    id: doc.id,
+                    ...doc.data()
+                }
+            })
+            )
+        })
+
+    }, [projectCodepenCollectionRef])
+
 
     // Pagination Photoshop
 
@@ -351,6 +435,7 @@ const Portfolio = () => {
                     </TabList>
 
 
+
                     <TabPanel>
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-3 gap-10 w-full mx-auto pt-10 px-10">
                             {
@@ -395,6 +480,7 @@ const Portfolio = () => {
                         </div>
 
                     </TabPanel>
+
 
                     <TabPanel>
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-3 gap-10 w-full mx-auto pt-10 px-10">

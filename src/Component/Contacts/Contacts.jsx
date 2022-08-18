@@ -2,8 +2,6 @@ import React, { useState, useRef } from 'react'
 import { useNavigate } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 
-import Profile from '../../assets/header-profile.png'
-import Contact from '../../assets/contact-profile.png'
 import { FaSadTear } from 'react-icons/fa'
 import { RiStarSmileFill } from 'react-icons/ri'
 
@@ -75,7 +73,7 @@ const Contacts = () => {
                     sm:px-5 px-2 
                     bg-[#212224] text-white'>
                     <div className='flex justify-center items-center text-center'>
-                        <img src={Profile} alt="profile-header" className='w-14 h-12 hover:brightness-110' />
+                        <img src='https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/header-profile.png?alt=media&token=c8763ec5-7534-478b-9787-2711bc50ea7a' alt="profile-header" className='w-14 h-12 hover:brightness-110' />
                         <Link to='/'
                             className='px-3 hover:cursor-pointer text-white hover:text-white
                          sm:text-[13px] xsm:text-[10px] md:text-[15px] lg:text-base xxsm:text-[8px]
@@ -124,7 +122,7 @@ const Contacts = () => {
                         className='xxsm:hidden lg:flex h-[640px] 2xl:w-[650px] w-[500px] shadow-sm shadow-white bg-[#212224] mx-auto'>
                         <div className='flex flex-col m-auto p-auto'>
                             <div className='flex justify-center text-start items-start'>
-                                <img src={Contact} alt='contact-profile'
+                                <img src='https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/contact-profile.png?alt=media&token=75d70099-6192-4907-8255-a5b7a0d9c51c' alt='contact-profile'
                                     className=' w-[390px] p-5 rounded-lg hover:brightness-110 hover:cursor-cell' />
                             </div>
                             <h1 className='text-white text-[25px] tracking-wider'> Mark Lester P. Moreno </h1>
