@@ -407,7 +407,7 @@ const Portfolio = () => {
                         xs:py-4 xs:px-6 xs:text-base
                         xsm:py-3 xsm:px-5 xsm:text-[10px]
                         xxsm:py-2 xxsm:px-4 xxsm:text-[8px]
-                        '> React App </Tab>
+                        '> Web App </Tab>
                         <Tab className='selected:bg-[#fe4066] hover:bg-[#fe4066] bg-[#212224] border border-white cursor-pointer text-white focus:border-none 
                         lg:py-4 lg:px-16 lg:text-2xl
                         md:py-4 md:px-12 md:text-xl 
