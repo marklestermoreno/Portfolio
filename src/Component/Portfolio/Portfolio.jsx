@@ -9,6 +9,7 @@ import CodepenCards from './CodepenCards';
 // Database
 import { db } from '../../firebase-config'
 import { collection, onSnapshot, orderBy, query } from 'firebase/firestore'
+import { ScaleLoader } from 'react-spinners';
 
 const Portfolio = () => {
 
@@ -434,17 +435,22 @@ const Portfolio = () => {
                         '>Codepen</Tab>
                     </TabList>
 
-
-
                     <TabPanel>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-3 gap-10 w-full mx-auto pt-10 px-10">
-                            {
-                                currentItemsReact.map((item, id) => {
-                                    return <ReactCards key={id} item={item} />
-                                })
+                        {currentItemsReact.length !== 0 ?
+                            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-3 gap-10 w-full mx-auto pt-10 px-10">
+                                {
+                                    currentItemsReact.map((item, id) => {
+                                        return <ReactCards key={id} item={item} />
+                                    })
 
-                            }
-                        </div>
+                                }
+                            </div>
+                            :
+                            <ScaleLoader className='py-10 flex justify-center text-center items-center'
+                                height={100}
+                                width={20}
+                                color='#fe4066' />
+                        }
 
                         <div className='flex items-center text-center justify-center ml-3 py-10'>
                             <div className=''>
@@ -483,46 +489,55 @@ const Portfolio = () => {
 
 
                     <TabPanel>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-3 gap-10 w-full mx-auto pt-10 px-10">
-                            {
-                                currentItems.map((item, id) => {
-                                    return <PhotoshopCards key={id} item={item} />
-                                })
+                        {currentItems.length !== 0 ?
+                            <>
+                                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-3 gap-10 w-full mx-auto pt-10 px-10">
+                                    {
+                                        currentItems.map((item, id) => {
+                                            return <PhotoshopCards key={id} item={item} />
+                                        })
 
-                            }
-                        </div>
-                        <div className='flex items-center text-center justify-center ml-3 py-10'>
-                            <div className=''>
-                                <button
-                                    className={!disabledPrev ?
-                                        'bg-[#212224] text-white sm:text-base xs:text-[10px] xxsm:text-[7px] sm:rounded-lg xxsm:rounded-sm sm:px-6 sm:py-3 xxsm:px-2 xxsm:py-1 hover:bg-[#fe4066] duration-150 cursor-pointer'
-                                        :
-                                        'bg-gray-400 text-white sm:text-base xs:text-[10px] xxsm:text-[7px] sm:rounded-lg xxsm:rounded-sm sm:px-6 sm:py-3 xxsm:px-2 xxsm:py-1 cursor-not-allowed'
                                     }
-                                    onClick={handlePrevbtn}
-                                    disabled={disabledPrev}
-                                >
-                                    Prev
-                                </button>
-                            </div>
-                            <div className='px-3 py-3'>  {pageDecrementBtn} </div>
-                            <div className='px-3 py-3'>  {renderPageNumbers} </div>
-                            <div className='px-3 py-3'>  {pageIncrementBtn} </div>
-                            <div>
-                                <button
-                                    className={
-                                        !disabledNext ?
-                                            'bg-[#212224] text-white sm:text-base xs:text-[10px] xxsm:text-[7px] sm:rounded-lg xxsm:rounded-sm sm:px-6 sm:py-3 xxsm:px-2 xxsm:py-1 hover:bg-[#fe4066] duration-150 cursor-pointer'
-                                            :
-                                            'bg-gray-400 text-white sm:text-base xs:text-[10px] xxsm:text-[7px] sm:rounded-lg xxsm:rounded-sm sm:px-6 sm:py-3 xxsm:px-2 xxsm:py-1 cursor-not-allowed'
-                                    }
-                                    onClick={handleNextbtn}
-                                    disabled={disabledNext}
-                                >
-                                    Next
-                                </button>
-                            </div>
-                        </div>
+                                </div>
+                                <div className='flex items-center text-center justify-center ml-3 py-10'>
+                                    <div className=''>
+                                        <button
+                                            className={!disabledPrev ?
+                                                'bg-[#212224] text-white sm:text-base xs:text-[10px] xxsm:text-[7px] sm:rounded-lg xxsm:rounded-sm sm:px-6 sm:py-3 xxsm:px-2 xxsm:py-1 hover:bg-[#fe4066] duration-150 cursor-pointer'
+                                                :
+                                                'bg-gray-400 text-white sm:text-base xs:text-[10px] xxsm:text-[7px] sm:rounded-lg xxsm:rounded-sm sm:px-6 sm:py-3 xxsm:px-2 xxsm:py-1 cursor-not-allowed'
+                                            }
+                                            onClick={handlePrevbtn}
+                                            disabled={disabledPrev}
+                                        >
+                                            Prev
+                                        </button>
+                                    </div>
+                                    <div className='px-3 py-3'>  {pageDecrementBtn} </div>
+                                    <div className='px-3 py-3'>  {renderPageNumbers} </div>
+                                    <div className='px-3 py-3'>  {pageIncrementBtn} </div>
+                                    <div>
+                                        <button
+                                            className={
+                                                !disabledNext ?
+                                                    'bg-[#212224] text-white sm:text-base xs:text-[10px] xxsm:text-[7px] sm:rounded-lg xxsm:rounded-sm sm:px-6 sm:py-3 xxsm:px-2 xxsm:py-1 hover:bg-[#fe4066] duration-150 cursor-pointer'
+                                                    :
+                                                    'bg-gray-400 text-white sm:text-base xs:text-[10px] xxsm:text-[7px] sm:rounded-lg xxsm:rounded-sm sm:px-6 sm:py-3 xxsm:px-2 xxsm:py-1 cursor-not-allowed'
+                                            }
+                                            onClick={handleNextbtn}
+                                            disabled={disabledNext}
+                                        >
+                                            Next
+                                        </button>
+                                    </div>
+                                </div>
+                            </>
+                            :
+                            <ScaleLoader className='py-10 flex justify-center text-center items-center'
+                                height={100}
+                                width={20}
+                                color='#fe4066' />
+                        }
                     </TabPanel>
 
                     <TabPanel>

@@ -76,6 +76,21 @@ const OtherCards = ({ item }) => {
                                         xsm:text-[7px] xsm:-mt-2
                                         xxsm:text-[5px] xxsm:-mt-1
                             '> {item.tags} </p>
+                            { item.github !== "" ?
+                            <> 
+                         <p className='lg:text-[15px]
+                                         md:text-[13px]
+                                         2xl:text-[20px]
+                                         sm:text-[11px]
+                                         xs:text-[9px]
+                                         xsm:text-[6px] 
+                                         xxsm:text-[4px]
+                            font-semibold'> Github Link:
+                <a href={item.githublink} className='text-[#fe4066] font-thin'> {item.github}  </a> </p>
+                </>
+                            :
+                            ""
+                            }
                             <p className='lg:text-[15px] 
                                          md:text-[13px]
                                          2xl:text-[20px]
@@ -84,7 +99,7 @@ const OtherCards = ({ item }) => {
                                          xsm:text-[7px] 
                                          xxsm:text-[5px]
                             font-thin'> {item.description} </p>
-
+                       
                             <div className='modal-text right'>
                                 <button className='close-modal btn_shadow xxsm:hidden xs:flex' onClick={toggleModal}>
                                     <AiFillCloseCircle size={30} />
