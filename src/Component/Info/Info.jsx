@@ -82,7 +82,21 @@ const Info = () => {
                                 xs:text-[8px] xs:px-5
                                 xxsm:text-[10px] xxsm:px-5 2xl:px-32 2xl:text-[20px]
                                 sm:text-[10px] sm:px-5'>
-                    Uses React JS to develop modern web app technologies. React JS associated with Node JS and Express JS
+                    <b> Skill Level: Proficient -  </b> Uses React JS to develop modern web app technologies. React JS associated with Node JS and Express JS
+                  </h1>
+                </h3>
+              </div>
+              <div>
+                <h3 className='flex flex-col justify-center items-center text-center text-white'>
+                  <img src='https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/skills%2Fangular.png?alt=media&token=b95a7c6f-c5cf-47fa-a6e6-4bc6d31720fe' alt='angular-icons' className='lg:w-[75px] md:w-16 sm:w-12 xxsm:w-10' />
+                  <h1 className='text-white pt-5 2xl:text-[30px] lg:text-[25px] md:text-[20px] xxsm:text-[15px] font-medium'> Angular JS</h1>
+                  <h1 className='text-white items-center text-center pb-5 
+                                lg:text-[15px] lg:px-18 
+                                md:text-[12px] md:px-10 
+                                xs:text-[8px] xs:px-5
+                                xxsm:text-[10px] xxsm:px-5 2xl:px-32 2xl:text-[20px]
+                                sm:text-[10px] sm:px-5'>
+                    <b> Skill Level: Advanced Beginner - </b> Uses Angular JS to develop modern enterprise-grade web app technologies.
                   </h1>
                 </h3>
               </div>
@@ -96,13 +110,13 @@ const Info = () => {
                                   xs:text-[8px] xs:px-5 
                                   xxsm:text-[10px] xxsm:px-5 2xl:px-32 2xl:text-[20px]
                                   sm:text-[10px] sm:px-5'>
-                    Uses Tailwind CSS to build custom user interface more efficient, organized and enables to layout freely
+                    <b> Skill Level: Expert - </b> Uses Tailwind CSS to build custom user interface more efficient, organized and enables to layout freely
                   </h1>
                 </h3>
               </div>
               <div>
                 <h3 className='flex flex-col justify-center items-center text-center text-white'>
-                  <img src='https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/skills%2Fantd.svg?alt=media&token=8c8d65cd-78a4-4af0-9e9b-1bdae5e5b4ed' alt='ant-icons' className='md:w-20 sm:w-14 xxsm:w-10' />
+                  <img src='https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/skills%2Fantd.svg?alt=media&token=8c8d65cd-78a4-4af0-9e9b-1bdae5e5b4ed' alt='ant-icons' className='lg:w-[70px] md:w-[60px] sm:w-14 xxsm:w-10' />
                   <h1 className='text-white pt-3 2xl:text-[30px] lg:text-[25px] md:text-[20px] xxsm:text-[15px] font-medium'> Ant Design </h1>
                   <h1 className='text-white items-center text-center pb-5 
                                   lg:text-[15px] lg:px-18 
@@ -111,13 +125,28 @@ const Info = () => {
                                   xs:text-[8px] xs:px-5 
                                   xxsm:text-[10px] xxsm:px-5 2xl:px-32 2xl:text-[20px]
                                   '>
-                    Uses Ant Design to create set of high quality React Components and design system for enterprise-level products.
+                    <b> Skill Level: Expert - </b> Uses Ant Design to create set of high quality React Components and design system for enterprise-level products.
+                  </h1>
+                </h3>
+              </div>
+              <div>
+                <h3 className='flex flex-col justify-center items-center text-center text-white'>
+                  <img src='https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/skills%2Fmaterialui.png?alt=media&token=338068ab-50be-4ccc-abc0-92ffa1442dfc' alt='materialui-icons' className='lg:w-[70px] md:w-[65px] sm:w-[55px]  xxsm:w-[40px]' />
+                  <h1 className='text-white pt-3 2xl:text-[30px] lg:text-[25px] md:text-[20px] xxsm:text-[15px] font-medium'> Material UI </h1>
+                  <h1 className='text-white items-center text-center pb-5 
+                                  lg:text-[15px] lg:px-18 
+                                  md:text-[12px] md:px-10 
+                                  sm:text-[10px] sm:px-5
+                                  xs:text-[8px] xs:px-5 
+                                  xxsm:text-[10px] xxsm:px-5 2xl:px-32 2xl:text-[20px]
+                                  '>
+                    <b> Skill Level: Proficient - </b> Uses Material UI to create set of high quality comprehensive suite of UI Tools, alternative for Ant Design.
                   </h1>
                 </h3>
               </div>
               <div>
                 <h3 className='flex flex-col justify-center items-center text-center pt-2 text-white'>
-                  <img src='https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/skills%2Fbootstrap.png?alt=media&token=2a6e18bd-3264-4b89-844c-eb3491fb980b' alt='bootstrap-icons' className='lg:w-[100px] md:w-[70px] sm:w-[55px] xxsm:w-[40px]' />
+                  <img src='https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/skills%2Fbootstrap.png?alt=media&token=2a6e18bd-3264-4b89-844c-eb3491fb980b' alt='bootstrap-icons' className='lg:w-[85px] md:w-[70px] sm:w-[55px] xxsm:w-[40px]' />
                   <h1 className='text-white pt-3 2xl:text-[30px] lg:text-[25px] md:text-[20px] xxsm:text-[15px]  font-medium'> Bootstrap </h1>
                   <h1 className='text-white items-center text-center pb-5 
                                   lg:text-[15px] lg:px-18
@@ -127,7 +156,7 @@ const Info = () => {
                                   xxsm:text-[10px] xxsm:px-5 
                                   2xl:px-32 2xl:text-[20px]
                                   '>
-                    Uses Bootstrap for a modular and customizable architecture. It contains JS-based design template
+                    <b> Skill Level: Proficient - </b> Uses Bootstrap for a modular and customizable architecture. It contains JS-based design template
                   </h1>
                 </h3>
               </div>
@@ -143,7 +172,7 @@ const Info = () => {
                                   xxsm:text-[10px] xxsm:px-5
                                   2xl:px-32 2xl:text-[20px]
                                   '>
-                    Uses SCSS for an advanced css for styling web design. SCSS is more expressive than the CSS
+                     <b> Skill Level: Proficient - </b> Uses SCSS for an advanced css for styling web design. SCSS is more expressive than the CSS
                   </h1>
                 </h3>
               </div>
@@ -159,7 +188,7 @@ const Info = () => {
                           2xl:px-32 2xl:text-[20px]
                           sm:text-[10px] sm:px-5'
                   >
-                    Uses HTML 5 to an advanced web app which has newer functionalities and supports all major browsers
+                     <b> Skill Level: Expert - </b>Uses HTML 5 to an advanced web app which has newer functionalities and supports all major browsers
                   </h1>
                 </h3>
               </div>
@@ -175,7 +204,7 @@ const Info = () => {
                                   xxsm:text-[10px] xxsm:px-5
                                   sm:text-[10px] sm:px-5'
                   >
-                    Uses My SQL for relational management database system, a good replacement for MongoDB
+                     <b> Skill Level: Competent - </b> Uses My SQL for relational management database system, a good replacement for MongoDB
                   </h1>
                 </h3>
               </div>
@@ -190,7 +219,7 @@ const Info = () => {
                                     2xl:px-32 2xl:text-[20px]
                                     xxsm:text-[10px] xxsm:px-5
                                     sm:text-[10px] sm:px-5'>
-                    Uses Firebase for authentication and file storage. A good replacement to MongoDB for small user database
+                     <b> Skill Level: Expert - </b> Uses Firebase for authentication and file storage. A good replacement to MongoDB for small user database
                   </h1>
                 </h3>
               </div>
@@ -205,7 +234,7 @@ const Info = () => {
                                 2xl:px-32 2xl:text-[20px]
                                 xxsm:text-[10px] xxsm:px-5
                                 sm:text-[10px] sm:px-5'>
-                    Uses MongoDB for large scale data, it has flexible schema makes it easier to store data and to work with it.
+                     <b> Skill Level: Proficient - </b> Uses MongoDB for large scale data, it has flexible schema makes it easier to store data and to work with it.
                   </h1>
                 </h3>
               </div>
@@ -220,7 +249,7 @@ const Info = () => {
                         2xl:px-32 2xl:text-[20px]
                         xxsm:text-[10px] xxsm:px-5
                         sm:text-[10px] sm:px-5'>
-                    Uses Sanity Studio as management system to delivers high-quality content to digital devices and products.
+                     <b> Skill Level: Proficient - </b> Uses Sanity Studio as management system to delivers high-quality content to digital devices and products.
                   </h1>
                 </h3>
               </div>
@@ -235,7 +264,7 @@ const Info = () => {
                      2xl:px-32 2xl:text-[20px]
                      xxsm:text-[10px] xxsm:px-5
                      sm:text-[10px] sm:px-5'>
-                    Uses Photoshop to create logos, icons, system designs and for photo enhancement and manipulation
+                     <b> Skill Level: Expert - </b> Uses Photoshop to create logos, icons, system designs and for photo enhancement and manipulation
                   </h1>
                 </h3>
               </div>
@@ -250,7 +279,7 @@ const Info = () => {
                     2xl:px-32 2xl:text-[20px]
                     xxsm:text-[10px] xxsm:px-5
                     sm:text-[10px] sm:px-5'>
-                    Uses After Effects for complex digital visual effects, motion graphics, and compositing application.
+                     <b> Skill Level: Proficient - </b> Uses After Effects for complex digital visual effects, motion graphics, and compositing application.
                   </h1>
                 </h3>
               </div>
@@ -265,7 +294,7 @@ const Info = () => {
                           2xl:px-32 2xl:text-[20px]
                           xxsm:text-[10px] xxsm:px-5
                           sm:text-[10px] sm:px-5'>
-                    Uses InDesign as an alternative for Microsoft Publisher to create stunning flyers, brochures, handous and newsletter
+                     <b> Skill Level: Proficient - </b> Uses InDesign as an alternative for Microsoft Publisher to create stunning flyers, brochures, handous and newsletter
                   </h1>
                 </h3>
               </div>
@@ -280,7 +309,7 @@ const Info = () => {
                         2xl:px-32 2xl:text-[20px]
                         xxsm:text-[10px] xxsm:px-5
                         sm:text-[10px] sm:px-5'>
-                    Uses InCopy as an alternative for Microsoft Word to create an advanced word processing
+                     <b> Skill Level: Proficient - </b> Uses InCopy as an alternative for Microsoft Word to create an advanced word processing
                   </h1>
                 </h3>
               </div>
@@ -295,7 +324,7 @@ const Info = () => {
                         xs:text-[8px] xs:px-5 
                         xxsm:text-[10px] xxsm:px-5
                         sm:text-[10px] sm:px-5'>
-                    Uses Wondershare Filmora for simple editing that do not requires a lot of complex visual effects.
+                    <b> Skill Level: Expert - </b>Uses Wondershare Filmora for simple editing that do not requires a lot of complex visual effects.
                   </h1>
                 </h3>
               </div>
@@ -310,7 +339,7 @@ const Info = () => {
                             2xl:px-32 2xl:text-[20px]
                             xxsm:text-[10px] xxsm:px-5
                             sm:text-[10px] sm:px-5'>
-                    Uses Mixcraft for mixing complex audio tracks into single track as well as applying music effects
+                    <b> Skill Level: Proficient - </b> Uses Mixcraft for mixing complex audio tracks into single track as well as applying music effects
                   </h1>
                 </h3>
               </div>
@@ -325,13 +354,13 @@ const Info = () => {
                           xs:text-[8px] xs:px-5 
                           xxsm:text-[10px] xxsm:px-5
                           sm:text-[10px] sm:px-5'>
-                    Uses Audacity for editing recording as well as applying complex music effects to recording
+                    <b> Skill Level: Expert - </b> Uses Audacity for editing recording as well as applying complex music effects to recording
                   </h1>
                 </h3>
               </div>
               <div>
                 <h3 className='flex flex-col justify-center items-center text-center text-white'>
-                  <img src='https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/skills%2Fflstudio.png?alt=media&token=48ebf889-db00-40e2-a61c-f4a219297d5e' alt='flstudio-icons' className='lg:w-[85px] md:w-[65px] sm:w-[55px]  xxsm:w-[40px]' />
+                  <img src='https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/skills%2Fflstudio.png?alt=media&token=48ebf889-db00-40e2-a61c-f4a219297d5e' alt='flstudio-icons' className='lg:w-[100px] md:w-[65px] sm:w-[55px]  xxsm:w-[40px]' />
                   <h1 className='text-white pt-3 2xl:text-[30px] lg:text-[25px] md:text-[20px] font-medium'> FL Studio </h1>
                   <h1 className='text-white items-center text-center pb-5 
                           lg:text-[15px] lg:px-20
@@ -340,7 +369,67 @@ const Info = () => {
                           2xl:px-32 2xl:text-[20px]
                           xxsm:text-[10px] xxsm:px-5
                           sm:text-[10px] sm:px-5'>
-                    Uses FL Studio to create music production with a pattern-based music sequencer.
+                    <b> Skill Level: Competent - </b> Uses FL Studio to create music production with a pattern-based music sequencer.
+                  </h1>
+                </h3>
+              </div>
+              <div>
+                <h3 className='flex flex-col justify-center items-center text-center text-white'>
+                  <img src='https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/skills%2Fjava.png?alt=media&token=13b192f3-9863-4e91-b6a6-ebe25d5472ee' alt='java-icons' className='lg:w-[85px] md:w-[65px] sm:w-[55px]  xxsm:w-[40px]' />
+                  <h1 className='text-white pt-3 2xl:text-[30px] lg:text-[25px] md:text-[20px] font-medium'> Java </h1>
+                  <h1 className='text-white items-center text-center pb-5 
+                          lg:text-[15px] lg:px-20
+                          md:text-[12px] md:px-10
+                          xs:text-[8px] xs:px-5 
+                          2xl:px-32 2xl:text-[20px]
+                          xxsm:text-[10px] xxsm:px-5
+                          sm:text-[10px] sm:px-5'>
+                    <b> Skill Level: Proficient - </b> With great knowledge in different OOP Pillars, Java Swing and basic Android App.
+                  </h1>
+                </h3>
+              </div>
+              <div>
+                <h3 className='flex flex-col justify-center items-center text-center text-white'>
+                  <img src='https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/skills%2Fc%2B%2B.png?alt=media&token=a0e08b72-af69-47b1-99e1-7cddefb2f298' alt='c++-icons' className='lg:w-[85px] md:w-[65px] sm:w-[55px]  xxsm:w-[40px]' />
+                  <h1 className='text-white pt-3 2xl:text-[30px] lg:text-[25px] md:text-[20px] font-medium'> C++ </h1>
+                  <h1 className='text-white items-center text-center pb-5 
+                          lg:text-[15px] lg:px-20
+                          md:text-[12px] md:px-10
+                          xs:text-[8px] xs:px-5 
+                          2xl:px-32 2xl:text-[20px]
+                          xxsm:text-[10px] xxsm:px-5
+                          sm:text-[10px] sm:px-5'>
+                    <b> Skill Level: Advanced Beginner - </b> With great knowledge in C++ functions and classes.
+                  </h1>
+                </h3>
+              </div>
+              <div>
+                <h3 className='flex flex-col justify-center items-center text-center text-white'>
+                  <img src='https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/skills%2Fc%23.png?alt=media&token=994ee2ab-b5b9-4cfb-97b6-a0223f2d4926' alt='c#-icons' className='lg:w-[100px] md:w-[75px] sm:w-[65px] xxsm:w-[50px]' />
+                  <h1 className='text-white pt-3 2xl:text-[30px] lg:text-[25px] md:text-[20px] font-medium'> C# </h1>
+                  <h1 className='text-white items-center text-center pb-5 
+                          lg:text-[15px] lg:px-20 
+                          md:text-[12px] md:px-10
+                          xs:text-[8px] xs:px-5 
+                          2xl:px-32 2xl:text-[20px]
+                          xxsm:text-[10px] xxsm:px-5
+                          sm:text-[10px] sm:px-5'>
+                    <b> Skill Level: Proficient - </b> With great knowledge in different OOP Pillars with basic understanding on ASP.NET.
+                  </h1>
+                </h3>
+              </div>
+              <div>
+                <h3 className='flex flex-col justify-center items-center text-center text-white'>
+                  <img src='https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/skills%2Fpython.png?alt=media&token=47ebc6f1-60a0-4194-85bf-001340f2311d' alt='python-icons' className='lg:w-[100px] md:w-[75px] sm:w-[65px] xxsm:w-[50px]' />
+                  <h1 className='text-white pt-3 2xl:text-[30px] lg:text-[25px] md:text-[20px] font-medium'> Python </h1>
+                  <h1 className='text-white items-center text-center pb-5 
+                          lg:text-[15px] lg:px-20 
+                          md:text-[12px] md:px-10
+                          xs:text-[8px] xs:px-5 
+                          2xl:px-32 2xl:text-[20px]
+                          xxsm:text-[10px] xxsm:px-5
+                          sm:text-[10px] sm:px-5'>
+                    <b> Skill Level: Proficient - </b> With great knowledge in different OOP Pillars with basic knowledge on Matplotlib.
                   </h1>
                 </h3>
               </div>
