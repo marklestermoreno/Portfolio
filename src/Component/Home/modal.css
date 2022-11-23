@@ -53,7 +53,7 @@
   .modal-text button.close-modal i {
     margin: 0;
   }
-  /*------------popup--------*/
+
   @media (max-width: 1024px) {
     .modal,
     .overlay {

@@ -29,6 +29,43 @@ const Experience = () => {
                                             xxsm:-ml-10 xxsm:mt-4  xsm:text-[11px]
                                             xsm:-ml-10 xsm:-mr-10  xxsm:text-[8px] 
                                             
+                                            font-semibold'> Bachelor of Science in Information Communication and Technology </h1>
+                                <p className='lg:text-base 
+                                            2xl:text-[20px]
+                                            md:text-[14px] 
+                                            sm:text-[12px]
+                                            xs:-ml-0 xs:-mr-0 xs:text-[10px]
+                                            xsm:text-[8px]
+                                            xxsm:text-[5px] xxsm:-ml-10 xxsm:-mr-5
+                                            flex'>
+                                    <span className='flex'>
+                                        A graduate of Bachelor of Science in Information Communication and Technology in Polytechnic University of the Philippines.
+                                        Have passed the BSIT Ladderize Qualifying Exam that made me eligible in pursuing my bachelor degree within the same institute.
+                                        Have developed different web application and mobile application
+                                    </span>
+                                </p>
+
+                            </div>
+                        </TabPane>
+                        <TabPane tab={<span className='text-start items-start flex justify-start 
+                                            lg:text-base lg:-ml-0
+                                            md:text-sm md:-ml-5
+                                            sm:text-[15px] sm:-ml-3
+                                            xs:text-[12px] xs:-ml-3
+                                            xsm:text-[9px] xsm:-ml-3 xsm:-mr-0
+                                            xxsm:text-[6px] xxsm:-ml-3 xxsm:-mr-5
+        
+                                            '> Polytechnic University of <br /> the Philippines - Sta Mesa</span>} key='2' className='text-white'>
+                            <div className='px-5' style={{ marginTop: '-20px' }}>
+                                <h1 className='
+                                            text-[#fe4066] 
+                                            lg:text-[21px] lg:mt-8
+                                            md:text-[17px] 
+                                            sm:text-[15px] sm:-ml-0
+                                            xs:text-[15px] xs:-ml-5 
+                                            xxsm:-ml-10 xxsm:mt-4  xsm:text-[11px]
+                                            xsm:-ml-10 xsm:-mr-10  xxsm:text-[8px] 
+                                            
                                             font-semibold'> Diploma in Information Communication and Technology </h1>
                                 <p className='lg:text-sm 
                                             2xl:text-base
@@ -50,10 +87,11 @@ const Experience = () => {
                                             xxsm:text-[5px] xxsm:-ml-10 xxsm:-mr-5
                                             flex'>
                                     <span className='flex'>
-                                        A 3rd year graduating student in Diploma in Information Communication and Technology. One of the
+                                        A graduate of Associate Degree in Diploma in Information Communication and Technology. One of the
                                         designer and developer of the extension project of PUP-ITech TRACK IT - to modernized barangay
                                         transactions, and the Furbae - Animal Welfare. Consistent President's Lister from 2nd year to 3rd year
-                                        and Dean's Lister in 1st year. A PUPCET passer in 2019 with a score of 89.
+                                        and Dean's Lister in 1st year. A PUPCET passer in 2019 with a score of 89 but due to insufficient BSIT slot,
+                                        was forced to transfer to Diploma Course to pursue Information Technology.
                                     </span>
                                 </p>
 
@@ -65,7 +103,7 @@ const Experience = () => {
                                            sm:text-[15px] sm:-ml-3
                                            xs:text-[12px] xs:-ml-3
                                            xsm:text-[9px] xsm:-ml-3 xsm:-mr-0
-                                           xxsm:text-[6px] xxsm:-ml-3 xxsm:-mr-5'> (Systems Technology Institute) <br /> STI College Marikina </span>} key='2' className='text-white'>
+                                           xxsm:text-[6px] xxsm:-ml-3 xxsm:-mr-5'> (Systems Technology Institute) <br /> STI College Marikina </span>} key='3' className='text-white'>
                             <div className='px-5' style={{ marginTop: '-20px' }}>
                                 <h1 className='
                                             text-[#fe4066] 
@@ -109,7 +147,7 @@ const Experience = () => {
                                           sm:text-[15px] sm:-ml-3
                                           xs:text-[12px] xs:-ml-3
                                           xsm:text-[9px] xsm:-ml-3 xsm:-mr-0
-                                          xxsm:text-[6px] xxsm:-ml-3 xxsm:-mr-5'> General Licerio Geronimo <br /> Memorial National High School </span>} key='3' className='text-white'>
+                                          xxsm:text-[6px] xxsm:-ml-3 xxsm:-mr-5'> General Licerio Geronimo <br /> Memorial National High School </span>} key='4' className='text-white'>
                             <div className='px-5' style={{ marginTop: '-20px' }}>
                                 <h1 className='
                                             text-[#fe4066] 

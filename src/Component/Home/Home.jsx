@@ -1,7 +1,12 @@
 import React, { useState } from 'react'
 import ImageGallery from 'react-image-gallery';
-import { AiFillCloseCircle } from 'react-icons/ai'
+import { AiFillCloseCircle, AiFillAndroid } from 'react-icons/ai'
+import { MdOutlineDocumentScanner } from 'react-icons/md'
 import Typewriter from 'typewriter-effect';
+import { Tooltip } from 'antd';
+import { confirmAlert } from 'react-confirm-alert'; // Import
+import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css
+
 
 import { motion } from 'framer-motion'
 import './modal.css'
@@ -45,7 +50,43 @@ const Home = () => {
 
     ];
 
+    const cvThemeLink = document.createElement('a');
+    cvThemeLink.href = "https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/Moreno%2C%20Mark%20Lester%20-%20CV%20(Theme).pdf?alt=media&token=3246f232-ad6c-4075-bb49-df0c0825df77";
+    document.body.appendChild(cvThemeLink);
 
+    const cvWhiteLink = document.createElement('a');
+    cvWhiteLink.href = "https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/Moreno%2C%20Mark%20Lester%20-%20CV%20(Plain).pdf?alt=media&token=b2e89fda-0ce7-4539-b1bc-37f762bcbbde";
+    document.body.appendChild(cvWhiteLink);
+
+    const resumeLink = document.createElement('a');
+    resumeLink.href = "https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/MORENO%2C%20MARK%20LESTER%20-%20RESUME.pdf?alt=media&token=03978fe4-c278-4236-8324-0cfd68dea55c";
+    document.body.appendChild(resumeLink);
+
+    const resume = () => {
+        confirmAlert({
+            title: <p className='font-bold'> Resume or Curriculum Vitae </p>,
+            message: <p className='font-medium'> What document will you download? </p>,
+            buttons: [
+                {
+                    label: "Theme CV",
+                    onClick: () => cvThemeLink.click()
+                },
+                {
+                    label: "Plain CV",
+                    onClick: () => cvWhiteLink.click()
+                },
+                {
+                    label: "Resume",
+                    onClick: () => resumeLink.click()
+                },
+
+            ]
+        })
+    }
+
+    document.body.removeChild(cvThemeLink);
+    document.body.removeChild(cvWhiteLink);
+    document.body.removeChild(resumeLink);
 
     return (
         <>
@@ -56,10 +97,10 @@ const Home = () => {
                                     lg:pt-20 lg:pl-14 
                                     3xl:pl-20
                                     md:text-[17px] md:pl-7 md:pt-16
-                                    sm:pl-8 sm:pt-16 
-                                    xs:pl-5 xs:pt-14 xs:text-[12px]
-                                    xsm:pl-4 xsm:pt-8 xsm:text-[10px] 
-                                    xxsm:pl-2 xxsm:pt-6 xxsm:text-[6px] 
+                                    sm:pl-8 sm:pt-10 
+                                    xs:pl-5 xs:pt-2 xs:text-[12px]
+                                    xsm:pl-4 xsm:pt-0 xsm:text-[10px] 
+                                    xxsm:pl-2 xxsm:pt-0 xxsm:text-[6px] 
                 '>
                     WELCOME TO MY WORLD
                     <br />
@@ -99,28 +140,45 @@ const Home = () => {
                     </p>
                     <p className='2xl:text-[20px] lg:text-[18px] md:text-[13px] sm:text-[10px] xs:text-[9px] xsm:text-[8px] xxsm:text-[5px]'>
 
-                        
 
-                    An incoming 4th year PUP student who seek a position as an IT Professional to develop my skills and experience 
-                    further while helping the company in creating the best web app and maintaining their computer system
+                        A graduate of Bachelor of Information Communication and Technology and Associate Degree of Diploma in Information Communication and Technology
+                        at Polytechnic University of the Philippines - Sta Mesa who seek a position as an IT Professional to develop my skills and experience
+                        further while helping the company in creating the best web app and maintaining their computer system
 
                     </p>
-                    <a href='https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/marklestermoreno.pdf?alt=media&token=5e794807-c88a-4de4-870c-0b0bef9744bb' download="Mark Lester Moreno Curiculum Vitae"
-                        className='bg-[#fe4066] flex justify-center text-white px-3 py-1  rounded-md 
+                    <div className='flex md:flex-row xxsm:flex-col md:justify-center'>
+                        <button onClick={resume}
+                            className='bg-[#fe4066] flex justify-center text-white xs:py-2 xxsm:py-1  rounded-md 
                                         hover:bg-white hover:text-[#fe4066] hover:transition-color duration-300
-                                        lg:text-lg lg:w-32 lg:mt-10
-                                        md:text-[16px] md:w-28 md:mt-5
-                                        xs:text-[10px] xs:w-1/2 xs:mt-5
-                                        xsm:text-[8px] xsm:w-1/2 xsm:mt-3
-                                        xxsm:text-[5px] xxsm:w-1/2 xxsm:mt-4
+                                        lg:text-lg lg:w-48 lg:mt-10 lg:mr-6
+                                        md:text-[14px] md:w-44 md:mt-5 md:mr-6
+                                        xs:text-[10px] xs:w-full xs:mt-5
+                                        xsm:text-[8px] xsm:w-full xsm:mt-1
+                                        xxsm:text-[5px] xxsm:w-full xxsm:mt-1
                                         '>
-                        Download CV
-                    </a>
+                            <span className='md:pt-[5px] xsm:pt-[3px] xxsm:pt-[1.5px] xxsm:pr-1 pr-2'> <MdOutlineDocumentScanner /> </span> Download Resume
+                        </button>
+                        <div>
+                            <Tooltip placement="bottom" title="Coming Soon" color='#fe4066' mouseEnterDelay={-0.5} mouseLeaveDelay={-0.5}>
+                                <button
+                                    className='bg-white flex justify-center text-[#111213] px-3 xs:py-2 xxsm:py-1 rounded-md 
+                                        hover:bg-[#111213] hover:cursor-not-allowed hover:text-[#fe4066] hover:transition-color duration-300
+                                        lg:text-lg lg:w-56 lg:mt-10 lg:ml-6 
+                                        md:text-[14px] md:w-44 md:mt-5
+                                        xs:text-[10px] xs:w-full xs:mt-5
+                                        xsm:text-[8px] xsm:w-full xsm:mt-2
+                                        xxsm:text-[5px] xxsm:w-full xxsm:mt-2
+                                        '>
+                                    <span className='md:pt-[5px] xsm:pt-[3px] xxsm:pt-[1.5px] xxsm:pr-1 pr-2'> <AiFillAndroid /> </span> Download for Android
+                                </button>
+                            </Tooltip>
+                        </div>
+                    </div>
                 </motion.div>
                 <motion.div animate={{ x: 0 }} initial={{ x: 1000 }} transition={{ duration: 0.5 }}
-                    className='flex justify-center text-start items-start w-1/2 xs:pl-10 xsm:pl-6 pt-4 pb-10'>
+                    className='flex justify-center text-start items-start w-1/2 xs:pl-10 xsm:pl-6 xs:pt-4 xsm:pt-0  pb-10'>
                     <img src='https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/profile-02.png?alt=media&token=855c4773-19b7-4d59-8daf-876e827e7c86' alt='profile' onClick={toggleModal}
-                        className='2xl:w-[450px] lg:w-96 md:w-72 sm:w-60 xs:w-44 xsm:w-32 xxsm:w-24 rounded-lg shadow-md hover:brightness-110 hover:cursor-pointer' />
+                        className='2xl:w-[450px] lg:w-96 md:w-72 sm:w-60 xs:w-48 xsm:w-40 xxsm:w-24 rounded-lg shadow-md hover:brightness-110 hover:cursor-pointer' />
                 </motion.div >
             </div>
 
@@ -160,7 +218,7 @@ const Home = () => {
                                          xs:text-[9px]
                                          xsm:text-[7px] 
                                          xxsm:text-[5px]
-                            font-thin'> Hi! My name is Mark Lester Moreno an <b> incoming 4th year PUP student </b> who seek a position as an IT Professional to develop my skills and experience further while helping the company in creating the best web app and maintaining
+                            font-thin'> Hi! My name is Mark Lester Moreno an <b> a 4th year PUP graduate student </b> who seek a position as an IT Professional to develop my skills and experience further while helping the company in creating the best web app and maintaining
                                 their computer system </p>
                             <div className='grid overflow-hidden grid-cols-3 grid-rows-2 pt-2'>
                                 <p className='box row-start-1 row-end-1 col-start-1 col-end-1 text-[#fe4066] 2xl:text-[20px] xxsm:text-[5px] xsm:text-[7px] xs:text-[9px] lg:text-[15px] md:text-[13px] sm:text-[11px] font-semibold'> Email </p>
@@ -209,6 +267,7 @@ const Home = () => {
                     </div>
                 </div>
             )}
+
         </>
     )
 }
