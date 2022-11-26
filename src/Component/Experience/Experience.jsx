@@ -31,6 +31,7 @@ const Experience = () => {
                                             
                                             font-semibold'> Bachelor of Science in Information Communication and Technology </h1>
                                 <p className='lg:text-base 
+                                            lg:mt-10
                                             2xl:text-[20px]
                                             md:text-[14px] 
                                             sm:text-[12px]

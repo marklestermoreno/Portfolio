@@ -3,7 +3,6 @@ import ImageGallery from 'react-image-gallery';
 import { AiFillCloseCircle, AiFillAndroid } from 'react-icons/ai'
 import { MdOutlineDocumentScanner } from 'react-icons/md'
 import Typewriter from 'typewriter-effect';
-import { Tooltip } from 'antd';
 import { confirmAlert } from 'react-confirm-alert'; // Import
 import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css
 
@@ -88,6 +87,37 @@ const Home = () => {
     document.body.removeChild(cvWhiteLink);
     document.body.removeChild(resumeLink);
 
+    // APK
+
+    const apk = document.createElement('a');
+    apk.href = "https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/MLMoreno.apk?alt=media&token=442f20e9-1643-422e-9a5a-cdbfec76c8a8";
+    document.body.appendChild(apk);
+
+    const downloadApk = () => {
+        confirmAlert({
+            title: <p className='font-bold'> Download for Android </p>,
+            message:
+                <div className='mb-5'>
+                    <p className='font-medium text-justify'>
+                        <b> Reminder: </b><span> Due to Google Play Store Developer Fee of $25 you may
+                            encounter problem installing the application since Google detects it as unwanted app.
+                            If you encounter problem installing, <b> go to settings and search for Google Play Protect and disable it while installing </b>
+                        </span> </p>
+                    <p className='font-medium text-justify'>
+                        <b> Note: </b> <span> I accept responsibility for any breach of personal information and any harmful event caused by this application.
+                        </span> </p>
+                </div>,
+            buttons: [
+                {
+                    label: "Download",
+                    onClick: () => apk.click()
+                },
+            ]
+        })
+    }
+
+    document.body.removeChild(apk);
+
     return (
         <>
             <div className='flex justify-center pt-10' id='home'>
@@ -159,19 +189,17 @@ const Home = () => {
                             <span className='md:pt-[5px] xsm:pt-[3px] xxsm:pt-[1.5px] xxsm:pr-1 pr-2'> <MdOutlineDocumentScanner /> </span> Download Resume
                         </button>
                         <div>
-                            <Tooltip placement="bottom" title="Coming Soon" color='#fe4066' mouseEnterDelay={-0.5} mouseLeaveDelay={-0.5}>
-                                <button
-                                    className='bg-white flex justify-center text-[#111213] px-3 xs:py-2 xxsm:py-1 rounded-md 
-                                        hover:bg-[#111213] hover:cursor-not-allowed hover:text-[#fe4066] hover:transition-color duration-300
+                            <button onClick={downloadApk}
+                                className='bg-white flex justify-center text-[#111213] px-3 xs:py-2 xxsm:py-1 rounded-md 
+                                        hover:bg-[#111213] hover:text-[#fe4066] hover:transition-color duration-300
                                         lg:text-lg lg:w-56 lg:mt-10 lg:ml-6 
                                         md:text-[14px] md:w-44 md:mt-5
                                         xs:text-[10px] xs:w-full xs:mt-5
                                         xsm:text-[8px] xsm:w-full xsm:mt-2
                                         xxsm:text-[5px] xxsm:w-full xxsm:mt-2
                                         '>
-                                    <span className='md:pt-[5px] xsm:pt-[3px] xxsm:pt-[1.5px] xxsm:pr-1 pr-2'> <AiFillAndroid /> </span> Download for Android
-                                </button>
-                            </Tooltip>
+                                <span className='md:pt-[5px] xsm:pt-[3px] xxsm:pt-[1.5px] xxsm:pr-1 pr-2'> <AiFillAndroid /> </span> Download for Android
+                            </button>
                         </div>
                     </div>
                 </motion.div>
