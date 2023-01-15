@@ -58,7 +58,7 @@ const Home = () => {
     document.body.appendChild(cvWhiteLink);
 
     const resumeLink = document.createElement('a');
-    resumeLink.href = "https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/MORENO%2C%20MARK%20LESTER%20-%20RESUME.pdf?alt=media&token=03978fe4-c278-4236-8324-0cfd68dea55c";
+    resumeLink.href = "https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/MORENO%2C%20MARK%20LESTER%20-%20RESUME.pdf?alt=media&token=3ce6a7d3-22b8-472f-b907-9499a5fa5734";
     document.body.appendChild(resumeLink);
 
     const resume = () => {
