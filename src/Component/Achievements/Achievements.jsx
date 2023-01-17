@@ -47,7 +47,7 @@ const Achievements = () => {
                         <b> As of November 22, 2022, </b> under the provision of Amended RA (9048).             
                         I have officially and legally updated my middle name from <b> "Peña" to "Dela Peña" </b>. 
                         Any certificates that has a middle name of Peña or middle initial of P before the subjected date is still considered mine. 
-                        <a href=""> Read Affidafit Here </a>
+                        <a href="https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/Affidafit.pdf?alt=media&token=6683ce31-0cc9-4319-9f42-1d98ad8d1602"> Read Affidafit Here </a>
                     </h1>
                 </div>
                 <div className='py-10 sm:mx-10 xxsm:mx-5'>
