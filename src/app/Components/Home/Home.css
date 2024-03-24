@@ -1,0 +1,35 @@
+.profile-image {
+    width: 275px;
+    border-radius: 10px;
+}
+
+.text-greetings {
+    font-weight: 400;
+    opacity: 0.6;
+    font-size: 20px;
+    margin-bottom: 6px;
+}
+
+.text-intro,
+.text-position {
+    font-weight: 800;
+    font-size: 40px;
+}
+
+.text-position {
+    margin-top: -10px !important;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.text-details {
+    text-align: justify;
+}
+
+@media screen and (max-width: 562px) {
+
+    .text-intro,
+    .text-position {
+        font-size: 30px;
+    }
+}

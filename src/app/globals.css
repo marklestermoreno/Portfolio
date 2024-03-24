@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -18,16 +20,63 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: "Poppins", sans-serif !;
+  cursor: default;
+  user-select: none;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+:root {
+  --primary-color: #ff014f;
+}
+
+body::-webkit-scrollbar-track {
+  background: #5C5C5D !important;
+  /* Background color of the track */
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #111113 !important;
+  /* Color of the scrollbar handle */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #111113 !important;
+  /* Color of the scrollbar handle on hover */
+}
+
+.separator {
+  margin: 0px 0px 30px 0px;
+  border-top: 1px solid rgb(43, 43, 43);
+}
+
+.tooltip-global {
+  background-color: var(--primary-color) !important;
+}
+
+.progress-bar {
+  position: fixed;
+  top: 130px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--primary-color) !important;
+  transform-origin: 0%;
+}
+
+@media (min-width:563px) and (max-width:640px) {
+  .progress-bar {
+    top: 125px;
+  }
+}
+
+@media screen and (max-width: 562px) {
+  .progress-bar {
+    top: 125px;
   }
 }
