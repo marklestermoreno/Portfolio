@@ -7,4 +7,5 @@ export interface AchievementInfo {
     subname: string;
     title: string;
     description: string;
+    otherDetails: string;
 }

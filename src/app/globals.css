@@ -69,6 +69,7 @@ body::-webkit-scrollbar-thumb:hover {
   transform-origin: 0%;
 }
 
+
 @media (min-width:563px) and (max-width:640px) {
   .progress-bar {
     top: 125px;

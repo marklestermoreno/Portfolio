@@ -22,3 +22,84 @@
 .image-loading {
     width: 250px;
 }
+
+.modal-container {
+    position: relative;
+}
+
+.modal-exit {
+    position: absolute;
+    top: -40px;
+    right: 0px;
+    background-color: var(--primary-color);
+    color: white !important;
+    padding: 5px 10px;
+    border-radius: 50%;
+    width: 35px;
+    transition-duration: 300ms;
+}
+
+.modal-exit:hover {
+    background: #111113;
+    transition-duration: 300ms;
+}
+
+.achievements-image {
+    margin: 40px 0px;
+    max-height: 80vh;
+    max-width: 500px;
+}
+
+
+/* Tabs Component */
+
+.tabs-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    margin: 15px;
+    padding: 1em 1.5em;
+    background: #1B1B1B;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.45);
+}
+
+.active-tabs {
+    background-color: var(--primary-color);
+    border-radius: 2px;
+    transition-duration: 400ms;
+}
+
+.inactive-tabs:hover {
+    background-color: rgba(255, 1, 79, 0.35);
+    border-radius: 2px;
+    color: white;
+    transition-duration: 400ms;
+}
+
+
+/* Loading Data */
+
+.loading-v2-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.loading-v2-label {
+    color: var(--primary-color);
+}
+
+.loading-v2-image-container {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.image-loading-v2 {
+    width: 120px;
+}

@@ -5,23 +5,23 @@ const homeImagePaths = [
 ];
 
 const infoImagePaths = [
-    'https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/PUP-Formal.png?alt=media&token=4c6a6318-b334-4586-ab97-d3bffc9ad7cc'
+    'https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/home-profile.png?alt=media&token=0bb3f816-0c1a-495d-8acc-409218b3c07f'
 ];
 
 const experienceImagePaths = [
-    'https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/header-logo.png?alt=media&token=3f8fcf79-f027-4a08-b8d1-0321e888998c',
+    ''
 ];
 
 const skillsImagePaths = [
-    'https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/header-logo.png?alt=media&token=3f8fcf79-f027-4a08-b8d1-0321e888998c',
+    ''
 ];
 
 const portfolioImagePaths = [
-    'https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/header-logo.png?alt=media&token=3f8fcf79-f027-4a08-b8d1-0321e888998c',
+    ''
 ];
 
 const achievementsImagePaths = [
-    'https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/header-logo.png?alt=media&token=3f8fcf79-f027-4a08-b8d1-0321e888998c',
+    ''
 ];
 
 

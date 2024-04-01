@@ -15,8 +15,6 @@ const NavLink = ({ href, children }: ActiveLinkProps) => {
     const router = usePathname();
     const isActive = router === href;
 
-    console.log(href)
-
     return (
         <ScrollLink activeClass="active"
             to={href}

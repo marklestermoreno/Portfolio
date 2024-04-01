@@ -77,21 +77,21 @@ export default function Header({ homeImages }: { homeImages: HTMLImageElement[] 
                 </div>
                 <div className="sm:w-11/12">
                     <div className="hidden sm:flex justify-around">
-                        <NavLink href="skills">
+                        <NavLink href="info">
                             Skill
                         </NavLink>
                         <NavLink href="experience">
                             Experience
                         </NavLink>
-                        <NavLink href="portfolios">
+                        <NavLink href="portfolio">
                             Portfolio
                         </NavLink>
-                        <NavLink href="achievements">
+                        <NavLink href="achievement">
                             Achievement
                         </NavLink>
-                        <NavLink href="contacts">
+                        <Link href='/Contacts'>
                             Contact
-                        </NavLink>
+                        </Link>
                     </div>
 
                     {/* Mobile Header */}

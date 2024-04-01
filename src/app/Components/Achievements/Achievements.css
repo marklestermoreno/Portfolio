@@ -36,5 +36,26 @@ a:hover {
 
 .separator {
     border-top: 2px solid rgb(43, 43, 43);
-  }
-  
+}
+
+
+.tips {
+    margin-top: -20px;
+}
+
+.tips, .tips-v2 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    color: #111113;
+    font-size: 13px;
+}
+
+.tips-v2 {
+    margin-bottom: 10px;
+}
+
+.tips b, .tips-v2 b {
+    color: var(--primary-color);
+    margin: 0px 3px;
+}

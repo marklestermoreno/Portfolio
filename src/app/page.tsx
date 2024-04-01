@@ -11,7 +11,7 @@ import Head from 'next/head';
 
 import { motion, useScroll, useSpring } from "framer-motion";
 import Experience from "./Components/Experience/Experience";
-import Portfolio from "./Components/Portfolio/Portfolio";
+import MainPortfolio from "./Components/Portfolio/MainPortfolio";
 import Achievements from "./Components/Achievements/Achievements";
 
 export default function Home() {
@@ -20,10 +20,6 @@ export default function Home() {
 
   const [homeImages, setHomeImages] = useState<HTMLImageElement[]>([]);
   const [infoImages, setInfoImages] = useState<HTMLImageElement[]>([]);
-  const [skillsImages, setSkillsImages] = useState<HTMLImageElement[]>([]);
-  const [experienceImages, setExperienceImages] = useState<HTMLImageElement[]>([]);
-  const [portfolioImages, setPortfolioImages] = useState<HTMLImageElement[]>([]);
-  const [achievements, setAchivementsImages] = useState<HTMLImageElement[]>([]);
 
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
@@ -43,19 +39,7 @@ export default function Home() {
       const info = await preloadImageAssets("INFO");
       setInfoImages(info);
 
-      const skills = await preloadImageAssets("SKILLS");
-      setSkillsImages(skills);
-
-      const experience = await preloadImageAssets("EXPERIENCE");
-      setExperienceImages(experience);
-
-      const portfolio = await preloadImageAssets("PORTFOLIO");
-      setPortfolioImages(portfolio);
-
-      const achievements = await preloadImageAssets("ACHIEVEMENTS");
-      setAchivementsImages(achievements);
-
-
+      
       setLoading(false);
     };
 
@@ -78,7 +62,8 @@ export default function Home() {
         <SkillsPage />
         <div className="separator" />
         <Experience />
-        {/* <Portfolio /> */}
+        <div className="separator" />
+        <MainPortfolio />
         <div className="separator" />
         <Achievements />
       </main>
