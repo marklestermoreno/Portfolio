@@ -8,23 +8,9 @@ const infoImagePaths = [
     'https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/home-profile.png?alt=media&token=0bb3f816-0c1a-495d-8acc-409218b3c07f'
 ];
 
-const experienceImagePaths = [
-    ''
+const contactsImagePath = [
+    'https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/profile-02.png?alt=media&token=855c4773-19b7-4d59-8daf-876e827e7c86'
 ];
-
-const skillsImagePaths = [
-    ''
-];
-
-const portfolioImagePaths = [
-    ''
-];
-
-const achievementsImagePaths = [
-    ''
-];
-
-
 
 
 export async function preloadImageAssets(pImagePaths: string): Promise<HTMLImageElement[]> {
@@ -39,24 +25,13 @@ export async function preloadImageAssets(pImagePaths: string): Promise<HTMLImage
         imagePaths = infoImagePaths;
     }
 
-    else if (pImagePaths === "SKILLS") {
-        imagePaths = skillsImagePaths;
+    else if (pImagePaths === "CONTACTS") {
+        imagePaths = contactsImagePath;
     }
 
-    else if (pImagePaths === "EXPERIENCE") {
-        imagePaths = experienceImagePaths;
-    }
-
-    else if (pImagePaths === "PORTFOLIO") {
-        imagePaths = portfolioImagePaths;
-    }
-
-    else if (pImagePaths === "ACHIEVEMENTS") {
-        imagePaths = achievementsImagePaths;
-    }
 
     else {
-        imagePaths = [...homeImagePaths, ...infoImagePaths, ...skillsImagePaths, ...experienceImagePaths, ...portfolioImagePaths, ...achievementsImagePaths]
+        imagePaths = [...homeImagePaths, ...infoImagePaths, ...contactsImagePath]
     }
 
 

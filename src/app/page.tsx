@@ -2,17 +2,20 @@
 
 import { useEffect, useState } from "react";
 import { preloadImageAssets } from "@/utils/preloadAssets";
+
 import Header from "./Components/Header/Header";
 import Loading from "./Components/Other/Loading";
 import HomePage from "./Components/Home/Home";
 import SkillsPage from "./Components/Skills/Skills";
-
-import Head from 'next/head';
-
-import { motion, useScroll, useSpring } from "framer-motion";
 import Experience from "./Components/Experience/Experience";
 import MainPortfolio from "./Components/Portfolio/MainPortfolio";
 import Achievements from "./Components/Achievements/Achievements";
+
+import Head from 'next/head';
+import { motion, useScroll, useSpring } from "framer-motion";
+import { Bounce, ToastContainer } from "react-toastify";
+import Contacts from "./Components/Contacts/Contacts";
+
 
 export default function Home() {
 
@@ -39,7 +42,7 @@ export default function Home() {
       const info = await preloadImageAssets("INFO");
       setInfoImages(info);
 
-      
+
       setLoading(false);
     };
 
@@ -66,7 +69,24 @@ export default function Home() {
         <MainPortfolio />
         <div className="separator" />
         <Achievements />
+        <div className="separator" />
+        <Contacts />
       </main>
+
+      <ToastContainer
+          position="top-right"
+        autoClose={3000}
+        limit={5}
+        hideProgressBar
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+        transition={Bounce}
+      />
     </>;
 }
 

@@ -98,7 +98,7 @@ export default function Skills() {
                     {data.map((item, index) => (
                         <div className='mt-4 flex flex-col justify-center items-center' key={index}>
                             <div className='container-skills flex flex-col items-center p-5 mx-2'>
-                                <img src={item.image} alt='react-icons' className='w-20 h-20' />
+                                <img src={item.image} alt={`${item.name}-icons`} className='w-20 h-20' />
                                 <div className='flex flex-col justify-center items-center '>
                                     <p className='text-white text-xl font-bold mt-5'>{item.name}</p>
                                     <p className='text-white items-center text-center'>

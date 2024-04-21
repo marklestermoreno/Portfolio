@@ -5,6 +5,7 @@ import { collection, onSnapshot, orderBy, query } from 'firebase/firestore';
 
 import "./Experience.css";
 import { ExperienceInfo } from '@/interfaces/ExperienceInfo';
+import Image from 'next/image';
 
 
 export default function Experience() {
@@ -38,7 +39,7 @@ export default function Experience() {
     return (
         <>
             <div className='mx-5 mt-10' id='experience'>
-                <h2 className=' text-white lg:text-4xl font-bold text-center'>
+                <h2 className=' text-white text-xl lg:text-4xl font-bold text-center'>
                     My History of <span className='text-[#ff014f]'> Success</span>.
                 </h2>
                 <p className='text-center text-gray-500 mx-5 md:mx-32 mt-5'>
@@ -73,7 +74,8 @@ export const ExperiencesComponent = ({ index, item }: { index: number; item: Exp
         <div className="timeline-container" key={index}>
             <div className="timeline-icon"> </div>
             <div className="timeline-body">
-                <img src={item.image} alt='experience-image' className='w-12 mb-4' />
+                <Image width={66} height={60}
+                 src={item.image} alt='experience-image' className='w-12 mb-4' />
                 <h4 className="timeline-name">{item.title}</h4>
                 <h4 className="timeline-title mt-2"><span className="badge">{item.name}</span></h4>
                 <p> {item.description}</p>

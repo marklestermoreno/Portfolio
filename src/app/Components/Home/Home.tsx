@@ -1,4 +1,5 @@
 import Typewriter from 'typewriter-effect';
+import Image from 'next/image';
 import "./Home.css"
 
 export default function Home({ infoImages }: { infoImages: HTMLImageElement[] }) {
@@ -32,7 +33,11 @@ export default function Home({ infoImages }: { infoImages: HTMLImageElement[] })
                     md:w-1/3 md:order-2">
                     <a href="mailto:mlmoreno.work@gmail.com" target="_blank">
                         {infoImages.length > 0 && infoImages[0] && (
-                            <img src={infoImages[0].src ?? ""} alt="profile-header" className='profile-image hover:brightness-110' />
+                            <Image src={infoImages[0].src ?? ""}
+                                alt="profile-header"
+                                width={1000}
+                                height={1000}
+                                className='profile-image hover:brightness-110' />
                         )}
                     </a>
                 </div>

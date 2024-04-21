@@ -2,9 +2,11 @@ import { useEffect, useState } from "react";
 import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
 import { AchievementInfo } from "@/interfaces/AchiemevementInfo";
 
+import Image from "next/image";
+
 import "./Achievements.css"
 import { db } from "@/app/firebase-config";
-import { ModalComponent } from "../Other/ModalComponent";
+import { ModalImage } from "../Other/ModalImage";
 
 export default function Achievements() {
 
@@ -50,8 +52,8 @@ export default function Achievements() {
 
     return (
         <>
-            <div className='mx-5 mt-20' id='achievement'>
-                <h2 className=' text-white lg:text-4xl font-bold text-center'>
+            <div className='mx-5 my-20' id='achievement'>
+                <h2 className=' text-white text-xl lg:text-4xl font-bold text-center'>
                     Epic Wins:<span className='text-[#ff014f]'> My Success Story</span>.
                 </h2>
                 <p className='text-center text-gray-500 mx-5 md:mx-32 mt-5'>
@@ -79,7 +81,9 @@ export default function Achievements() {
                                     </div>
                                 </div>
                                 <div className="flex items-end">
-                                    <img src={item.icon} className='w-12 h-12 rounded-full hover:brightness-110' />
+                                    <Image 
+                                        height={66} width={66} alt=""
+                                        src={item.icon} className='w-12 h-12 rounded-full hover:brightness-110' />
                                 </div>
                             </div>
                             <div className="separator"> </div>
@@ -103,14 +107,14 @@ export default function Achievements() {
                     ))}
                 </div>
             </div>
-            <ModalComponent isModalOpen={isModalOpen} closeModal={closeModal} image={modalImage} currentImageIndex={currentImageIndex} handlePrevImage={handlePrevImage} handleNextImage={handleNextImage}>
+            <ModalImage isModalOpen={isModalOpen} closeModal={closeModal} image={modalImage} currentImageIndex={currentImageIndex} handlePrevImage={handlePrevImage} handleNextImage={handleNextImage}>
                 <label className="tips"> Click <b> ESC </b> to close </label>
                 {
                     modalImage.length !== 1 && (
                         <label className="tips-v2"> Click <b> Arrows </b> to navigate to image </label>
                     )
                 }
-            </ModalComponent>
+            </ModalImage>
         </>
     );
 }

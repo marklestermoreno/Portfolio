@@ -25,7 +25,7 @@ export default function MainPortfolio() {
     return (
         <>
             <div className='mx-5 my-20' id='portfolio'>
-                <h2 className=' text-white lg:text-4xl font-bold text-center'>
+                <h2 className=' text-white text-xl lg:text-4xl font-bold text-center'>
                     Unveiling My Creative Universe: <span className='text-[#ff014f]'> <br />
                         Explore My Personal Projects! </span>                </h2>
                 <p className='text-center text-gray-500 mx-5 md:mx-32 mt-5'>

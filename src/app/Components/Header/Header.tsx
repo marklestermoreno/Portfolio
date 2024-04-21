@@ -1,9 +1,12 @@
 import "./Header.css"
 import Link from 'next/link';
 
+import { usePathname } from 'next/navigation';
+import { useEffect, useState } from "react";
 import { PiAddressBookDuotone, PiFacebookLogoFill } from "react-icons/pi";
 import { MdContactEmergency, MdContacts } from "react-icons/md";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
+import { BsFillTelephoneInboundFill } from "react-icons/bs";
 
 import { Tooltip } from 'react-tooltip'
 
@@ -11,11 +14,23 @@ import NavLink from "../Other/NavLink";
 
 
 
+
 export default function Header({ homeImages }: { homeImages: HTMLImageElement[] }) {
+
+    const router = usePathname();
+    const [isContacts, setIsContacts] = useState(false);
+
+    useEffect(() => {
+
+        setIsContacts(router === "/Contacts");
+        console.log(isContacts);
+        console.log(router);
+
+    }, [isContacts])
 
     return (
         <>
-            <div className="flex justify-around items-center text-center py-3 background-color text-slate-400 border-b-2">
+            <div className={`flex justify-around items-center text-center py-3 background-color text-slate-400 ${isContacts ? '' : 'border-b-2'}`}>
 
                 <span id="address" className="flex align-middle items-center text-xs hover:cursor-pointer">
                     <PiAddressBookDuotone />
@@ -67,43 +82,46 @@ export default function Header({ homeImages }: { homeImages: HTMLImageElement[] 
 
             {/* Desktop Header */}
 
-            <header className='flex justify-between items-center text-center py-3 px-5 background-color text-white'>
-                <div className="sm:w-2/12">
-                    {homeImages.length > 0 && homeImages[0] && (
-                        <Link href='/'>
-                            <img src={homeImages[0].src ?? ""} alt="profile-header" className='w-16 h-16 hover:brightness-110' />
-                        </Link>
-                    )}
-                </div>
-                <div className="sm:w-11/12">
-                    <div className="hidden sm:flex justify-around">
-                        <NavLink href="info">
-                            Skill
-                        </NavLink>
-                        <NavLink href="experience">
-                            Experience
-                        </NavLink>
-                        <NavLink href="portfolio">
-                            Portfolio
-                        </NavLink>
-                        <NavLink href="achievement">
-                            Achievement
-                        </NavLink>
-                        <Link href='/Contacts'>
-                            Contact
-                        </Link>
+            {!isContacts && (
+                <header className='flex justify-between items-center text-center py-3 px-5 background-color text-white'>
+                    <div className="sm:w-2/12">
+                        {homeImages.length > 0 && homeImages[0] && (
+                            <Link href='/'>
+                                <img src={homeImages[0].src ?? ""} alt="profile-header" className='w-16 h-16 hover:brightness-110' />
+                            </Link>
+                        )}
+                    </div>
+                    <div className="sm:w-11/12">
+                        <div className="hidden sm:flex justify-around  items-center">
+                            <NavLink href="info">
+                                Skill
+                            </NavLink>
+                            <NavLink href="experience">
+                                Experience
+                            </NavLink>
+                            <NavLink href="portfolio">
+                                Portfolio
+                            </NavLink>
+                            <NavLink href="achievement">
+                                Achievement
+                            </NavLink>
+                            <NavLink href="contacts">
+                                Contacts
+                            </NavLink>
+
+                        </div>
+
+                        {/* Mobile Header */}
+                        <div className="flex sm:hidden">
+                            <NavLink href="contacts">
+                                <MdContacts size={40} />
+                            </NavLink>
+                        </div>
                     </div>
 
-                    {/* Mobile Header */}
-                    <div className="flex sm:hidden">
-                        <NavLink href="contacts">
-                            <MdContacts size={40} />
-                        </NavLink>
-                    </div>
-                </div>
 
-
-            </header>
+                </header>
+            )}
         </>
     );
 }

@@ -11,3 +11,24 @@
     transition: all .25s;
     padding-bottom: 10px;
 }
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.blinking-dot {
+    width: 100vh;
+    height: 200px;
+    background-color: #b1b1b1;
+    animation: blink 2s infinite;
+}

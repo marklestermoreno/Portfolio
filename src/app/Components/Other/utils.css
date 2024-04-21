@@ -25,11 +25,17 @@
 
 .modal-container {
     position: relative;
+    max-width: 95vh;
+    max-height: 95vh;
+}
+
+.desc {
+    top: -5px !important;
 }
 
 .modal-exit {
     position: absolute;
-    top: -40px;
+    top: -45px;
     right: 0px;
     background-color: var(--primary-color);
     color: white !important;
@@ -44,12 +50,28 @@
     transition-duration: 300ms;
 }
 
+.smaller-image {
+    margin: 40px 0px;
+    max-height: 40vh;
+    max-width: 400px;
+    text-align: center;
+}
+
 .achievements-image {
     margin: 40px 0px;
     max-height: 80vh;
     max-width: 500px;
+    text-align: center;
 }
 
+.blurred {
+    filter: blur(10px);
+}
+
+.loaded {
+    filter: none;
+    /* Remove the blur effect once the image is loaded */
+}
 
 /* Tabs Component */
 
