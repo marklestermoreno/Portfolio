@@ -74,8 +74,8 @@ export default function PortfolioWeb() {
                                 <div className="blinking-dot"></div>
                             ) : (
                                 <Image
-                                    width={1000}
-                                    height={1000}
+                                    width={500}
+                                    height={500}
                                     loading="lazy"
                                     src={item.image[0]}
                                     alt={`${item.name}-image`}

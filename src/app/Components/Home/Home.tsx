@@ -12,7 +12,7 @@ export default function Home({ infoImages }: { infoImages: HTMLImageElement[] })
                         md:w-2/3 md:text-start md:order-1 md:mr-10">
                     <p className="text-greetings pt-5 md:pt-0"> Welcome to my Porfolio </p>
                     <p className="text-intro"> Hi, I'm Mark Lester Moreno </p>
-                    <p className="text-position">
+                    <div className="text-position">
                         <span>
                             <Typewriter
                                 options={{
@@ -25,7 +25,7 @@ export default function Home({ infoImages }: { infoImages: HTMLImageElement[] })
                                 }}
                             />
                         </span>
-                    </p>
+                    </div>
                     <p className="text-details">  A consistently achieved President's and Dean's List honors, holds a degree in Bachelor of Information Communication and Technology as well as an Associate Degree in Diploma in Information Communication and Technology from Polytechnic University of the Philippines - Sta Mesa. Currently employed as a Junior Web Developer with expertise in Blazor and ASP.Net, alongside proficiency in web design. </p>
                 </div>
 

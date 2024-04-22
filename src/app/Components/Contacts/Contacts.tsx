@@ -9,6 +9,7 @@ import { useState, useEffect, FormEvent, ChangeEvent } from "react";
 import { toast } from "react-toastify";
 import emailjs from 'emailjs-com';
 import { ContactInfo } from "@/interfaces/ContactInfo";
+import Image from 'next/image';
 
 export default function Contacts() {
 
@@ -185,7 +186,7 @@ export default function Contacts() {
 
                     <motion.div animate={{ x: 0 }} initial={{ x: 1000 }} transition={{ duration: 0.5 }} className="ml-10 hidden md:flex">
                         {contactsImages.length > 0 && contactsImages[0] && (
-                            <img src={contactsImages[0].src ?? ""} alt="contacts-profile" className="w-80 grayscale hover:filter-none hover:cursor-pointer transition-all duration-300" />
+                            <Image src={contactsImages[0].src} width={1000} height={1000} alt="contacts-profile" className="w-80 grayscale hover:filter-none hover:cursor-pointer transition-all duration-300" />
                         )}
                     </motion.div>
                 </div>

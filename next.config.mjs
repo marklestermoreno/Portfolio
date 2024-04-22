@@ -2,7 +2,10 @@
 const nextConfig = {
     reactStrictMode: true,
     images: {
-        remotePatterns: ['firebasestorage.googleapis.com'],
+        remotePatterns: [{
+            protocol: "https",
+            hostname: 'firebasestorage.googleapis.com'
+        }],
         minimumCacheTTL: 1500000,
     },
     compiler: {

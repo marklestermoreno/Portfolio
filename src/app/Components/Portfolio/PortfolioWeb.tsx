@@ -108,8 +108,8 @@ export default function PortfolioWeb() {
                                 <div className="blinking-dot"></div>
                                 :
                                 <Image
-                                    width={1000}
-                                    height={1000}
+                                    width={500}
+                                    height={500}
                                     loading="lazy"
                                     src={item.previewLink}
                                     alt={`${item.name}-image`}

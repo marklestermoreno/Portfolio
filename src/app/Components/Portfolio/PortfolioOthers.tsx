@@ -90,8 +90,8 @@ export default function PortfolioOthers() {
                                 :
                                 (
                                     <Image
-                                        width={1000}
-                                        height={1000}
+                                        width={500}
+                                        height={500}
                                         loading="lazy"
                                         src={item.image}
                                         alt={`${item.name}-image`}

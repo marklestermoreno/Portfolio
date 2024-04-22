@@ -48,15 +48,14 @@ export default function Experience() {
                 <div className='container'>
 
                     <div className="timeline">
-                        {schoolExperiences.map((item, index) => (
-                            <ExperiencesComponent index={index} item={item} />
+                        {schoolExperiences.map((item, key) => (
+                            <ExperiencesComponent key={`school-${key}`} index={key} item={item} />
                         ))}
                     </div>
 
-
                     <div className="timeline">
-                        {workExperiences.map((item, index) => (
-                            <ExperiencesComponent index={index} item={item} />
+                        {workExperiences.map((item, key) => (
+                            <ExperiencesComponent key={`work-${key}`} index={key} item={item} />
                         ))}
                     </div>
 
@@ -75,7 +74,7 @@ export const ExperiencesComponent = ({ index, item }: { index: number; item: Exp
             <div className="timeline-icon"> </div>
             <div className="timeline-body">
                 <Image width={66} height={60}
-                 src={item.image} alt='experience-image' className='w-12 mb-4' />
+                    src={item.image} alt='experience-image' className='w-12 mb-4' />
                 <h4 className="timeline-name">{item.title}</h4>
                 <h4 className="timeline-title mt-2"><span className="badge">{item.name}</span></h4>
                 <p> {item.description}</p>
