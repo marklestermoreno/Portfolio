@@ -52,13 +52,13 @@ export default function Achievements() {
 
     return (
         <>
-            <div className='mx-5 my-20' id='achievement'>
-                <h2 className=' text-white text-xl lg:text-4xl font-bold text-center'>
-                    Epic Wins:<span className='text-[#ff014f]'> My Success Story</span>.
+            <div className="mx-5 my-20" id="achievement">
+                <h2 className=" text-white text-xl lg:text-4xl font-bold text-center">
+                    Epic Wins:<span className="text-[#ff014f]"> My Success Story</span>.
                 </h2>
-                <p className='text-center text-gray-500 mx-5 md:mx-32 mt-5'>
+                <p className="text-center text-gray-500 mx-5 md:mx-32 mt-5">
                     <b> As of November 22, 2022, </b> under the provision of Amended RA (9048).
-                    I have officially and legally updated my middle name from <b> "Peña" to "Dela Peña" </b>.
+                    I have officially and legally updated my middle name from <b>&quot;Pe&ntilde;a&quot; to &quot;Dela Pe&ntilde;a&quot;</b>.
                     Any certificates that has a middle name of Peña or middle initial of P before the subjected date is still considered mine.
                     <a href="https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/Affidavit.pdf?alt=media&token=7429e80b-fb5e-4588-b2fe-fa3dbade3519" target="_blank"> Read Affidafit Here </a>
                 </p>
@@ -67,23 +67,23 @@ export default function Achievements() {
                     {data.map((item, index) => (
                         <div className="achievements-container" key={index}>
                             <div className="flex flex-wrap justify-between items-center mb-4">
-                                <div className='flex flex-col justify-start items-start '>
+                                <div className="flex flex-col justify-start items-start ">
                                     {
                                         item.image.length === 0 ?
                                             null :
                                             <button className="btn-achievements" onClick={() => openModal(item.image)}> View Image </button>
                                     }
-                                    <p className='text-white text-xl font-bold mt-4'>{item.title}</p>
+                                    <p className="text-white text-xl font-bold mt-4">{item.title}</p>
                                     <div className="flex">
-                                        <p className='text-[#6d6d6d] text-xs font-light'>{item.subname}</p>
+                                        <p className="text-[#6d6d6d] text-xs font-light">{item.subname}</p>
                                         <span className="border-l-2 border-[#6d6d6d] mx-1" />
-                                        <p className='text-[#6d6d6d] text-xs font-light'>{item.date}</p>
+                                        <p className="text-[#6d6d6d] text-xs font-light">{item.date}</p>
                                     </div>
                                 </div>
                                 <div className="flex items-end">
                                     <Image 
                                         height={66} width={66} alt=""
-                                        src={item.icon} className='w-12 h-12 rounded-full hover:brightness-110' />
+                                        src={item.icon} className="w-12 h-12 rounded-full hover:brightness-110" />
                                 </div>
                             </div>
                             <div className="separator"> </div>
