@@ -80,10 +80,9 @@ export default function Contacts() {
                     Contact Hub: <span className='text-[#ff014f]'>
                         Get in touch! </span>                </h2>
                 <p className='text-center text-gray-500 mx-5 md:mx-32 mt-5'>
-                    Please note that the information you provide in this form <br />
-                    will only be used for contact purposes. We respect your privacy <br />
-                    and assure you that your information will not be stored or used <br />
-                    for any other purposes.
+                    Please note that the information you provide in this form will only be 
+                    used for contact purposes. We respect your privacy and assure you that <br />
+                    your information will not be stored or used for any other purposes.
                 </p>
                 <div className="contacts-container flex md:flex-row items-center bg-gray-100 mt-10 mx-10 p-10 w-auto">
                     <motion.div animate={{ x: 0 }} initial={{ x: -1000 }} transition={{ duration: 0.5 }}>

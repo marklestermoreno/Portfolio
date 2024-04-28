@@ -8,7 +8,8 @@ export default function Home({ infoImages }: { infoImages: HTMLImageElement[] })
         <>
             <div className="w-100 flex flex-col justify-around align-center py-10 px-5 text-white
                         md:flex-row ">
-                <div className="w-100 text-center self-center order-2 mr-0 ml-5
+                <div className="w-100 text-center self-center order-2 mr-0 ml-0
+                        md:ml-5
                         md:w-2/3 md:text-start md:order-1 md:mr-10">
                     <p className="text-greetings pt-5 md:pt-0"> Welcome to my Porfolio </p>
                     <p className="text-intro"> Hi, I&apos;m Mark Lester Moreno </p>

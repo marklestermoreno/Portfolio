@@ -9,7 +9,7 @@ const infoImagePaths = [
 ];
 
 const contactsImagePath = [
-    'https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/profile-02.png?alt=media&token=855c4773-19b7-4d59-8daf-876e827e7c86'
+    'https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/PUP-Formal.png?alt=media&token=392f163a-dab3-4f1c-986d-3cb925160083'
 ];
 
 

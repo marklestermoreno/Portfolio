@@ -25,8 +25,8 @@
 
 .modal-container {
     position: relative;
-    max-width: 95vh;
-    max-height: 95vh;
+    max-width: 90vh;
+    max-height: 90vh;
 }
 
 .desc {
@@ -34,14 +34,40 @@
 }
 
 .modal-exit {
-    position: absolute;
     top: -45px;
     right: 0px;
+}
+
+.navigator {
+    position: absolute;
     background-color: var(--primary-color);
     color: white !important;
     padding: 5px 10px;
     border-radius: 50%;
     width: 35px;
+    transition-duration: 300ms;
+}
+
+.prev {
+    position: absolute;
+    left: -5px;
+    top: 35vh;
+    background-color: #333;
+    font-weight: 700;
+}
+
+.next {
+    position: absolute;
+    right: -5px;
+    top: 35vh;
+    background-color: #333;
+    font-weight: 700
+}
+
+.prev:hover,
+.next:hover {
+    cursor: pointer;
+    opacity: 0.8;
     transition-duration: 300ms;
 }
 

@@ -52,6 +52,7 @@ export const ModalImage = ({
     }, [isModalOpen, image]);
 
     useEffect(() => {
+
         const handleKeyDown = (event: KeyboardEvent) => {
             if (!isModalOpen) return;
             if (event.key === "ArrowLeft") {
@@ -81,20 +82,43 @@ export const ModalImage = ({
                     ) : (
                         Array.isArray(image) && (
                             <>
-                                <button className="modal-exit" onClick={closeModal}>
+                                <button className="modal-exit navigator" onClick={closeModal}>
                                     X
                                 </button>
-                                <img
-                                    src={image[currentImageIndex]}
-                                    alt={`${currentImageIndex}`}
-                                    className="achievements-image"
-                                />
+
+                                {image.length != 1 ?
+                                    <>
+                                        <button className="prev navigator" onClick={handlePrevImage}>
+                                            &lt;
+                                        </button>
+
+                                        <button className="next navigator" onClick={handleNextImage}>
+                                            &gt;
+                                        </button>
+
+                                        <img
+                                            src={image[currentImageIndex]}
+                                            alt={`${currentImageIndex}`}
+                                            className="achievements-image"
+                                        />
+                                    </>
+
+                                    :
+                                    <img
+                                        src={image[0]}
+                                        alt={`${0}`}
+                                        className="achievements-image"
+                                    />
+
+                                }
                                 {children}
+
                             </>
                         )
                     )}
                 </div>
-            )}
-        </Modal>
+            )
+            }
+        </Modal >
     );
 };
