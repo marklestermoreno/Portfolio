@@ -43,7 +43,8 @@ export default function Experience() {
                     My History of <span className='text-[#ff014f]'> Success</span>.
                 </h2>
                 <p className='text-center text-gray-500 mx-5 md:mx-32 mt-5'>
-                    Welcome to "My History of Success," where I share my journey from school to work. Here, I'll take you through the ups and downs, showing how I've grown and succeeded along the way. It's a story of hard work, learning, and making things happen. So, let's dive in and explore how I've turned challenges into achievements!                </p>
+                    Welcome to &quot;My History of Success,&quot; where I share my journey from school to work. Here, I&apos;ll take you through the ups and downs, showing how I&apos;ve grown and succeeded along the way. It&apos;s a story of hard work, learning, and making things happen. So, let&apos;s dive in and explore how I&apos;ve turned challenges into achievements!
+                </p>
                 <div className='container'>
 
                     <div className="timeline">
