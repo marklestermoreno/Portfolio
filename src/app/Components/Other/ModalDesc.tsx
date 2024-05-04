@@ -21,7 +21,7 @@ export const ModalDesc = ({
             {isModalOpen && (
                 <div className="modal-container">
 
-                    <button className="modal-exit desc" onClick={closeModal}>
+                    <button className="modal-exit navigator desc" onClick={closeModal}>
                         X
                     </button>
                     <div className="w-full text-center flex justify-center">
