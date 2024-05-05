@@ -4,7 +4,6 @@ import { collection, onSnapshot, orderBy, query, limit, startAfter, DocumentSnap
 import { useEffect, useState } from "react";
 import LoadingData from "../Other/LoadingData";
 import { ModalDesc } from "../Other/ModalDesc";
-import { ModalImage } from "../Other/ModalImage";
 
 import Image from 'next/image'
 
@@ -150,14 +149,7 @@ export default function PortfolioWeb() {
                 )
             }
 
-            <ModalImage isModalOpen={isModalOpen} closeModal={closeModal} image={modalImage} currentImageIndex={currentImageIndex} handlePrevImage={handlePrevImage} handleNextImage={handleNextImage}>
-                <label className="tips"> Click <b> ESC </b> to close </label>
-                {
-                    modalImage.length !== 1 && (
-                        <label className="tips-v2"> Click <b> Arrows </b> to navigate to UI </label>
-                    )
-                }
-            </ModalImage>
+           
 
             <ModalDesc isModalOpen={isModalDescOpen} closeModal={closeModalDesc} previewImage={modalDescData?.previewLink}>
                 <div className="text-start -mt-5 mb-4">
