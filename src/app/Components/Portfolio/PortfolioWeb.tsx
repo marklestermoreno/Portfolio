@@ -2,9 +2,9 @@ import { db } from "@/app/firebase-config";
 import { ProjectsWebInfo } from "@/interfaces/ProjectsWebInfo";
 import { collection, onSnapshot, orderBy, query, limit, startAfter, DocumentSnapshot, DocumentData, getDocs } from "firebase/firestore";
 import { useEffect, useState } from "react";
-import { ModalImage } from "../Other/ModalImage";
 import LoadingData from "../Other/LoadingData";
 import { ModalDesc } from "../Other/ModalDesc";
+import { ModalImage } from "../Other/ModalImage";
 
 import Image from 'next/image'
 
