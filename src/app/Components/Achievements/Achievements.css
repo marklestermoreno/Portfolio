@@ -2,7 +2,7 @@ a {
     font-weight: 700;
     color: white;
     transition-duration: 300ms;
-}
+} 
 
 a:hover {
     color: var(--primary-color);
