@@ -10,7 +10,7 @@ const Tabs: React.FC<TabsProps> = ({ tabs }) => {
     return (
         <div className="tabs text-center">
             <div className="w-100 flex justify-center text-center mt-10">
-                <div className='tabs-container'>
+                <div className='tabs-container flex-col sm:flex-row'>
                     {tabs.map((tab, index) => (
                         <div
                             key={index}
