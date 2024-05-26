@@ -25,7 +25,7 @@
 
 .modal-container {
     position: relative;
-    max-width: 90vh;
+    max-width: 70vh;
     max-height: 90vh;
 }
 
@@ -150,4 +150,23 @@
 
 .image-loading-v2 {
     width: 120px;
+}
+
+@media (max-width: 567px) {
+    .modal-exit {
+        right: 20vh !important;
+    }
+    
+    .prev {
+        position: absolute;
+        top: 75vh;
+        left: 18vh;
+    }
+    
+    .next {
+        position: absolute;
+        top: 75vh;
+        right: 18vh;
+    }
+    
 }
