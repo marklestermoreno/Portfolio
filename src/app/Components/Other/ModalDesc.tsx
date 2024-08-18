@@ -20,17 +20,21 @@ export const ModalDesc = ({
         <Modal isOpen={isModalOpen}>
             {isModalOpen && (
                 <div className="modal-container">
-
-                    <button className="modal-exit navigator desc" onClick={closeModal}>
-                        X
-                    </button>
-                    <div className="w-full text-center flex justify-center">
+                    <div className="text-center flex justify-center">
                         <img
                             src={previewImage}
                             className="smaller-image shadow-lg"
                         />
                     </div>
                     {children}
+                    <div className="line-separator" />
+                    <div className="flex justify-end">
+                        <button className="text-[#ff014f] border-[#ff014f] border p-2 rounded-md text-xs
+                                            hover:bg-[#ff014f] hover:text-white duration-300 -mb-3
+                                        " onClick={closeModal}>
+                            Close
+                        </button>
+                    </div>
                 </div>
             )}
         </Modal>

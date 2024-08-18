@@ -25,7 +25,9 @@
 
 .modal-container {
     position: relative;
-    max-height: 90vh;
+    max-width: 700px;
+    min-width: 300px;
+    padding: 10px;
 }
 
 .desc {
@@ -38,29 +40,23 @@
 }
 
 .navigator {
-    position: absolute;
     background-color: var(--primary-color);
     color: white !important;
     padding: 5px 10px;
-    border-radius: 50%;
-    width: 35px;
     transition-duration: 300ms;
+    font-size: 13px;
+    margin: 0px 5px;
+    border-radius: 5px;
 }
 
 .prev {
-    position: absolute;
-    left: -5px;
-    top: 35vh;
     background-color: #333;
-    font-weight: 700;
+    font-weight: 400;
 }
 
 .next {
-    position: absolute;
-    right: -5px;
-    top: 35vh;
     background-color: #333;
-    font-weight: 700
+    font-weight: 400
 }
 
 .prev:hover,
@@ -85,7 +81,7 @@
 .achievements-image {
     margin: 40px 0px;
     max-height: 80vh;
-    max-width: 500px;
+    max-width: 600px;
     text-align: center;
 }
 

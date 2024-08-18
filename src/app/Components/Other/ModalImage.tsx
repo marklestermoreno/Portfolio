@@ -82,19 +82,8 @@ export const ModalImage = ({
                     ) : (
                         Array.isArray(image) && (
                             <>
-                                <button className="modal-exit navigator" onClick={closeModal}>
-                                    X
-                                </button>
-
                                 {image.length != 1 ?
                                     <>
-                                        <button className="prev navigator" onClick={handlePrevImage}>
-                                            &lt;
-                                        </button>
-
-                                        <button className="next navigator" onClick={handleNextImage}>
-                                            &gt;
-                                        </button>
 
                                         <img
                                             src={image[currentImageIndex]}
@@ -112,7 +101,24 @@ export const ModalImage = ({
 
                                 }
                                 {children}
+                                <div className="line-separator" />
+                                <div className="flex justify-between">
 
+                                    <div className="-mb-3">
+                                        <button className="prev navigator" onClick={handlePrevImage}>
+                                            Prev
+                                        </button>
+
+                                        <button className="next navigator" onClick={handleNextImage}>
+                                            Next
+                                        </button>
+                                    </div>
+                                    <button className="text-white bg-[#ff014f] p-2 rounded-md text-xs
+                                            hover:opacity-50 duration-200 -mb-3
+                                        " onClick={closeModal}>
+                                        Close
+                                    </button>
+                                </div>
                             </>
                         )
                     )}
