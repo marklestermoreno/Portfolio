@@ -6,7 +6,7 @@ export default function Home({ infoImages }: { infoImages: HTMLImageElement[] })
 
     const resumeLink = document.createElement('a');
     resumeLink.target = "_blank"; // Open link in a new tab
-    resumeLink.href = "https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/MLMORENO2024.pdf?alt=media&token=ff0bb93d-a576-4cd5-871c-aa4c40680a0b";
+    resumeLink.href = "https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/Mark%20Lester%20Moreno%20-%20Resume.pdf?alt=media&token=74c1b8b1-b198-4e4e-bb9e-1fa54e126a69";
     document.body.appendChild(resumeLink);
 
     // APK
