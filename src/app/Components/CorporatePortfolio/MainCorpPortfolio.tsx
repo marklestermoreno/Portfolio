@@ -108,7 +108,7 @@ export default function MainCorpPortfolio() {
                         Explore Our Corporate Ventures! </span>   </h2>
                 <p className='text-center text-gray-500 mx-5 md:mx-32 mt-5'>
 
-                    Welcome to my corporate projects showcase! As a web designer, programmer, and developer, I focus on creating smart, effective digital solutions. Here, you'll find a selection of my work that highlights my skills in building modern websites and applications for businesses.
+                    Welcome to my corporate projects showcase! As a web designer, programmer, and developer, I focus on creating smart, effective digital solutions. Here, you&apos;ll find a selection of my work that highlights my skills in building modern websites and applications for businesses.
                     <br /> <br />
                     Please note, some of these projects are private and only accessible internally within the company. Additionally, certain freelancing projects have non-disclosure agreements (NDAs) and cannot be shown here. All work shown is credited to the companies I worked with. I don&apos;t own these projects but share them as a reference for the kind of work I&apos;ve done. If you want more details or want to talk about future projects, feel free to contact me.                </p>
 
@@ -229,4 +229,5 @@ export default function MainCorpPortfolio() {
             </div>
         </>
     )
+
 }
