@@ -1,0 +1,176 @@
+.link {
+    color: #c4cfde;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition-duration: 300ms;
+}
+
+.active {
+    font-weight: 800;
+    color: #000;
+    transition-duration: 300ms;
+}
+
+.link:hover {
+    cursor: pointer;
+    color: #ff014f;
+    transition-duration: 300ms;
+}
+
+/* Loading Component */
+
+.image-loading {
+    width: 250px;
+}
+
+.modal-container {
+    position: relative;
+    max-height: 90vh;
+    max-width: 700px;
+    padding: 10px 20px;
+    overflow-y: scroll;
+}
+
+.modal-container::-webkit-scrollbar {
+    width: 0px;
+}
+
+.desc {
+    top: -5px !important;
+}
+
+.navigator {
+    background-color: var(--primary-color);
+    color: white !important;
+    padding: 3px 3px 3px;
+    width: 33px;
+    border-radius: 50%;
+    transition-duration: 300ms;
+}
+
+.prev {
+    position: absolute;
+    left: 0px;
+    top: 35vh;
+    background-color: #333;
+    font-weight: 700;
+    padding: 2px 2px 5px 2px;
+    width: 30px;
+}
+
+.next {
+    position: absolute;
+    right: 0px;
+    top: 35vh;
+    background-color: #333;
+    font-weight: 700;
+    padding: 2px 2px 5px 2px;
+    width: 30px;
+}
+
+.prev:hover,
+.next:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transition-duration: 300ms;
+}
+
+.modal-exit:hover {
+    background: #111113;
+    transition-duration: 300ms;
+}
+
+.smaller-image {
+    margin: 0px 0px 40px 0px;
+    max-height: 500px;
+    max-width: 400px;
+    text-align: center;
+}
+
+.achievements-image {
+    margin: 10px 0px 40px 0px;
+    text-align: center;
+}
+
+.blurred {
+    filter: blur(10px);
+}
+
+.loaded {
+    filter: none;
+    /* Remove the blur effect once the image is loaded */
+}
+
+/* Tabs Component */
+
+.tabs-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    margin: 15px;
+    padding: 1em 1.5em;
+    background: #1B1B1B;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.45);
+}
+
+.active-tabs {
+    background-color: var(--primary-color);
+    border-radius: 2px;
+    transition-duration: 400ms;
+}
+
+.inactive-tabs:hover {
+    background-color: rgba(255, 1, 79, 0.35);
+    border-radius: 2px;
+    color: white;
+    transition-duration: 400ms;
+}
+
+
+/* Loading Data */
+
+.loading-v2-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.loading-v2-label {
+    color: var(--primary-color);
+}
+
+.loading-v2-image-container {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.image-loading-v2 {
+    width: 120px;
+}
+
+@media (max-width: 567px) {
+
+
+    .modal-container {
+        max-width: 350px;
+    }
+
+    .prev {
+        position: absolute;
+        top: 75vh;
+        left: 18vh;
+    }
+
+    .next {
+        position: absolute;
+        top: 75vh;
+        right: 18vh;
+    }
+
+}
