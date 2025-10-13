@@ -69,6 +69,8 @@ export default function Home() {
         <div className="separator" />
         <MainPortfolio />
         <div className="separator" />
+        <MainCorpPortfolio />
+        <div className="separator" />
         <Achievements />
         <div className="separator" />
         <Contacts />
