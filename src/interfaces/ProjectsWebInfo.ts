@@ -14,4 +14,5 @@ export interface ProjectsWebInfo {
     type: string;
     videoAds: string;
     videoDemo: string;
+    isPersonalProj: boolean;
 }

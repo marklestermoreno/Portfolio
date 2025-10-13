@@ -21,9 +21,11 @@ export const ModalDesc = ({
             {isModalOpen && (
                 <div className="modal-container">
 
-                    <button className="modal-exit navigator desc" onClick={closeModal}>
-                        X
-                    </button>
+                    <div className="flex justify-end">
+                        <button className="modal-exit navigator desc" onClick={closeModal}>
+                            ✖
+                        </button>
+                    </div>
                     <div className="w-full text-center flex justify-center">
                         <img
                             src={previewImage}

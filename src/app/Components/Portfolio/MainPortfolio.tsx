@@ -32,7 +32,7 @@ export default function MainPortfolio() {
                     Here, you&apos;ll step into the dynamic world where my creativity meets code. As a web designer, programmer, and developer, I&apos;ve poured my passion into crafting unique digital experiences that push boundaries and spark innovation. Get ready to embark on a journey through my diverse portfolio, where each project tells a story of imagination, skill, and endless possibilities. So, let&apos;s dive in and discover the wonders of my creative universe together!
                     <br /> <br />
 
-                    Please note that only personal projects are showcased on this website. Work-related projects, including those developed under contract or for employers, are not featured here. If you are interested in viewing professional work samples or discussing potential collaborations, please contact me directly for further information.
+                    Please be aware that this website only displays personal projects. Work-related projects, such as those created under contract or for employers, are not included here but can be found in the following section of the website.
                 </p>
 
                 <Tabs tabs={tabs} />

@@ -26,41 +26,44 @@
 .modal-container {
     position: relative;
     max-height: 90vh;
+    max-width: 700px;
+    padding: 10px 20px;
+    overflow-y: scroll;
+}
+
+.modal-container::-webkit-scrollbar {
+    width: 0px;
 }
 
 .desc {
     top: -5px !important;
 }
 
-.modal-exit {
-    top: -45px;
-    right: 0px;
-}
-
 .navigator {
-    position: absolute;
     background-color: var(--primary-color);
     color: white !important;
-    padding: 5px 10px;
+    padding: 3px 3px 3px;
     border-radius: 50%;
-    width: 35px;
+    width: 33px;
     transition-duration: 300ms;
 }
 
 .prev {
     position: absolute;
-    left: -5px;
+    left: 0px;
     top: 35vh;
     background-color: #333;
     font-weight: 700;
+    padding: 5px 10px 7px 8px;
 }
 
 .next {
     position: absolute;
-    right: -5px;
+    right: 0px;
     top: 35vh;
     background-color: #333;
-    font-weight: 700
+    font-weight: 700;
+    padding: 5px 8px 7px 10px;
 }
 
 .prev:hover,
@@ -76,16 +79,14 @@
 }
 
 .smaller-image {
-    margin: 40px 0px;
-    max-height: 40vh;
+    margin: 0px 0px 40px 0px;
+    max-height: 500px;
     max-width: 400px;
     text-align: center;
 }
 
 .achievements-image {
-    margin: 40px 0px;
-    max-height: 80vh;
-    max-width: 500px;
+    margin: 10px 0px 40px 0px;
     text-align: center;
 }
 
@@ -152,20 +153,22 @@
 }
 
 @media (max-width: 567px) {
-    .modal-exit {
-        right: 20vh !important;
+
+
+    .modal-container {
+        max-width: 350px;
     }
-    
+
     .prev {
         position: absolute;
         top: 75vh;
         left: 18vh;
     }
-    
+
     .next {
         position: absolute;
         top: 75vh;
         right: 18vh;
     }
-    
+
 }

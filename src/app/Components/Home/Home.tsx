@@ -6,14 +6,14 @@ export default function Home({ infoImages }: { infoImages: HTMLImageElement[] })
 
     const resumeLink = document.createElement('a');
     resumeLink.target = "_blank"; // Open link in a new tab
-    resumeLink.href = "https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/Mark%20Lester%20Moreno%20-%20Resume.pdf?alt=media&token=74c1b8b1-b198-4e4e-bb9e-1fa54e126a69";
+    resumeLink.href = "https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/Mark%20Lester%20Moreno%20-%20Resume.pdf?alt=media&token=74bb1a1a-b2b7-44ec-adf3-b8490d7ebda3";
     document.body.appendChild(resumeLink);
 
     // APK
-    const apk = document.createElement('a');
-    apk.target = "_blank"; // Open link in a new tab
-    apk.href = "https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/ML%20Moreno.apk?alt=media&token=082a3b5b-0add-4be4-a881-573e6a10e1a9";
-    document.body.appendChild(apk);
+    // const apk = document.createElement('a');
+    // apk.target = "_blank"; // Open link in a new tab
+    // apk.href = "https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/ML%20Moreno.apk?alt=media&token=082a3b5b-0add-4be4-a881-573e6a10e1a9";
+    // document.body.appendChild(apk);
 
     return (
         <>
@@ -38,15 +38,16 @@ export default function Home({ infoImages }: { infoImages: HTMLImageElement[] })
                             />
                         </span>
                     </div>
-                    <p className="text-details">  A consistently achieved President&apos;s and Dean&apos;s List honors, holds a degree in Bachelor of Information Communication and Technology as well as an Associate Degree in Diploma in Information Communication and Technology from Polytechnic University of the Philippines - Sta Mesa. Currently employed as a Junior Web Developer with expertise in Blazor and ASP.Net, alongside proficiency in web design. </p>
-
+                    <p className="text-details">
+                        A graduate of BSIT from PUP-Sta Mesa, consistently achieving President&apos;s and Dean&apos;s List honors, I am currently a Mid Web Developer and UI/UX Designer at a Filipino startup digital marketing company. Skilled in Blazor (Server, MAUI, WASM), ASP.Net, React/NextJS, and MS SQL, I design dynamic, user-friendly web applications. My expertise extends to Photoshop, Figma, and Illustrator for creating high-quality assets and UI designs. Previously, I served as a Senior Programmer in the software solutions industry, specializing in insurance systems. With a strong background in System Design, Front-End, Back-End, Database, and DevOps, I am passionate about building seamless and scalable web solutions as well as optimizing the SEO, performance and security.
+                    </p>
                     <div className="flex flex-col sm:flex-row md:justify-start justify-center text-center mt-5 mb-1">
                         <button onClick={() => resumeLink.click()} className='bg-[#ff014f] text-sm text-white rounded-sm mx-1 py-1 px-5 hover:bg-white hover:text-[#ff014f] hover:cursor-pointer transition-all duration-150'>
                             Download Resume
                         </button>
-                        <button onClick={() => apk.click()} className='mt-2 sm:mt-0 bg-[#ff014f] text-sm text-white rounded-sm mx-1 py-1 px-5 hover:bg-white hover:text-[#ff014f] hover:cursor-pointer transition-all duration-150'>
+                        {/* <button onClick={() => apk.click()} className='mt-2 sm:mt-0 bg-[#ff014f] text-sm text-white rounded-sm mx-1 py-1 px-5 hover:bg-white hover:text-[#ff014f] hover:cursor-pointer transition-all duration-150'>
                             Download APK for Android
-                        </button>
+                        </button> */}
                     </div>
                 </div>
 

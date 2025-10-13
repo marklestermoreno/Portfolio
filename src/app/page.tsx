@@ -9,6 +9,7 @@ import HomePage from "./Components/Home/Home";
 import SkillsPage from "./Components/Skills/Skills";
 import Experience from "./Components/Experience/Experience";
 import MainPortfolio from "./Components/Portfolio/MainPortfolio";
+import MainCorpPortfolio from "./Components/CorporatePortfolio/MainCorpPortfolio";
 import Achievements from "./Components/Achievements/Achievements";
 
 import Head from 'next/head';
@@ -68,13 +69,15 @@ export default function Home() {
         <div className="separator" />
         <MainPortfolio />
         <div className="separator" />
+        <MainCorpPortfolio />
+        <div className="separator" />
         <Achievements />
         <div className="separator" />
         <Contacts />
       </main>
 
       <ToastContainer
-          position="top-right"
+        position="top-right"
         autoClose={3000}
         limit={5}
         hideProgressBar

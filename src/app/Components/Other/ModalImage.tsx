@@ -82,18 +82,20 @@ export const ModalImage = ({
                     ) : (
                         Array.isArray(image) && (
                             <>
-                                <button className="modal-exit navigator" onClick={closeModal}>
-                                    X
-                                </button>
+                                <div className="flex justify-end">
+                                    <button className="modal-exit navigator" onClick={closeModal}>
+                                        ✖
+                                    </button>
+                                </div>
 
                                 {image.length != 1 ?
                                     <>
                                         <button className="prev navigator" onClick={handlePrevImage}>
-                                            &lt;
+                                            ◀
                                         </button>
 
                                         <button className="next navigator" onClick={handleNextImage}>
-                                            &gt;
+                                            ▶
                                         </button>
 
                                         <img

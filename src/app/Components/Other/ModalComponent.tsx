@@ -81,9 +81,11 @@ export const ModalComponent = ({
                     ) : (
                         Array.isArray(image) && (
                             <>
-                                <button className="modal-exit" onClick={closeModal}>
-                                    X
-                                </button>
+                                <div className="flex justify-end">
+                                    <button className="modal-exit" onClick={closeModal}>
+                                        ✖
+                                    </button>
+                                </div>
                                 <img
                                     src={image[currentImageIndex]}
                                     alt={`achievement-${currentImageIndex}`}

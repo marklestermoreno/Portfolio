@@ -1,6 +1,6 @@
 import { db } from "@/app/firebase-config";
 import { ProjectsWebInfo } from "@/interfaces/ProjectsWebInfo";
-import { collection, onSnapshot, orderBy, query, limit, startAfter, DocumentSnapshot, DocumentData, getDocs } from "firebase/firestore";
+import { collection, onSnapshot, orderBy, query, limit, startAfter, where, DocumentSnapshot, DocumentData, getDocs } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import LoadingData from "../Other/LoadingData";
 import { ModalDesc } from "../Other/ModalDesc";
@@ -24,7 +24,7 @@ export default function PortfolioWeb() {
     useEffect(() => {
         const fetchData = async () => {
             setLoading(true);
-            const q = query(dataCollectionRef, orderBy("id", "desc"), limit(recordsPerPage));
+            const q = query(dataCollectionRef, where("isPersonalProj", "==", true), orderBy("id", "desc"), limit(recordsPerPage));
             const unsubscribe = onSnapshot(q, (snapshot) => {
                 const fetchedData: ProjectsWebInfo[] = [];
                 snapshot.forEach((doc) => {
