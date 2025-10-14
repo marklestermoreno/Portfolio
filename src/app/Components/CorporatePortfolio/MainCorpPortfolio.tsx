@@ -50,7 +50,7 @@ export default function MainCorpPortfolio() {
     const handleLoadMore = async () => {
         if (lastDocument) {
             setLoading(true);
-            const q = query(dataCollectionRef, orderBy("id", "desc"), startAfter(lastDocument), limit(recordsPerPage)); // Adjust the limit as per your requirement
+            const q = query(dataCollectionRef, orderBy("id", "asc"), startAfter(lastDocument), limit(recordsPerPage)); // Adjust the limit as per your requirement
             const snapshot = await getDocs(q);
             const fetchedData: ProjectsWebInfo[] = [];
             snapshot.forEach((doc) => {
@@ -229,4 +229,5 @@ export default function MainCorpPortfolio() {
             </div>
         </>
     )
+
 }
