@@ -101,9 +101,9 @@ export default function Skills() {
                                 <img src={item.image} alt={`${item.name}-icons`} className='w-20 h-20' />
                                 <div className='flex flex-col justify-center items-center '>
                                     <p className='text-white text-xl font-bold mt-5'>{item.name}</p>
-                                    <p className='text-white items-center text-center'>
+                                   {/* <p className='text-white items-center text-center'>
                                         <span> Skill Level: </span> {item.skillLevel}
-                                    </p>
+                                    </p> */}
                                 </div>
                             </div>
                         </div>
