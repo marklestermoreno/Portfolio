@@ -6,7 +6,7 @@ export default function Home({ infoImages }: { infoImages: HTMLImageElement[] })
 
     const resumeLink = document.createElement('a');
     resumeLink.target = "_blank"; // Open link in a new tab
-    resumeLink.href = "https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/Mark%20Lester%20Moreno%20-%20Resume.pdf?alt=media&token=74bb1a1a-b2b7-44ec-adf3-b8490d7ebda3";
+    resumeLink.href = "https://firebasestorage.googleapis.com/v0/b/portfolio-efbfd.appspot.com/o/Mark%20Lester%20Moreno.pdf?alt=media&token=dc04336c-0e0f-4c24-ad0a-931dc0bb24db";
     document.body.appendChild(resumeLink);
 
     // APK
@@ -39,15 +39,11 @@ export default function Home({ infoImages }: { infoImages: HTMLImageElement[] })
                         </span>
                     </div>
                     <p className="text-details">
-                        A graduate of BSIT from PUP-Sta Mesa, consistently achieving President&apos;s and Dean&apos;s List honors, I am currently a Mid Web Developer and UI/UX Designer at a Filipino startup digital marketing company. Skilled in Blazor (Server, MAUI, WASM), ASP.Net, React/NextJS, and MS SQL, I design dynamic, user-friendly web applications. My expertise extends to Photoshop, Figma, and Illustrator for creating high-quality assets and UI designs. Previously, I served as a Senior Programmer in the software solutions industry, specializing in insurance systems. With a strong background in System Design, Front-End, Back-End, Database, and DevOps, I am passionate about building seamless and scalable web solutions as well as optimizing the SEO, performance and security.
-                    </p>
+                        A graduate of BSIT from PUP-Sta Mesa, consistently achieving President's and Dean's List honors, I am a Full-Stack Web Developer and UI/UX Designer actively seeking a long-term, work-from-home opportunity. Skilled in Blazor (Server, MAUI, WASM), ASP.Net, React/NextJS, MS SQL, Firebase, and Redis, I specialize in architecting dynamic, high-performance web applications with efficient database management and aggressive caching strategies. My technical foundation is complemented by creative expertise in Photoshop, Figma, and Illustrator, allowing me to design intuitive interfaces and high-quality digital assets. With a comprehensive background in System Design, Front-End, Back-End, Database management, and DevOps, I am deeply passionate about building seamless, scalable platforms while rigorously optimizing SEO, performance, and security.                    </p>
                     <div className="flex flex-col sm:flex-row md:justify-start justify-center text-center mt-5 mb-1">
                         <button onClick={() => resumeLink.click()} className='bg-[#ff014f] text-sm text-white rounded-sm mx-1 py-1 px-5 hover:bg-white hover:text-[#ff014f] hover:cursor-pointer transition-all duration-150'>
                             Download Resume
                         </button>
-                        {/* <button onClick={() => apk.click()} className='mt-2 sm:mt-0 bg-[#ff014f] text-sm text-white rounded-sm mx-1 py-1 px-5 hover:bg-white hover:text-[#ff014f] hover:cursor-pointer transition-all duration-150'>
-                            Download APK for Android
-                        </button> */}
                     </div>
                 </div>
 
